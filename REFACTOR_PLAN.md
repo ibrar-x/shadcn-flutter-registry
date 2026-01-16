@@ -5,8 +5,8 @@ Goal: migrate components into the registry one-by-one with minimal shared surfac
 ## Checklist
 
 - [x] button
-- [ ] card
-- [ ] badge
+- [x] card
+- [x] badge
 - [ ] input/textfield
 - [ ] dialog
 - [ ] popover

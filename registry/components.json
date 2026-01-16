@@ -256,6 +256,42 @@
       },
       "assets": [],
       "postInstall": []
+    },
+    {
+      "id": "badge",
+      "name": "Badge",
+      "description": "Compact label/status components built on button styles.",
+      "category": "display",
+      "tags": ["display", "status", "label"],
+      "files": [
+        {
+          "source": "registry/components/badge/badge.dart",
+          "destination": "{installPath}/components/badge/badge.dart"
+        },
+        {
+          "source": "registry/components/badge/_impl/badge_theme.dart",
+          "destination": "{installPath}/components/badge/_impl/badge_theme.dart"
+        },
+        {
+          "source": "registry/components/badge/_impl/badge_widgets.dart",
+          "destination": "{installPath}/components/badge/_impl/badge_widgets.dart"
+        },
+        {
+          "source": "registry/components/badge/README.md",
+          "destination": "{installPath}/components/badge/README.md"
+        },
+        {
+          "source": "registry/components/badge/meta.json",
+          "destination": "{installPath}/components/badge/meta.json"
+        }
+      ],
+      "shared": ["theme"],
+      "dependsOn": ["button"],
+      "pubspec": {
+        "dependencies": {}
+      },
+      "assets": [],
+      "postInstall": []
     }
   ]
 }
