@@ -103,6 +103,80 @@
       ]
     },
     {
+      "id": "constants",
+      "description": "Shared timing constants used across animations.",
+      "files": [
+        {
+          "source": "registry/shared/utils/constants.dart",
+          "destination": "{sharedPath}/utils/constants.dart"
+        }
+      ]
+    },
+    {
+      "id": "text_input_utils",
+      "description": "Text input helpers for replacing or inserting text.",
+      "files": [
+        {
+          "source": "registry/shared/utils/text_input_utils.dart",
+          "destination": "{sharedPath}/utils/text_input_utils.dart"
+        }
+      ]
+    },
+    {
+      "id": "chip_utils",
+      "description": "Tokenizer helpers for chip-style inputs.",
+      "files": [
+        {
+          "source": "registry/shared/utils/chip_utils.dart",
+          "destination": "{sharedPath}/utils/chip_utils.dart"
+        }
+      ]
+    },
+    {
+      "id": "geometry_extensions",
+      "description": "Geometry helpers for optional resolution.",
+      "files": [
+        {
+          "source": "registry/shared/utils/geometry_extensions.dart",
+          "destination": "{sharedPath}/utils/geometry_extensions.dart"
+        }
+      ]
+    },
+    {
+      "id": "hidden",
+      "description": "Hidden widget with size-preserving transitions.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/hidden.dart",
+          "destination": "{sharedPath}/primitives/hidden.dart"
+        }
+      ]
+    },
+    {
+      "id": "overlay",
+      "description": "Overlay and popover primitives for anchored surfaces.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/overlay.dart",
+          "destination": "{sharedPath}/primitives/overlay.dart"
+        },
+        {
+          "source": "registry/shared/primitives/popover.dart",
+          "destination": "{sharedPath}/primitives/popover.dart"
+        }
+      ]
+    },
+    {
+      "id": "lucide_icons",
+      "description": "Lucide icon font mappings used by controls.",
+      "files": [
+        {
+          "source": "registry/shared/icons/lucide_icons.dart",
+          "destination": "{sharedPath}/icons/lucide_icons.dart"
+        }
+      ]
+    },
+    {
       "id": "outlined_container",
       "description": "Outlined container primitive with surface blur support.",
       "files": [
@@ -289,6 +363,121 @@
       "dependsOn": ["button"],
       "pubspec": {
         "dependencies": {}
+      },
+      "assets": [],
+      "postInstall": []
+    },
+    {
+      "id": "text_field",
+      "name": "Text Field",
+      "description": "Text input with rich features, autocomplete, and actions.",
+      "category": "forms",
+      "tags": ["forms", "input", "text"],
+      "files": [
+        {
+          "source": "registry/components/text_field/text_field.dart",
+          "destination": "{installPath}/components/text_field/text_field.dart"
+        },
+        {
+          "source": "registry/components/text_field/input.dart",
+          "destination": "{installPath}/components/text_field/input.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/text_field_theme.dart",
+          "destination": "{installPath}/components/text_field/_impl/text_field_theme.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/input_feature_visibility.dart",
+          "destination": "{installPath}/components/text_field/_impl/input_feature_visibility.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/input_feature_base.dart",
+          "destination": "{installPath}/components/text_field/_impl/input_feature_base.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/text_field_gestures.dart",
+          "destination": "{installPath}/components/text_field/_impl/text_field_gestures.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/text_input_mixin.dart",
+          "destination": "{installPath}/components/text_field/_impl/text_input_mixin.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/text_input_stateful_widget.dart",
+          "destination": "{installPath}/components/text_field/_impl/text_input_stateful_widget.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/text_input_stateful_widget_cont.dart",
+          "destination": "{installPath}/components/text_field/_impl/text_input_stateful_widget_cont.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/text_field_widget.dart",
+          "destination": "{installPath}/components/text_field/_impl/text_field_widget.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/text_field_state_part1.dart",
+          "destination": "{installPath}/components/text_field/_impl/text_field_state_part1.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/text_field_state_part2.dart",
+          "destination": "{installPath}/components/text_field/_impl/text_field_state_part2.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/text_field_intents.dart",
+          "destination": "{installPath}/components/text_field/_impl/text_field_intents.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/input_features_basic.dart",
+          "destination": "{installPath}/components/text_field/_impl/input_features_basic.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/input_features_autocomplete.dart",
+          "destination": "{installPath}/components/text_field/_impl/input_features_autocomplete.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/input_features_spinner.dart",
+          "destination": "{installPath}/components/text_field/_impl/input_features_spinner.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/input_features_copy_paste.dart",
+          "destination": "{installPath}/components/text_field/_impl/input_features_copy_paste.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/auto_complete_theme.dart",
+          "destination": "{installPath}/components/text_field/_impl/auto_complete_theme.dart"
+        },
+        {
+          "source": "registry/components/text_field/_impl/auto_complete_widget.dart",
+          "destination": "{installPath}/components/text_field/_impl/auto_complete_widget.dart"
+        },
+        {
+          "source": "registry/components/text_field/README.md",
+          "destination": "{installPath}/components/text_field/README.md"
+        },
+        {
+          "source": "registry/components/text_field/meta.json",
+          "destination": "{installPath}/components/text_field/meta.json"
+        }
+      ],
+      "shared": [
+        "theme",
+        "color_extensions",
+        "form_value_supplier",
+        "style_value",
+        "border_utils",
+        "constants",
+        "text_input_utils",
+        "chip_utils",
+        "geometry_extensions",
+        "hidden",
+        "overlay",
+        "lucide_icons"
+      ],
+      "dependsOn": ["button"],
+      "pubspec": {
+        "dependencies": {
+          "data_widget": "^0.0.2"
+        }
       },
       "assets": [],
       "postInstall": []

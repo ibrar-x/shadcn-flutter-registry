@@ -22,3 +22,17 @@ Radius _subtractSafe(Radius a, Radius b) {
     max(0, a.y - b.y),
   );
 }
+
+/// Resolves a BorderRadiusGeometry to BorderRadius if needed.
+BorderRadius? optionallyResolveBorderRadius(
+  BuildContext context,
+  BorderRadiusGeometry? radius,
+) {
+  if (radius == null) {
+    return null;
+  }
+  if (radius is BorderRadius) {
+    return radius;
+  }
+  return radius.resolve(Directionality.of(context));
+}
