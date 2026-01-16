@@ -113,6 +113,16 @@
       ]
     },
     {
+      "id": "controlled_animation",
+      "description": "Lightweight wrapper for controlled animation curves.",
+      "files": [
+        {
+          "source": "registry/shared/utils/controlled_animation.dart",
+          "destination": "{sharedPath}/utils/controlled_animation.dart"
+        }
+      ]
+    },
+    {
       "id": "text_input_utils",
       "description": "Text input helpers for replacing or inserting text.",
       "files": [
@@ -594,6 +604,138 @@
       "pubspec": {
         "dependencies": {
           "data_widget": "^0.0.2"
+        }
+      },
+      "assets": [],
+      "postInstall": []
+    },
+    {
+      "id": "drawer",
+      "name": "Drawer",
+      "description": "Sliding drawer and sheet overlays with drag support.",
+      "category": "overlay",
+      "tags": ["overlay", "drawer", "sheet"],
+      "files": [
+        {
+          "source": "registry/components/drawer/drawer.dart",
+          "destination": "{installPath}/components/drawer/drawer.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_types.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_types.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_theme.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_theme.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_api.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_api.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_wrapper.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_wrapper.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_wrapper_state_part1.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_wrapper_state_part1.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_wrapper_state_build_draggable.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_wrapper_state_build_draggable.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_wrapper_state_part2.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_wrapper_state_part2.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_close_sheet.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_close_sheet.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/sheet_wrapper.dart",
+          "destination": "{installPath}/components/drawer/_impl/sheet_wrapper.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/overlay_position.dart",
+          "destination": "{installPath}/components/drawer/_impl/overlay_position.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/backdrop_transform_data.dart",
+          "destination": "{installPath}/components/drawer/_impl/backdrop_transform_data.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_overlay_wrapper.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_overlay_wrapper.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_raw_api.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_raw_api.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/mounted_overlay_entry_data.dart",
+          "destination": "{installPath}/components/drawer/_impl/mounted_overlay_entry_data.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_close_drawer.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_close_drawer.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_layer_data.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_layer_data.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_overlay.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_overlay.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_entry_widget.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_entry_widget.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_entry_widget_state.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_entry_widget_state.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_typedefs.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_typedefs.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_overlay_entry.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_overlay_entry.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/drawer_overlay_completer.dart",
+          "destination": "{installPath}/components/drawer/_impl/drawer_overlay_completer.dart"
+        },
+        {
+          "source": "registry/components/drawer/_impl/sheet_overlay_handler.dart",
+          "destination": "{installPath}/components/drawer/_impl/sheet_overlay_handler.dart"
+        },
+        {
+          "source": "registry/components/drawer/README.md",
+          "destination": "{installPath}/components/drawer/README.md"
+        },
+        {
+          "source": "registry/components/drawer/meta.json",
+          "destination": "{installPath}/components/drawer/meta.json"
+        }
+      ],
+      "shared": [
+        "theme",
+        "color_extensions",
+        "style_value",
+        "constants",
+        "geometry_extensions",
+        "controlled_animation",
+        "outlined_container",
+        "overlay"
+      ],
+      "dependsOn": ["dialog"],
+      "pubspec": {
+        "dependencies": {
+          "data_widget": "^0.0.2",
+          "gap": "^3.0.1"
         }
       },
       "assets": [],

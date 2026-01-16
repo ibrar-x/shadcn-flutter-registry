@@ -10,7 +10,7 @@ Goal: migrate components into the registry one-by-one with minimal shared surfac
 - [x] input/textfield
 - [x] dialog
 - [x] popover
-- [ ] drawer
+- [x] drawer
 - [ ] dropdown/menu
 - [ ] tabs
 - [ ] table
