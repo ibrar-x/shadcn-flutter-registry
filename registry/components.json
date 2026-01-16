@@ -1,0 +1,176 @@
+{
+  "$schema": "./components.schema.json",
+  "schemaVersion": 1,
+  "name": "shadcn_flutter_registry",
+  "flutter": {
+    "minSdk": ">=3.3.0"
+  },
+  "defaults": {
+    "installPath": "lib/ui/shadcn",
+    "sharedPath": "lib/ui/shadcn/shared"
+  },
+  "shared": [
+    {
+      "id": "theme",
+      "description": "Core theme data, color schemes, and typography.",
+      "files": [
+        {
+          "source": "registry/shared/theme/theme.dart",
+          "destination": "{sharedPath}/theme/theme.dart"
+        },
+        {
+          "source": "registry/shared/theme/color_scheme.dart",
+          "destination": "{sharedPath}/theme/color_scheme.dart"
+        },
+        {
+          "source": "registry/shared/theme/typography.dart",
+          "destination": "{sharedPath}/theme/typography.dart"
+        },
+        {
+          "source": "registry/shared/theme/generated_colors.dart",
+          "destination": "{sharedPath}/theme/generated_colors.dart"
+        }
+      ]
+    },
+    {
+      "id": "color_extensions",
+      "description": "Color utilities used by theme and components.",
+      "files": [
+        {
+          "source": "registry/shared/utils/color_extensions.dart",
+          "destination": "{sharedPath}/utils/color_extensions.dart"
+        }
+      ]
+    },
+    {
+      "id": "clickable",
+      "description": "Shared interactive primitive for state-aware widgets.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/clickable.dart",
+          "destination": "{sharedPath}/primitives/clickable.dart"
+        }
+      ]
+    },
+    {
+      "id": "form_control",
+      "description": "Controlled component primitives for form integration.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/form_control.dart",
+          "destination": "{sharedPath}/primitives/form_control.dart"
+        }
+      ]
+    },
+    {
+      "id": "form_value_supplier",
+      "description": "Minimal form value supplier interfaces.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/form_value_supplier.dart",
+          "destination": "{sharedPath}/primitives/form_value_supplier.dart"
+        }
+      ]
+    },
+    {
+      "id": "menu_group",
+      "description": "Lightweight menu group metadata shared across components.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/menu_group.dart",
+          "destination": "{sharedPath}/primitives/menu_group.dart"
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "button",
+      "name": "Button",
+      "description": "Shadcn-style button system with variants, toggles, and groups.",
+      "category": "control",
+      "tags": ["controls", "forms", "buttons"],
+      "files": [
+        {
+          "source": "registry/components/button/button.dart",
+          "destination": "{installPath}/components/button/button.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/toggle_controller.dart",
+          "destination": "{installPath}/components/button/_impl/toggle_controller.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/toggle.dart",
+          "destination": "{installPath}/components/button/_impl/toggle.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/selected_button.dart",
+          "destination": "{installPath}/components/button/_impl/selected_button.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/button_core.dart",
+          "destination": "{installPath}/components/button/_impl/button_core.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/button_style.dart",
+          "destination": "{installPath}/components/button/_impl/button_style.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/button_theme.dart",
+          "destination": "{installPath}/components/button/_impl/button_theme.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/button_variance.dart",
+          "destination": "{installPath}/components/button/_impl/button_variance.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/button_helpers.dart",
+          "destination": "{installPath}/components/button/_impl/button_helpers.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/button_variants.dart",
+          "destination": "{installPath}/components/button/_impl/button_variants.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/button_icon.dart",
+          "destination": "{installPath}/components/button/_impl/button_icon.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/button_overrides.dart",
+          "destination": "{installPath}/components/button/_impl/button_overrides.dart"
+        },
+        {
+          "source": "registry/components/button/_impl/button_group.dart",
+          "destination": "{installPath}/components/button/_impl/button_group.dart"
+        },
+        {
+          "source": "registry/components/button/README.md",
+          "destination": "{installPath}/components/button/README.md"
+        },
+        {
+          "source": "registry/components/button/meta.json",
+          "destination": "{installPath}/components/button/meta.json"
+        }
+      ],
+      "shared": [
+        "theme",
+        "color_extensions",
+        "clickable",
+        "form_control",
+        "form_value_supplier",
+        "menu_group"
+      ],
+      "dependsOn": [],
+      "pubspec": {
+        "dependencies": {
+          "data_widget": "^0.0.2",
+          "gap": "^3.0.1"
+        }
+      },
+      "assets": [],
+      "postInstall": [
+        "Optional: wrap a subtree with Theme(data: ThemeData(...), child: ...) to override defaults."
+      ]
+    }
+  ]
+}
