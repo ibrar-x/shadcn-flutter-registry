@@ -81,6 +81,46 @@
           "destination": "{sharedPath}/primitives/menu_group.dart"
         }
       ]
+    },
+    {
+      "id": "style_value",
+      "description": "Style helper for resolving widget/theme/default values.",
+      "files": [
+        {
+          "source": "registry/shared/utils/style_value.dart",
+          "destination": "{sharedPath}/utils/style_value.dart"
+        }
+      ]
+    },
+    {
+      "id": "border_utils",
+      "description": "Border radius helpers used by outlined containers.",
+      "files": [
+        {
+          "source": "registry/shared/utils/border_utils.dart",
+          "destination": "{sharedPath}/utils/border_utils.dart"
+        }
+      ]
+    },
+    {
+      "id": "outlined_container",
+      "description": "Outlined container primitive with surface blur support.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/outlined_container.dart",
+          "destination": "{sharedPath}/primitives/outlined_container.dart"
+        }
+      ]
+    },
+    {
+      "id": "sheet_overlay",
+      "description": "Sheet overlay context helper.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/sheet_overlay.dart",
+          "destination": "{sharedPath}/primitives/sheet_overlay.dart"
+        }
+      ]
     }
   ],
   "components": [
@@ -171,6 +211,51 @@
       "postInstall": [
         "Optional: wrap a subtree with Theme(data: ThemeData(...), child: ...) to override defaults."
       ]
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "description": "Card container with optional surface blur variant.",
+      "category": "layout",
+      "tags": ["layout", "surface", "container"],
+      "files": [
+        {
+          "source": "registry/components/card/card.dart",
+          "destination": "{installPath}/components/card/card.dart"
+        },
+        {
+          "source": "registry/components/card/_impl/card_theme.dart",
+          "destination": "{installPath}/components/card/_impl/card_theme.dart"
+        },
+        {
+          "source": "registry/components/card/_impl/card_widgets.dart",
+          "destination": "{installPath}/components/card/_impl/card_widgets.dart"
+        },
+        {
+          "source": "registry/components/card/README.md",
+          "destination": "{installPath}/components/card/README.md"
+        },
+        {
+          "source": "registry/components/card/meta.json",
+          "destination": "{installPath}/components/card/meta.json"
+        }
+      ],
+      "shared": [
+        "theme",
+        "color_extensions",
+        "style_value",
+        "border_utils",
+        "outlined_container",
+        "sheet_overlay"
+      ],
+      "dependsOn": [],
+      "pubspec": {
+        "dependencies": {
+          "data_widget": "^0.0.2"
+        }
+      },
+      "assets": [],
+      "postInstall": []
     }
   ]
 }
