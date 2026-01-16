@@ -8,7 +8,7 @@ Goal: migrate components into the registry one-by-one with minimal shared surfac
 - [x] card
 - [x] badge
 - [x] input/textfield
-- [ ] dialog
+- [x] dialog
 - [ ] popover
 - [ ] drawer
 - [ ] dropdown/menu

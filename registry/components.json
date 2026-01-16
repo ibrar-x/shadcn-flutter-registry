@@ -481,6 +481,87 @@
       },
       "assets": [],
       "postInstall": []
+    },
+    {
+      "id": "dialog",
+      "name": "Dialog",
+      "description": "Modal dialog primitives with alert dialog and overlay handlers.",
+      "category": "overlay",
+      "tags": ["overlay", "modal", "dialog"],
+      "files": [
+        {
+          "source": "registry/components/dialog/dialog.dart",
+          "destination": "{installPath}/components/dialog/dialog.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/modal_backdrop_theme.dart",
+          "destination": "{installPath}/components/dialog/_impl/modal_backdrop_theme.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/modal_backdrop.dart",
+          "destination": "{installPath}/components/dialog/_impl/modal_backdrop.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/modal_container.dart",
+          "destination": "{installPath}/components/dialog/_impl/modal_container.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/surface_barrier_painter.dart",
+          "destination": "{installPath}/components/dialog/_impl/surface_barrier_painter.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/dialog_route.dart",
+          "destination": "{installPath}/components/dialog/_impl/dialog_route.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/dialog_transitions.dart",
+          "destination": "{installPath}/components/dialog/_impl/dialog_transitions.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/dialog_api.dart",
+          "destination": "{installPath}/components/dialog/_impl/dialog_api.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/dialog_overlay_handler.dart",
+          "destination": "{installPath}/components/dialog/_impl/dialog_overlay_handler.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/dialog_overlay_full_screen_handler.dart",
+          "destination": "{installPath}/components/dialog/_impl/dialog_overlay_full_screen_handler.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/dialog_overlay_completer.dart",
+          "destination": "{installPath}/components/dialog/_impl/dialog_overlay_completer.dart"
+        },
+        {
+          "source": "registry/components/dialog/_impl/alert_dialog.dart",
+          "destination": "{installPath}/components/dialog/_impl/alert_dialog.dart"
+        },
+        {
+          "source": "registry/components/dialog/README.md",
+          "destination": "{installPath}/components/dialog/README.md"
+        },
+        {
+          "source": "registry/components/dialog/meta.json",
+          "destination": "{installPath}/components/dialog/meta.json"
+        }
+      ],
+      "shared": [
+        "theme",
+        "color_extensions",
+        "style_value",
+        "constants",
+        "geometry_extensions",
+        "overlay"
+      ],
+      "dependsOn": ["card"],
+      "pubspec": {
+        "dependencies": {
+          "data_widget": "^0.0.2"
+        }
+      },
+      "assets": [],
+      "postInstall": []
     }
   ]
 }
