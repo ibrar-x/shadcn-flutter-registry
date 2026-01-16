@@ -1,0 +1,19 @@
+{
+  "id": "popover",
+  "name": "Popover",
+  "description": "Anchored overlay surfaces for floating content.",
+  "category": "overlay",
+  "tags": ["overlay", "popover", "floating"],
+  "dependencies": {
+    "pubspec": {
+      "data_widget": "^0.0.2"
+    },
+    "shared": [
+      "theme",
+      "color_extensions",
+      "constants",
+      "geometry_extensions",
+      "overlay"
+    ]
+  }
+}
