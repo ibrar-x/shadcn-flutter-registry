@@ -14,7 +14,7 @@ Goal: migrate components into the registry one-by-one with minimal shared surfac
 - [x] dropdown/menu
 - [x] sortable
 - [x] tabs
-- [ ] table
+- [x] table
 
 ## Workflow per Component
 

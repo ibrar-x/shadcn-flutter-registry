@@ -217,6 +217,20 @@
       ]
     },
     {
+      "id": "resizer",
+      "description": "Resizable layout helpers for tables and panels.",
+      "files": [
+        {
+          "source": "registry/shared/utils/resizable_item.dart",
+          "destination": "{sharedPath}/utils/resizable_item.dart"
+        },
+        {
+          "source": "registry/shared/utils/resizer.dart",
+          "destination": "{sharedPath}/utils/resizer.dart"
+        }
+      ]
+    },
+    {
       "id": "lucide_icons",
       "description": "Lucide icon font mappings used by controls.",
       "files": [
@@ -1172,6 +1186,184 @@
         "fade_scroll"
       ],
       "dependsOn": ["sortable"],
+      "pubspec": {
+        "dependencies": {
+          "data_widget": "^0.0.2"
+        }
+      },
+      "assets": [],
+      "postInstall": []
+    },
+    {
+      "id": "table",
+      "name": "Table",
+      "description": "Resizable table layout with headers, footers, and frozen cells.",
+      "category": "layout",
+      "tags": ["table", "layout", "data"],
+      "files": [
+        {
+          "source": "registry/components/table/README.md",
+          "destination": "{installPath}/components/table/README.md"
+        },
+        {
+          "source": "registry/components/table/_impl/cell_predicate.dart",
+          "destination": "{installPath}/components/table/_impl/cell_predicate.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/cell_resizer.dart",
+          "destination": "{installPath}/components/table/_impl/cell_resizer.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/cell_resizer_state_part1.dart",
+          "destination": "{installPath}/components/table/_impl/cell_resizer_state_part1.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/cell_resizer_state_part2.dart",
+          "destination": "{installPath}/components/table/_impl/cell_resizer_state_part2.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/constrained_table_size.dart",
+          "destination": "{installPath}/components/table/_impl/constrained_table_size.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/flattened_table_cell.dart",
+          "destination": "{installPath}/components/table/_impl/flattened_table_cell.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/frozen_table_data.dart",
+          "destination": "{installPath}/components/table/_impl/frozen_table_data.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/hover_callback.dart",
+          "destination": "{installPath}/components/table/_impl/hover_callback.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/hovered_cell.dart",
+          "destination": "{installPath}/components/table/_impl/hovered_cell.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/hovered_line.dart",
+          "destination": "{installPath}/components/table/_impl/hovered_line.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/intrinsic_computer.dart",
+          "destination": "{installPath}/components/table/_impl/intrinsic_computer.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/raw_cell.dart",
+          "destination": "{installPath}/components/table/_impl/raw_cell.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/raw_table_layout.dart",
+          "destination": "{installPath}/components/table/_impl/raw_table_layout.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/render_table_layout_part1.dart",
+          "destination": "{installPath}/components/table/_impl/render_table_layout_part1.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/render_table_layout_part2a.dart",
+          "destination": "{installPath}/components/table/_impl/render_table_layout_part2a.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/render_table_layout_part2b.dart",
+          "destination": "{installPath}/components/table/_impl/render_table_layout_part2b.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/render_table_layout_part3.dart",
+          "destination": "{installPath}/components/table/_impl/render_table_layout_part3.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/resizable_table.dart",
+          "destination": "{installPath}/components/table/_impl/resizable_table.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/resizable_table_controller.dart",
+          "destination": "{installPath}/components/table/_impl/resizable_table_controller.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/resizable_table_data.dart",
+          "destination": "{installPath}/components/table/_impl/resizable_table_data.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/resizable_table_state.dart",
+          "destination": "{installPath}/components/table/_impl/resizable_table_state.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/resizable_table_theme.dart",
+          "destination": "{installPath}/components/table/_impl/resizable_table_theme.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_cell.dart",
+          "destination": "{installPath}/components/table/_impl/table_cell.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_cell_data.dart",
+          "destination": "{installPath}/components/table/_impl/table_cell_data.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_cell_resize_mode.dart",
+          "destination": "{installPath}/components/table/_impl/table_cell_resize_mode.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_cell_theme.dart",
+          "destination": "{installPath}/components/table/_impl/table_cell_theme.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_cell_theme_builder.dart",
+          "destination": "{installPath}/components/table/_impl/table_cell_theme_builder.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_footer.dart",
+          "destination": "{installPath}/components/table/_impl/table_footer.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_header.dart",
+          "destination": "{installPath}/components/table/_impl/table_header.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_layout_result.dart",
+          "destination": "{installPath}/components/table/_impl/table_layout_result.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_parent_data.dart",
+          "destination": "{installPath}/components/table/_impl/table_parent_data.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_ref.dart",
+          "destination": "{installPath}/components/table/_impl/table_ref.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_row.dart",
+          "destination": "{installPath}/components/table/_impl/table_row.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_size_supplier.dart",
+          "destination": "{installPath}/components/table/_impl/table_size_supplier.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_state.dart",
+          "destination": "{installPath}/components/table/_impl/table_state.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_theme.dart",
+          "destination": "{installPath}/components/table/_impl/table_theme.dart"
+        },
+        {
+          "source": "registry/components/table/_impl/table_widget.dart",
+          "destination": "{installPath}/components/table/_impl/table_widget.dart"
+        },
+        {
+          "source": "registry/components/table/meta.json",
+          "destination": "{installPath}/components/table/meta.json"
+        },
+        {
+          "source": "registry/components/table/table.dart",
+          "destination": "{installPath}/components/table/table.dart"
+        }
+      ],
+      "shared": ["theme", "clickable", "resizer"],
+      "dependsOn": [],
       "pubspec": {
         "dependencies": {
           "data_widget": "^0.0.2"
