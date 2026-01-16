@@ -11,7 +11,7 @@ Goal: migrate components into the registry one-by-one with minimal shared surfac
 - [x] dialog
 - [x] popover
 - [x] drawer
-- [ ] dropdown/menu
+- [x] dropdown/menu
 - [ ] tabs
 - [ ] table
 

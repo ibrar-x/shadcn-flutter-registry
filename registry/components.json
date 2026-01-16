@@ -177,12 +177,52 @@
       ]
     },
     {
+      "id": "subfocus",
+      "description": "Hierarchical focus utilities for keyboard navigation.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/subfocus.dart",
+          "destination": "{sharedPath}/primitives/subfocus.dart"
+        }
+      ]
+    },
+    {
+      "id": "basic_layout",
+      "description": "Basic layout helper for leading/content/trailing rows.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/basic.dart",
+          "destination": "{sharedPath}/primitives/basic.dart"
+        }
+      ]
+    },
+    {
+      "id": "keyboard_shortcut_utils",
+      "description": "Keyboard shortcut helpers and display handle.",
+      "files": [
+        {
+          "source": "registry/shared/utils/keyboard_shortcut_utils.dart",
+          "destination": "{sharedPath}/utils/keyboard_shortcut_utils.dart"
+        }
+      ]
+    },
+    {
       "id": "lucide_icons",
       "description": "Lucide icon font mappings used by controls.",
       "files": [
         {
           "source": "registry/shared/icons/lucide_icons.dart",
           "destination": "{sharedPath}/icons/lucide_icons.dart"
+        }
+      ]
+    },
+    {
+      "id": "radix_icons",
+      "description": "Radix icon font mappings used by menus.",
+      "files": [
+        {
+          "source": "registry/shared/icons/radix_icons.dart",
+          "destination": "{sharedPath}/icons/radix_icons.dart"
         }
       ]
     },
@@ -736,6 +776,176 @@
         "dependencies": {
           "data_widget": "^0.0.2",
           "gap": "^3.0.1"
+        }
+      },
+      "assets": [],
+      "postInstall": []
+    },
+    {
+      "id": "menu",
+      "name": "Menu",
+      "description": "Menu primitives, items, and popup container.",
+      "category": "overlay",
+      "tags": ["menu", "overlay", "navigation"],
+      "files": [
+        {
+          "source": "registry/components/menu/menu.dart",
+          "destination": "{installPath}/components/menu/menu.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_text_styles.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_text_styles.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_theme.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_theme.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_shortcut.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_shortcut.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_item.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_item.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_radio_group.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_radio_group.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_radio.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_radio.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_divider.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_divider.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_gap.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_gap.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_button.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_button.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_label.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_label.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_checkbox.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_checkbox.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_button_state.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_button_state.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_group_data.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_group_data.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_data.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_data.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_group.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_group.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_group_state.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_group_state.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_intents.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_intents.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_overlay_handler.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_overlay_handler.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_directional_intent.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_directional_intent.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_popup_theme.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_popup_theme.dart"
+        },
+        {
+          "source": "registry/components/menu/_impl/menu_popup.dart",
+          "destination": "{installPath}/components/menu/_impl/menu_popup.dart"
+        },
+        {
+          "source": "registry/components/menu/README.md",
+          "destination": "{installPath}/components/menu/README.md"
+        },
+        {
+          "source": "registry/components/menu/meta.json",
+          "destination": "{installPath}/components/menu/meta.json"
+        }
+      ],
+      "shared": [
+        "theme",
+        "color_extensions",
+        "constants",
+        "style_value",
+        "overlay",
+        "subfocus",
+        "basic_layout",
+        "keyboard_shortcut_utils",
+        "radix_icons"
+      ],
+      "dependsOn": ["dialog", "drawer"],
+      "pubspec": {
+        "dependencies": {
+          "data_widget": "^0.0.2",
+          "gap": "^3.0.1"
+        }
+      },
+      "assets": [],
+      "postInstall": []
+    },
+    {
+      "id": "dropdown_menu",
+      "name": "Dropdown Menu",
+      "description": "Dropdown menu overlay built on menu primitives.",
+      "category": "overlay",
+      "tags": ["menu", "dropdown", "overlay"],
+      "files": [
+        {
+          "source": "registry/components/dropdown_menu/dropdown_menu.dart",
+          "destination": "{installPath}/components/dropdown_menu/dropdown_menu.dart"
+        },
+        {
+          "source": "registry/components/dropdown_menu/_impl/dropdown_menu_api.dart",
+          "destination": "{installPath}/components/dropdown_menu/_impl/dropdown_menu_api.dart"
+        },
+        {
+          "source": "registry/components/dropdown_menu/_impl/dropdown_menu_theme.dart",
+          "destination": "{installPath}/components/dropdown_menu/_impl/dropdown_menu_theme.dart"
+        },
+        {
+          "source": "registry/components/dropdown_menu/_impl/dropdown_menu_widget.dart",
+          "destination": "{installPath}/components/dropdown_menu/_impl/dropdown_menu_widget.dart"
+        },
+        {
+          "source": "registry/components/dropdown_menu/README.md",
+          "destination": "{installPath}/components/dropdown_menu/README.md"
+        },
+        {
+          "source": "registry/components/dropdown_menu/meta.json",
+          "destination": "{installPath}/components/dropdown_menu/meta.json"
+        }
+      ],
+      "shared": [
+        "theme",
+        "overlay"
+      ],
+      "dependsOn": ["menu", "drawer"],
+      "pubspec": {
+        "dependencies": {
+          "data_widget": "^0.0.2"
         }
       },
       "assets": [],
