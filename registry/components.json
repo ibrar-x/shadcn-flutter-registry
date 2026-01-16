@@ -197,6 +197,16 @@
       ]
     },
     {
+      "id": "fade_scroll",
+      "description": "Scroll edge fade helper for scrollable content.",
+      "files": [
+        {
+          "source": "registry/shared/primitives/fade_scroll.dart",
+          "destination": "{sharedPath}/primitives/fade_scroll.dart"
+        }
+      ]
+    },
+    {
       "id": "keyboard_shortcut_utils",
       "description": "Keyboard shortcut helpers and display handle.",
       "files": [
@@ -943,6 +953,225 @@
         "overlay"
       ],
       "dependsOn": ["menu", "drawer"],
+      "pubspec": {
+        "dependencies": {
+          "data_widget": "^0.0.2"
+        }
+      },
+      "assets": [],
+      "postInstall": []
+    },
+    {
+      "id": "sortable",
+      "name": "Sortable",
+      "description": "Drag-and-drop sorting primitives with drop zones and scrolling.",
+      "category": "layout",
+      "tags": ["drag", "sortable", "interaction"],
+      "files": [
+        {
+          "source": "registry/components/sortable/sortable.dart",
+          "destination": "{installPath}/components/sortable/sortable.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_widget.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_widget.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_dragging_session.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_dragging_session.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_drop_location.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_drop_location.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_drop_fallback.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_drop_fallback.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_drop_fallback_state.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_drop_fallback_state.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_dropping_target.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_dropping_target.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_drop_transform.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_drop_transform.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_state_part1.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_state_part1.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_state_part2.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_state_part2.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_drag_handle.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_drag_handle.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_drag_handle_state.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_drag_handle_state.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_data.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_data.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_layer.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_layer.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_pending_drop_transform.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_pending_drop_transform.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/sortable_layer_state.dart",
+          "destination": "{installPath}/components/sortable/_impl/sortable_layer_state.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/scrollable_sortable_layer.dart",
+          "destination": "{installPath}/components/sortable/_impl/scrollable_sortable_layer.dart"
+        },
+        {
+          "source": "registry/components/sortable/_impl/scrollable_sortable_layer_state.dart",
+          "destination": "{installPath}/components/sortable/_impl/scrollable_sortable_layer_state.dart"
+        },
+        {
+          "source": "registry/components/sortable/README.md",
+          "destination": "{installPath}/components/sortable/README.md"
+        },
+        {
+          "source": "registry/components/sortable/meta.json",
+          "destination": "{installPath}/components/sortable/meta.json"
+        }
+      ],
+      "shared": ["constants"],
+      "dependsOn": [],
+      "pubspec": {
+        "dependencies": {
+          "data_widget": "^0.0.2"
+        }
+      },
+      "assets": [],
+      "postInstall": []
+    },
+    {
+      "id": "tabs",
+      "name": "Tabs",
+      "description": "Tabbed navigation primitives with lists and panes.",
+      "category": "navigation",
+      "tags": ["tabs", "navigation", "layout"],
+      "files": [
+        {
+          "source": "registry/components/tabs/tabs.dart",
+          "destination": "{installPath}/components/tabs/tabs.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tabs_text_styles.dart",
+          "destination": "{installPath}/components/tabs/_impl/tabs_text_styles.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tabs_theme.dart",
+          "destination": "{installPath}/components/tabs/_impl/tabs_theme.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tabs_widget.dart",
+          "destination": "{installPath}/components/tabs/_impl/tabs_widget.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_list_theme.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_list_theme.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_list.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_list.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_container_theme.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_container_theme.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_container_data.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_container_data.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_child_widget.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_child_widget.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/keyed_tab_child_widget.dart",
+          "destination": "{installPath}/components/tabs/_impl/keyed_tab_child_widget.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_item.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_item.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/keyed_tab_item.dart",
+          "destination": "{installPath}/components/tabs/_impl/keyed_tab_item.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_builder_typedefs.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_builder_typedefs.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_container.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_container.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_pane_theme.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_pane_theme.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_pane_data.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_pane_data.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_pane_typedefs.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_pane_typedefs.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_pane_widget.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_pane_widget.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_ghost_data.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_ghost_data.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_pane_state.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_pane_state.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/tab_item_painter.dart",
+          "destination": "{installPath}/components/tabs/_impl/tab_item_painter.dart"
+        },
+        {
+          "source": "registry/components/tabs/_impl/clip_rect_with_adjustment.dart",
+          "destination": "{installPath}/components/tabs/_impl/clip_rect_with_adjustment.dart"
+        },
+        {
+          "source": "registry/components/tabs/README.md",
+          "destination": "{installPath}/components/tabs/README.md"
+        },
+        {
+          "source": "registry/components/tabs/meta.json",
+          "destination": "{installPath}/components/tabs/meta.json"
+        }
+      ],
+      "shared": [
+        "theme",
+        "border_utils",
+        "style_value",
+        "constants",
+        "outlined_container",
+        "fade_scroll"
+      ],
+      "dependsOn": ["sortable"],
       "pubspec": {
         "dependencies": {
           "data_widget": "^0.0.2"
