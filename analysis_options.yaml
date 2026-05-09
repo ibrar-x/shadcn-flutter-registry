@@ -1,8 +1,8 @@
-include: package:flutter_lints/flutter.yaml
+analyzer:
+  exclude:
+    - registry/**
 
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
 linter:
   rules:
-  - public_member_api_docs
-  #    - package_api_docs
+    - avoid_print
+    - prefer_final_locals

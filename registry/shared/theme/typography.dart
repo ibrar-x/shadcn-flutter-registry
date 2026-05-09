@@ -115,10 +115,14 @@ class Typography {
 
   /// Creates a typography with Geist font family.
   const Typography.geist({
-    this.sans =
-        const TextStyle(fontFamily: 'GeistSans'),
-    this.mono =
-        const TextStyle(fontFamily: 'GeistMono'),
+    this.sans = const TextStyle(
+      fontFamily: 'GeistSans',
+      fontFamilyFallback: ['NotoSansSymbols2'],
+    ),
+    this.mono = const TextStyle(
+      fontFamily: 'GeistMono',
+      fontFamilyFallback: ['NotoSansSymbols2'],
+    ),
     this.xSmall = const TextStyle(fontSize: 12),
     this.small = const TextStyle(fontSize: 14),
     this.base = const TextStyle(fontSize: 16),
@@ -148,9 +152,16 @@ class Typography {
     this.h4 = const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
     this.p = const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
     this.blockQuote = const TextStyle(
-        fontSize: 16, fontWeight: FontWeight.w400, fontStyle: FontStyle.italic),
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      fontStyle: FontStyle.italic,
+    ),
     this.inlineCode = const TextStyle(
-        fontFamily: 'GeistMono', fontSize: 14, fontWeight: FontWeight.w600),
+      fontFamily: 'GeistMono',
+      fontFamilyFallback: ['NotoSansSymbols2'],
+      fontSize: 14,
+      fontWeight: FontWeight.w600,
+    ),
     this.lead = const TextStyle(fontSize: 20),
     this.textLarge = const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
     this.textSmall = const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
@@ -443,6 +454,7 @@ class Typography {
   }
 
   @override
+/// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) =>
       identical(this, other) ||
       other is Typography &&
@@ -523,6 +535,7 @@ class Typography {
       textMuted.hashCode;
 
   @override
+/// Executes `toString` behavior for this component/composite.
   String toString() {
     return 'Typography(sans: $sans, mono: $mono, xSmall: $xSmall, small: $small, base: $base, large: $large, xLarge: $xLarge, x2Large: $x2Large, x3Large: $x3Large, x4Large: $x4Large, x5Large: $x5Large, x6Large: $x6Large, x7Large: $x7Large, x8Large: $x8Large, x9Large: $x9Large, thin: $thin, light: $light, extraLight: $extraLight, normal: $normal, medium: $medium, semiBold: $semiBold, bold: $bold, extraBold: $extraBold, black: $black, italic: $italic, h1: $h1, h2: $h2, h3: $h3, h4: $h4, p: $p, blockQuote: $blockQuote, inlineCode: $inlineCode, lead: $lead, textLarge: $textLarge, textSmall: $textSmall, textMuted: $textMuted)';
   }
