@@ -53,7 +53,7 @@
             "type": "copyDir",
             "from": "registry/shared",
             "to": "lib/ui/shadcn/shared",
-            "index": "registry/manifests/shared_init_files.json",
+            "index": "registry/manifests/shared_init_files.v2.json",
             "overwrite": false
           },
           {
