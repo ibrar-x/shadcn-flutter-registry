@@ -53,6 +53,7 @@
             "type": "copyDir",
             "from": "shared",
             "to": "lib/ui/shadcn/shared",
+            "index": "manifests/shared_init_files.json",
             "overwrite": false
           },
           {
