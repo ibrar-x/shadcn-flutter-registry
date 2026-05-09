@@ -14,14 +14,14 @@
       "minCliVersion": "0.2.0",
       "homepage": "https://github.com/ibrar-x/shadcn-flutter-registry",
       "description": "Production Flutter shadcn component registry.",
-      "baseUrl": "https://raw.githubusercontent.com/ibrar-x/shadcn-flutter-registry/master/registry",
+      "baseUrl": "https://raw.githubusercontent.com/ibrar-x/shadcn-flutter-registry/master",
       "paths": {
-        "componentsJson": "components.json",
-        "componentsSchemaJson": "components.schema.json",
-        "indexJson": "manifests/index.json",
-        "indexSchemaJson": "manifests/index.schema.json",
-        "themesJson": "manifests/theme.index.json",
-        "themesSchemaJson": "manifests/themes.index.schema.json"
+        "componentsJson": "registry/components.json",
+        "componentsSchemaJson": "registry/components.schema.json",
+        "indexJson": "registry/manifests/index.json",
+        "indexSchemaJson": "registry/manifests/index.schema.json",
+        "themesJson": "registry/manifests/theme.index.json",
+        "themesSchemaJson": "registry/manifests/themes.index.schema.json"
       },
       "install": {
         "namespace": "shadcn",
@@ -51,9 +51,9 @@
           },
           {
             "type": "copyDir",
-            "from": "shared",
+            "from": "registry/shared",
             "to": "lib/ui/shadcn/shared",
-            "index": "manifests/shared_init_files.json",
+            "index": "registry/manifests/shared_init_files.json",
             "overwrite": false
           },
           {
