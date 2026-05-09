@@ -64,7 +64,9 @@
               "registry/components/utility/locale_utils/_impl/core/duration_part.dart",
               "registry/components/utility/locale_utils/_impl/core/time_part.dart",
               "registry/components/utility/locale_utils/locale_utils.dart"
-            ]
+            ],
+            "base": "registry",
+            "destBase": "lib/ui/shadcn"
           },
           {
             "type": "mergePubspec",
