@@ -1,0 +1,80 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ibrar-x/shadcn-flutter-registry/master/registries.schema.json",
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-09T00:00:00Z",
+  "registries": [
+    {
+      "id": "shadcn",
+      "displayName": "shadcn_flutter_kit",
+      "maintainers": [
+        "ibrar-x"
+      ],
+      "repo": "https://github.com/ibrar-x/shadcn-flutter-registry",
+      "license": "MIT",
+      "minCliVersion": "0.2.0",
+      "homepage": "https://github.com/ibrar-x/shadcn-flutter-registry",
+      "description": "Production Flutter shadcn component registry.",
+      "baseUrl": "https://raw.githubusercontent.com/ibrar-x/shadcn-flutter-registry/master",
+      "paths": {
+        "componentsJson": "registry/components.v2.json",
+        "componentsSchemaJson": "registry/components.schema.json",
+        "indexJson": "registry/manifests/index.json",
+        "indexSchemaJson": "registry/manifests/index.schema.json",
+        "themesJson": "registry/manifests/theme.index.v2.json",
+        "themesSchemaJson": "registry/manifests/themes.index.schema.json"
+      },
+      "install": {
+        "namespace": "shadcn",
+        "root": "lib/ui/shadcn"
+      },
+      "capabilities": {
+        "sharedGroups": true,
+        "composites": true,
+        "theme": true
+      },
+      "init": {
+        "version": 1,
+        "description": "Bootstrap shared core files and baseline dependencies for flutter_shadcn.",
+        "actions": [
+          {
+            "type": "message",
+            "lines": [
+              "shared core: theme, primitives, utils, icons, fonts, and localization support",
+              "pub dependencies: data_widget, gap"
+            ]
+          },
+          {
+            "type": "ensureDirs",
+            "dirs": [
+              "lib/ui/shadcn/shared"
+            ]
+          },
+          {
+            "type": "copyDir",
+            "from": "registry/shared",
+            "to": "lib/ui/shadcn/shared",
+            "index": "registry/manifests/shared_init_files.v2.json",
+            "overwrite": false
+          },
+          {
+            "type": "copyFiles",
+            "overwrite": false,
+            "files": [
+              "registry/components/utility/locale_utils/_impl/core/date_part.dart",
+              "registry/components/utility/locale_utils/_impl/core/duration_part.dart",
+              "registry/components/utility/locale_utils/_impl/core/time_part.dart",
+              "registry/components/utility/locale_utils/locale_utils.dart"
+            ]
+          },
+          {
+            "type": "mergePubspec",
+            "dependencies": {
+              "data_widget": "^0.0.2",
+              "gap": "^3.0.1"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
