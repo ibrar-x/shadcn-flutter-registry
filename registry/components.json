@@ -5669,7 +5669,8 @@
         "button",
         "dropzone",
         "linear_progress_indicator",
-        "scaffold"
+        "scaffold",
+        "file_input"
       ],
       "pubspec": {
         "dependencies": {

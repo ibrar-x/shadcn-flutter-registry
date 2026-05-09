@@ -57,6 +57,16 @@
             "overwrite": false
           },
           {
+            "type": "copyFiles",
+            "overwrite": false,
+            "files": [
+              "registry/components/utility/locale_utils/_impl/core/date_part.dart",
+              "registry/components/utility/locale_utils/_impl/core/duration_part.dart",
+              "registry/components/utility/locale_utils/_impl/core/time_part.dart",
+              "registry/components/utility/locale_utils/locale_utils.dart"
+            ]
+          },
+          {
             "type": "mergePubspec",
             "dependencies": {
               "data_widget": "^0.0.2",
