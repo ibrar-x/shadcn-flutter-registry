@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ibrar-x/shadcn-flutter-registry/master/registries.schema.json",
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-09T00:00:00Z",
+  "registries": [
+    {
+      "id": "shadcn",
+      "displayName": "shadcn_flutter_kit",
+      "maintainers": [
+        "ibrar-x"
+      ],
+      "repo": "https://github.com/ibrar-x/shadcn-flutter-registry",
+      "license": "MIT",
+      "minCliVersion": "0.2.0",
+      "homepage": "https://github.com/ibrar-x/shadcn-flutter-registry",
+      "description": "Production Flutter shadcn component registry.",
+      "baseUrl": "https://raw.githubusercontent.com/ibrar-x/shadcn-flutter-registry/master",
+      "paths": {
+        "componentsJson": "registry/components.json",
+        "componentsSchemaJson": "registry/components.schema.json",
+        "indexJson": "registry/manifests/index.json",
+        "indexSchemaJson": "registry/manifests/index.schema.json",
+        "themesJson": "registry/manifests/theme.index.json",
+        "themesSchemaJson": "registry/manifests/themes.index.schema.json"
+      },
+      "install": {
+        "namespace": "shadcn",
+        "root": "lib/ui/shadcn"
+      },
+      "capabilities": {
+        "sharedGroups": true,
+        "composites": true,
+        "theme": true
+      }
+    }
+  ]
+}

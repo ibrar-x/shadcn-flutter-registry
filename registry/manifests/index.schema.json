@@ -6,6 +6,7 @@
   "additionalProperties": false,
   "required": ["schemaVersion", "generatedAt", "components"],
   "properties": {
+    "$schema": { "type": "string" },
     "schemaVersion": { "type": "integer", "minimum": 1 },
     "generatedAt": { "type": "string" },
     "components": {
@@ -41,7 +42,10 @@
 
           "api": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
             "required": ["constructors", "callbacks"],
             "properties": {
               "constructors": { "type": "array", "items": { "type": "string" } },
