@@ -31,6 +31,38 @@
         "sharedGroups": true,
         "composites": true,
         "theme": true
+      },
+      "init": {
+        "version": 1,
+        "description": "Bootstrap shared core files and baseline dependencies for flutter_shadcn.",
+        "actions": [
+          {
+            "type": "message",
+            "lines": [
+              "shared core: theme, primitives, utils, icons, fonts, and localization support",
+              "pub dependencies: data_widget, gap"
+            ]
+          },
+          {
+            "type": "ensureDirs",
+            "dirs": [
+              "lib/ui/shadcn/shared"
+            ]
+          },
+          {
+            "type": "copyDir",
+            "from": "shared",
+            "to": "lib/ui/shadcn/shared",
+            "overwrite": false
+          },
+          {
+            "type": "mergePubspec",
+            "dependencies": {
+              "data_widget": "^0.0.2",
+              "gap": "^3.0.1"
+            }
+          }
+        ]
       }
     }
   ]
