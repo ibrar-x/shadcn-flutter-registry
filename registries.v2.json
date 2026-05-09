@@ -20,7 +20,7 @@
         "componentsSchemaJson": "registry/components.schema.json",
         "indexJson": "registry/manifests/index.json",
         "indexSchemaJson": "registry/manifests/index.schema.json",
-        "themesJson": "registry/manifests/theme.index.json",
+        "themesJson": "registry/manifests/theme.index.v2.json",
         "themesSchemaJson": "registry/manifests/themes.index.schema.json"
       },
       "install": {
