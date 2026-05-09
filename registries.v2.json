@@ -16,7 +16,7 @@
       "description": "Production Flutter shadcn component registry.",
       "baseUrl": "https://raw.githubusercontent.com/ibrar-x/shadcn-flutter-registry/master",
       "paths": {
-        "componentsJson": "registry/components.json",
+        "componentsJson": "registry/components.v2.json",
         "componentsSchemaJson": "registry/components.schema.json",
         "indexJson": "registry/manifests/index.json",
         "indexSchemaJson": "registry/manifests/index.schema.json",
