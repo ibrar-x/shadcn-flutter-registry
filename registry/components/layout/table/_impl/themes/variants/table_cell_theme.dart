@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../table.dart';
 
 /// TableCellTheme defines a reusable type for this registry module.
@@ -45,6 +47,7 @@ class TableCellTheme {
   const TableCellTheme({this.border, this.backgroundColor, this.textStyle});
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -80,9 +83,8 @@ class TableCellTheme {
   }) {
     return TableCellTheme(
       border: border == null ? this.border : border(),
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       textStyle: textStyle == null ? this.textStyle : textStyle(),
     );
   }

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../text_field.dart';
 
 /// _AutoCompleteState stores and manages mutable widget state.
@@ -163,28 +165,28 @@ class _AutoCompleteState extends State<AutoComplete> {
               ? {
                   NavigateSuggestionIntent:
                       CallbackAction<NavigateSuggestionIntent>(
-                        onInvoke: (intent) {
-                          final direction = intent.direction;
-                          final selectedIndex = _selectedIndex.value;
-                          final suggestions = _suggestions.value;
-                          if (suggestions.isEmpty) {
-                            return;
-                          }
-                          final newSelectedIndex =
-                              (selectedIndex + direction) % suggestions.length;
-                          _selectedIndex.value = newSelectedIndex < 0
-                              ? suggestions.length - 1
-                              : newSelectedIndex;
-                          return;
-                        },
-                      ),
+                    onInvoke: (intent) {
+                      final direction = intent.direction;
+                      final selectedIndex = _selectedIndex.value;
+                      final suggestions = _suggestions.value;
+                      if (suggestions.isEmpty) {
+                        return;
+                      }
+                      final newSelectedIndex =
+                          (selectedIndex + direction) % suggestions.length;
+                      _selectedIndex.value = newSelectedIndex < 0
+                          ? suggestions.length - 1
+                          : newSelectedIndex;
+                      return;
+                    },
+                  ),
                   AcceptSuggestionIntent:
                       CallbackAction<AcceptSuggestionIntent>(
-                        onInvoke: (intent) {
-                          _handleProceed();
-                          return;
-                        },
-                      ),
+                    onInvoke: (intent) {
+                      _handleProceed();
+                      return;
+                    },
+                  ),
                 }
               : null,
           child: widget.child,

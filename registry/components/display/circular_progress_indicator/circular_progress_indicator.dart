@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/material.dart' as mat;
 import 'package:flutter/widgets.dart';
 
@@ -66,9 +68,8 @@ class CircularProgressIndicator extends StatelessWidget {
     final effectiveColor = styleValue(
       widgetValue: color,
       themeValue: compTheme?.color,
-      defaultValue: onSurface
-          ? theme.colorScheme.background
-          : theme.colorScheme.primary,
+      defaultValue:
+          onSurface ? theme.colorScheme.background : theme.colorScheme.primary,
     );
 
     final effectiveBackgroundColor = styleValue(

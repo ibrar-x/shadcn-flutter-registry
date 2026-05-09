@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form.dart';
 
 /// A validator that negates the result of another validator.
@@ -19,7 +21,7 @@ class NotValidator<T> extends Validator<T> {
 
   /// Custom error message, or null to use default localized message.
   final String?
-  message; // if null, use default message from ShadcnLocalizations
+      message; // if null, use default message from ShadcnLocalizations
 
   /// Creates a [NotValidator] that negates the result of another validator.
   const NotValidator(this.validator, {this.message});

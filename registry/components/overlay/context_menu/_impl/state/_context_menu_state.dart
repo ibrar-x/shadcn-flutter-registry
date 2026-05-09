@@ -1,19 +1,23 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../context_menu.dart';
 
 /// _ContextMenuState defines a reusable type for this registry module.
 class _ContextMenuState extends State<ContextMenu> {
-/// Stores `_children` state/configuration for this implementation.
+  /// Stores `_children` state/configuration for this implementation.
   late ValueNotifier<List<MenuItem>> _children;
 
   @override
-/// Executes `initState` behavior for this component/composite.
+
+  /// Executes `initState` behavior for this component/composite.
   void initState() {
     super.initState();
     _children = ValueNotifier(widget.items);
   }
 
   @override
-/// Executes `didUpdateWidget` behavior for this component/composite.
+
+  /// Executes `didUpdateWidget` behavior for this component/composite.
   void didUpdateWidget(covariant ContextMenu oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (!listEquals(widget.items, oldWidget.items)) {
@@ -24,18 +28,19 @@ class _ContextMenuState extends State<ContextMenu> {
   }
 
   @override
-/// Executes `dispose` behavior for this component/composite.
+
+  /// Executes `dispose` behavior for this component/composite.
   void dispose() {
     _children.dispose();
     super.dispose();
   }
 
   @override
-/// Executes `build` behavior for this component/composite.
+
+  /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final platform = Theme.of(context).platform;
-    final bool enableLongPress =
-        platform == TargetPlatform.iOS ||
+    final bool enableLongPress = platform == TargetPlatform.iOS ||
         platform == TargetPlatform.android ||
         platform == TargetPlatform.fuchsia;
     return GestureDetector(
@@ -43,7 +48,7 @@ class _ContextMenuState extends State<ContextMenu> {
       onSecondaryTapDown: !widget.enabled
           ? null
           : (details) {
-/// Creates a `_showContextMenu` instance.
+              /// Creates a `_showContextMenu` instance.
               _showContextMenu(
                 context,
                 details.globalPosition,
@@ -53,7 +58,7 @@ class _ContextMenuState extends State<ContextMenu> {
             },
       onLongPressStart: enableLongPress && widget.enabled
           ? (details) {
-/// Creates a `_showContextMenu` instance.
+              /// Creates a `_showContextMenu` instance.
               _showContextMenu(
                 context,
                 details.globalPosition,
@@ -102,9 +107,9 @@ Future<void> _showContextMenu(
                 child: MenuGroup(
                   itemPadding: isSheetOverlay
                       ? EdgeInsets.symmetric(
-                              horizontal: theme.density.baseGap,
-                            ) *
-                            theme.scaling
+                            horizontal: theme.density.baseGap,
+                          ) *
+                          theme.scaling
                       : EdgeInsets.zero,
                   direction: direction,
                   regionGroupId: key,

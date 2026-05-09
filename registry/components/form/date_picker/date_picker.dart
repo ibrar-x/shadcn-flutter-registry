@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../display/calendar/calendar.dart';
@@ -132,9 +134,8 @@ class DatePicker extends StatelessWidget {
               ? null
               : CalendarValue.single(handler.value!),
           onChanged: (value) {
-            handler.value = value == null
-                ? null
-                : (value as SingleCalendarValue).date;
+            handler.value =
+                value == null ? null : (value as SingleCalendarValue).date;
           },
           stateBuilder: stateBuilder,
         );

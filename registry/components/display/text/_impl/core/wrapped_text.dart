@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../text.dart';
 
 /// A widget that wraps text with customizable styling and layout.
@@ -166,9 +168,8 @@ class WrappedText extends StatelessWidget implements TextModifier {
       softWrap: softWrap == null ? this.softWrap : softWrap(),
       overflow: overflow == null ? this.overflow : overflow(),
       maxLines: maxLines == null ? this.maxLines : maxLines(),
-      textWidthBasis: textWidthBasis == null
-          ? this.textWidthBasis
-          : textWidthBasis(),
+      textWidthBasis:
+          textWidthBasis == null ? this.textWidthBasis : textWidthBasis(),
       child: child == null ? this.child : child(),
     );
   }

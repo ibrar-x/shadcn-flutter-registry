@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math';
 
 import 'package:flutter/gestures.dart';
@@ -63,15 +65,15 @@ class ScrollableClientTheme extends ComponentThemeData {
           ? this.keyboardDismissBehavior
           : keyboardDismissBehavior(),
       clipBehavior: clipBehavior == null ? this.clipBehavior : clipBehavior(),
-      hitTestBehavior: hitTestBehavior == null
-          ? this.hitTestBehavior
-          : hitTestBehavior(),
+      hitTestBehavior:
+          hitTestBehavior == null ? this.hitTestBehavior : hitTestBehavior(),
       overscroll: overscroll == null ? this.overscroll : overscroll(),
     );
   }
 
   @override
-/// Executes `operator ==` behavior for this component/composite.
+
+  /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) =>
       other is ScrollableClientTheme &&
       other.diagonalDragBehavior == diagonalDragBehavior &&
@@ -83,28 +85,28 @@ class ScrollableClientTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    diagonalDragBehavior,
-    dragStartBehavior,
-    keyboardDismissBehavior,
-    clipBehavior,
-    hitTestBehavior,
-    overscroll,
-  );
+        diagonalDragBehavior,
+        dragStartBehavior,
+        keyboardDismissBehavior,
+        clipBehavior,
+        hitTestBehavior,
+        overscroll,
+      );
 
   @override
-/// Executes `toString` behavior for this component/composite.
+
+  /// Executes `toString` behavior for this component/composite.
   String toString() =>
       'ScrollableClientTheme(diagonalDragBehavior: $diagonalDragBehavior, dragStartBehavior: $dragStartBehavior, keyboardDismissBehavior: $keyboardDismissBehavior, clipBehavior: $clipBehavior, hitTestBehavior: $hitTestBehavior, overscroll: $overscroll)';
 }
 
 /// Builder function for creating scrollable content with viewport information.
-typedef ScrollableBuilder =
-    Widget Function(
-      BuildContext context,
-      Offset offset,
-      Size viewportSize,
-      Widget? child,
-    );
+typedef ScrollableBuilder = Widget Function(
+  BuildContext context,
+  Offset offset,
+  Size viewportSize,
+  Widget? child,
+);
 
 /// A customizable scrollable widget with two-axis scrolling support.
 

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math';
 
 import 'package:data_widget/data_widget.dart';
@@ -83,7 +85,8 @@ class ResizableDraggerTheme extends ComponentThemeData {
   }
 
   @override
-/// Executes `operator ==` behavior for this component/composite.
+
+  /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     return other is ResizableDraggerTheme &&
@@ -173,12 +176,13 @@ mixin ResizablePaneController implements ValueListenable<double> {
   }
 
   _ResizablePaneState? _paneState;
-/// Executes `_attachPaneState` behavior for this component/composite.
+
+  /// Executes `_attachPaneState` behavior for this component/composite.
   void _attachPaneState(_ResizablePaneState panelData) {
     _paneState = panelData;
   }
 
-/// Executes `_detachPaneState` behavior for this component/composite.
+  /// Executes `_detachPaneState` behavior for this component/composite.
   void _detachPaneState(_ResizablePaneState panelData) {
     if (_paneState == panelData) {
       _paneState = null;
@@ -290,5 +294,5 @@ typedef OptionalWidgetBuilder = Widget? Function(BuildContext context);
 /// Used internally to pass layout direction information through the widget tree.
 
 /// Type alias for `_ResizableLayoutCallback` used by public or internal APIs.
-typedef _ResizableLayoutCallback =
-    void Function(double panelSize, double flexCount);
+typedef _ResizableLayoutCallback = void Function(
+    double panelSize, double flexCount);

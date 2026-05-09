@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -73,8 +75,8 @@ class _GooeyToastPreviewState extends State<GooeyToastPreview> {
   /// Custom step description input controller.
   final TextEditingController _customDescriptionController =
       TextEditingController(
-        text: 'Preparing your itinerary and verifying payment.',
-      );
+    text: 'Preparing your itinerary and verifying payment.',
+  );
 
   /// Custom step duration input controller in milliseconds.
   final TextEditingController _customDurationController = TextEditingController(
@@ -300,8 +302,7 @@ class _GooeyToastPreviewState extends State<GooeyToastPreview> {
     }) async {
       final resolvedCompactGap =
           compactGap ?? const Duration(milliseconds: 260);
-      final resolvedExpandedAutopilot =
-          expandedAutopilot ??
+      final resolvedExpandedAutopilot = expandedAutopilot ??
           const GooeyAutopilot(
             expandDelay: Duration.zero,
             collapseDelay: Duration(milliseconds: 2200),
@@ -1095,8 +1096,7 @@ class _GooeyToastPreviewState extends State<GooeyToastPreview> {
       bool? persistUntilDismissed,
       ValueChanged<GooeyToastExpansionPhase>? onExpansionPhaseChanged,
       ValueChanged<double>? onExpansionProgressChanged,
-    })
-    show,
+    }) show,
     Future<void> Function({
       required String id,
       required Object stateTag,
@@ -1112,8 +1112,7 @@ class _GooeyToastPreviewState extends State<GooeyToastPreview> {
       Duration? nextCompactGap,
       ValueChanged<GooeyToastExpansionPhase>? onExpandedPhaseChanged,
       ValueChanged<double>? onExpandedProgressChanged,
-    })
-    transitionToState,
+    }) transitionToState,
   ) {
     for (final timer in _flowTimers) {
       timer.cancel();
@@ -1911,8 +1910,7 @@ class _GooeyToastPreviewState extends State<GooeyToastPreview> {
                                     ),
                                     _PlaygroundChip(
                                       label: 'Next State',
-                                      selected:
-                                          _selectedAction ==
+                                      selected: _selectedAction ==
                                           _DemoAction.customStateFlow,
                                       onTap: () => _triggerDemo(
                                         _DemoAction.customStateFlow,
@@ -1981,15 +1979,14 @@ class _GooeyToastPreviewState extends State<GooeyToastPreview> {
                                     _PlaygroundChip(
                                       label:
                                           'trigger ${(_customFlowProgressTrigger * 100).round()}%',
-                                      selected:
-                                          _customFlowAdvanceMode ==
+                                      selected: _customFlowAdvanceMode ==
                                           _FlowAdvanceMode.progress,
                                       onTap: () => setState(
                                         () => _customFlowProgressTrigger =
                                             _customFlowProgressTrigger >= 0.95
-                                            ? 0.5
-                                            : (_customFlowProgressTrigger +
-                                                  0.1),
+                                                ? 0.5
+                                                : (_customFlowProgressTrigger +
+                                                    0.1),
                                       ),
                                       minWidth: ultra ? 112 : 132,
                                       minHeight: chipHeight,
@@ -2015,8 +2012,8 @@ class _GooeyToastPreviewState extends State<GooeyToastPreview> {
                                       onTap: () => setState(
                                         () => _compactMorphMs =
                                             _compactMorphMs >= 420
-                                            ? 160
-                                            : _compactMorphMs + 40,
+                                                ? 160
+                                                : _compactMorphMs + 40,
                                       ),
                                       minWidth: ultra ? 112 : 128,
                                       minHeight: chipHeight,
@@ -2030,8 +2027,8 @@ class _GooeyToastPreviewState extends State<GooeyToastPreview> {
                                       onTap: () => setState(
                                         () => _compactMorphSlide =
                                             _compactMorphSlide >= 0.28
-                                            ? 0.06
-                                            : (_compactMorphSlide + 0.04),
+                                                ? 0.06
+                                                : (_compactMorphSlide + 0.04),
                                       ),
                                       minWidth: ultra ? 112 : 126,
                                       minHeight: chipHeight,
@@ -2045,8 +2042,9 @@ class _GooeyToastPreviewState extends State<GooeyToastPreview> {
                                       onTap: () => setState(
                                         () => _compactMorphScaleFrom =
                                             _compactMorphScaleFrom <= 0.82
-                                            ? 0.96
-                                            : (_compactMorphScaleFrom - 0.04),
+                                                ? 0.96
+                                                : (_compactMorphScaleFrom -
+                                                    0.04),
                                       ),
                                       minWidth: ultra ? 112 : 126,
                                       minHeight: chipHeight,
@@ -2081,17 +2079,15 @@ class _GooeyToastPreviewState extends State<GooeyToastPreview> {
                                           CrossAxisAlignment.start,
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
-                                        for (
-                                          var i = 0;
-                                          i < _customSteps.length;
-                                          i++
-                                        )
+                                        for (var i = 0;
+                                            i < _customSteps.length;
+                                            i++)
                                           Padding(
                                             padding: EdgeInsets.only(
                                               bottom:
                                                   i == _customSteps.length - 1
-                                                  ? 0
-                                                  : 6,
+                                                      ? 0
+                                                      : 6,
                                             ),
                                             child: Text(
                                               '${i + 1}. ${_customSteps[i].state.name} · ${_customSteps[i].title} · ${_customSteps[i].duration.inMilliseconds}ms'
@@ -2942,8 +2938,7 @@ class _AnimatedCompactLabelState extends State<_AnimatedCompactLabel>
   @override
   void didUpdateWidget(covariant _AnimatedCompactLabel oldWidget) {
     super.didUpdateWidget(oldWidget);
-    final changed =
-        oldWidget.title != widget.title ||
+    final changed = oldWidget.title != widget.title ||
         oldWidget.tone != widget.tone ||
         oldWidget.icon != widget.icon;
     if (!changed) return;

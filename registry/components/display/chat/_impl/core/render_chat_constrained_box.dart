@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../chat.dart';
 
 /// A render object that constrains the width of its child and aligns it.
@@ -20,9 +22,9 @@ class RenderChatConstrainedBox extends RenderShiftedBox {
     required double widthFactor,
     required AxisAlignment alignment,
     RenderBox? child,
-  }) : _widthFactor = widthFactor,
-       _alignment = alignment,
-       super(child);
+  })  : _widthFactor = widthFactor,
+        _alignment = alignment,
+        super(child);
 
   /// The fraction of the available width that the child should occupy.
   double get widthFactor => _widthFactor;
@@ -60,8 +62,8 @@ class RenderChatConstrainedBox extends RenderShiftedBox {
     constraints = constraints.copyWith(maxWidth: newMaxWidth, minWidth: 0);
     child!.layout(constraints, parentUsesSize: true);
     size = this.constraints.constrain(
-      Size(this.constraints.maxWidth, child!.size.height),
-    );
+          Size(this.constraints.maxWidth, child!.size.height),
+        );
     double x = _alignment.alongValue(
       Axis.horizontal,
       this.constraints.maxWidth - child!.size.width,

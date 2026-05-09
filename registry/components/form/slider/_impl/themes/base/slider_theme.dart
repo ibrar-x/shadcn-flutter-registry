@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../../../../shared/theme/theme.dart';
@@ -523,23 +525,19 @@ class SliderTheme extends ComponentThemeData {
       fillStopsAtThumbCenter: fillStopsAtThumbCenter == null
           ? this.fillStopsAtThumbCenter
           : fillStopsAtThumbCenter(),
-      fillEdgeBiasPx: fillEdgeBiasPx == null
-          ? this.fillEdgeBiasPx
-          : fillEdgeBiasPx(),
+      fillEdgeBiasPx:
+          fillEdgeBiasPx == null ? this.fillEdgeBiasPx : fillEdgeBiasPx(),
       preset: preset == null ? this.preset : preset(),
       trackBuilder: trackBuilder == null ? this.trackBuilder : trackBuilder(),
       fillBuilder: fillBuilder == null ? this.fillBuilder : fillBuilder(),
       thumbBuilder: thumbBuilder == null ? this.thumbBuilder : thumbBuilder(),
       ticksBuilder: ticksBuilder == null ? this.ticksBuilder : ticksBuilder(),
-      overlayBuilder: overlayBuilder == null
-          ? this.overlayBuilder
-          : overlayBuilder(),
-      segmentLayout: segmentLayout == null
-          ? this.segmentLayout
-          : segmentLayout(),
-      trackRenderer: trackRenderer == null
-          ? this.trackRenderer
-          : trackRenderer(),
+      overlayBuilder:
+          overlayBuilder == null ? this.overlayBuilder : overlayBuilder(),
+      segmentLayout:
+          segmentLayout == null ? this.segmentLayout : segmentLayout(),
+      trackRenderer:
+          trackRenderer == null ? this.trackRenderer : trackRenderer(),
       dragPopoverBuilder: dragPopoverBuilder == null
           ? this.dragPopoverBuilder
           : dragPopoverBuilder(),
@@ -557,21 +555,17 @@ class SliderTheme extends ComponentThemeData {
           ? this.popoverForegroundColor
           : popoverForegroundColor(),
       guideColor: guideColor == null ? this.guideColor : guideColor(),
-      fillActiveColor: fillActiveColor == null
-          ? this.fillActiveColor
-          : fillActiveColor(),
+      fillActiveColor:
+          fillActiveColor == null ? this.fillActiveColor : fillActiveColor(),
       fillInactiveColor: fillInactiveColor == null
           ? this.fillInactiveColor
           : fillInactiveColor(),
-      thumbFillColor: thumbFillColor == null
-          ? this.thumbFillColor
-          : thumbFillColor(),
-      thumbBorderColor: thumbBorderColor == null
-          ? this.thumbBorderColor
-          : thumbBorderColor(),
-      dotsActiveColor: dotsActiveColor == null
-          ? this.dotsActiveColor
-          : dotsActiveColor(),
+      thumbFillColor:
+          thumbFillColor == null ? this.thumbFillColor : thumbFillColor(),
+      thumbBorderColor:
+          thumbBorderColor == null ? this.thumbBorderColor : thumbBorderColor(),
+      dotsActiveColor:
+          dotsActiveColor == null ? this.dotsActiveColor : dotsActiveColor(),
       dotsInactiveColor: dotsInactiveColor == null
           ? this.dotsInactiveColor
           : dotsInactiveColor(),
@@ -585,33 +579,26 @@ class SliderTheme extends ComponentThemeData {
       wavePadding: wavePadding == null ? this.wavePadding : wavePadding(),
       waveBarWidth: waveBarWidth == null ? this.waveBarWidth : waveBarWidth(),
       waveBarGap: waveBarGap == null ? this.waveBarGap : waveBarGap(),
-      waveMinBarHeight: waveMinBarHeight == null
-          ? this.waveMinBarHeight
-          : waveMinBarHeight(),
-      waveMaxBarHeight: waveMaxBarHeight == null
-          ? this.waveMaxBarHeight
-          : waveMaxBarHeight(),
-      waveCornerRadius: waveCornerRadius == null
-          ? this.waveCornerRadius
-          : waveCornerRadius(),
-      waveActiveColor: waveActiveColor == null
-          ? this.waveActiveColor
-          : waveActiveColor(),
+      waveMinBarHeight:
+          waveMinBarHeight == null ? this.waveMinBarHeight : waveMinBarHeight(),
+      waveMaxBarHeight:
+          waveMaxBarHeight == null ? this.waveMaxBarHeight : waveMaxBarHeight(),
+      waveCornerRadius:
+          waveCornerRadius == null ? this.waveCornerRadius : waveCornerRadius(),
+      waveActiveColor:
+          waveActiveColor == null ? this.waveActiveColor : waveActiveColor(),
       waveInactiveColor: waveInactiveColor == null
           ? this.waveInactiveColor
           : waveInactiveColor(),
       waveDisabledOpacity: waveDisabledOpacity == null
           ? this.waveDisabledOpacity
           : waveDisabledOpacity(),
-      waveShowThumb: waveShowThumb == null
-          ? this.waveShowThumb
-          : waveShowThumb(),
-      waveThumbRadius: waveThumbRadius == null
-          ? this.waveThumbRadius
-          : waveThumbRadius(),
-      waveThumbColor: waveThumbColor == null
-          ? this.waveThumbColor
-          : waveThumbColor(),
+      waveShowThumb:
+          waveShowThumb == null ? this.waveShowThumb : waveShowThumb(),
+      waveThumbRadius:
+          waveThumbRadius == null ? this.waveThumbRadius : waveThumbRadius(),
+      waveThumbColor:
+          waveThumbColor == null ? this.waveThumbColor : waveThumbColor(),
       waveThumbBorderColor: waveThumbBorderColor == null
           ? this.waveThumbBorderColor
           : waveThumbBorderColor(),
@@ -692,58 +679,58 @@ class SliderTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hashAll([
-    trackHeight,
-    trackRadius,
-    thumbInset,
-    thumbSize,
-    thumbRadius,
-    thumbEdgeOffsetPx,
-    thumbVerticalOffsetPx,
-    joinGapPx,
-    fillStopsAtThumbCenter,
-    fillEdgeBiasPx,
-    preset,
-    trackBuilder,
-    fillBuilder,
-    thumbBuilder,
-    ticksBuilder,
-    overlayBuilder,
-    segmentLayout,
-    trackRenderer,
-    dragPopoverBuilder,
-    dragPopoverOffset,
-    dragPopoverVisibility,
-    popoverShape,
-    popoverBackgroundColor,
-    popoverForegroundColor,
-    guideColor,
-    fillActiveColor,
-    fillInactiveColor,
-    thumbFillColor,
-    thumbBorderColor,
-    dotsActiveColor,
-    dotsInactiveColor,
-    waveformTicksActiveColor,
-    waveformTicksInactiveColor,
-    waveHeight,
-    wavePadding,
-    waveBarWidth,
-    waveBarGap,
-    waveMinBarHeight,
-    waveMaxBarHeight,
-    waveCornerRadius,
-    waveActiveColor,
-    waveInactiveColor,
-    waveDisabledOpacity,
-    waveShowThumb,
-    waveThumbRadius,
-    waveThumbColor,
-    waveThumbBorderColor,
-    waveThumbBorderWidth,
-    waveHitSlop,
-    waveEnabled,
-    wavePopoverBuilder,
-    wavePopoverOffset,
-    wavePopoverVisibility,
-  ]);
+        trackHeight,
+        trackRadius,
+        thumbInset,
+        thumbSize,
+        thumbRadius,
+        thumbEdgeOffsetPx,
+        thumbVerticalOffsetPx,
+        joinGapPx,
+        fillStopsAtThumbCenter,
+        fillEdgeBiasPx,
+        preset,
+        trackBuilder,
+        fillBuilder,
+        thumbBuilder,
+        ticksBuilder,
+        overlayBuilder,
+        segmentLayout,
+        trackRenderer,
+        dragPopoverBuilder,
+        dragPopoverOffset,
+        dragPopoverVisibility,
+        popoverShape,
+        popoverBackgroundColor,
+        popoverForegroundColor,
+        guideColor,
+        fillActiveColor,
+        fillInactiveColor,
+        thumbFillColor,
+        thumbBorderColor,
+        dotsActiveColor,
+        dotsInactiveColor,
+        waveformTicksActiveColor,
+        waveformTicksInactiveColor,
+        waveHeight,
+        wavePadding,
+        waveBarWidth,
+        waveBarGap,
+        waveMinBarHeight,
+        waveMaxBarHeight,
+        waveCornerRadius,
+        waveActiveColor,
+        waveInactiveColor,
+        waveDisabledOpacity,
+        waveShowThumb,
+        waveThumbRadius,
+        waveThumbColor,
+        waveThumbBorderColor,
+        waveThumbBorderWidth,
+        waveHitSlop,
+        waveEnabled,
+        wavePopoverBuilder,
+        wavePopoverOffset,
+        wavePopoverVisibility,
+      ]);
 }

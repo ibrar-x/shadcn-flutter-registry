@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 /// Extension adding layout and styling utilities to widgets.
@@ -5,7 +7,7 @@ extension WidgetExtension on Widget {
   /// Converts this widget to a builder function.
   NeverWidgetBuilder get asBuilder => ([a, b, c, d, e, f, g, h, i, j]) => this;
 
-/// Executes `sized` behavior for this component/composite.
+  /// Executes `sized` behavior for this component/composite.
   Widget sized({double? width, double? height}) {
     if (this is SizedBox) {
       return SizedBox(
@@ -67,7 +69,7 @@ extension WidgetExtension on Widget {
       double? vertical,
       double? all,
       EdgeInsetsGeometry? padding}) {
-/// Creates a `assert` instance.
+    /// Creates a `assert` instance.
     assert(() {
       if (all != null) {
         if (top != null ||
@@ -104,7 +106,7 @@ extension WidgetExtension on Widget {
     );
   }
 
-/// Executes `center` behavior for this component/composite.
+  /// Executes `center` behavior for this component/composite.
   Widget center({Key? key}) {
     return Center(
       key: key,
@@ -112,7 +114,7 @@ extension WidgetExtension on Widget {
     );
   }
 
-/// Executes `withAlign` behavior for this component/composite.
+  /// Executes `withAlign` behavior for this component/composite.
   Widget withAlign(AlignmentGeometry alignment) {
     return Align(
       alignment: alignment,
@@ -132,7 +134,7 @@ extension WidgetExtension on Widget {
     );
   }
 
-/// Executes `expanded` behavior for this component/composite.
+  /// Executes `expanded` behavior for this component/composite.
   Widget expanded({int flex = 1}) {
     return Expanded(
       flex: flex,
@@ -140,7 +142,7 @@ extension WidgetExtension on Widget {
     );
   }
 
-/// Executes `withOpacity` behavior for this component/composite.
+  /// Executes `withOpacity` behavior for this component/composite.
   Widget withOpacity(double opacity) {
     return Opacity(
       opacity: opacity,
@@ -148,7 +150,7 @@ extension WidgetExtension on Widget {
     );
   }
 
-/// Executes `clip` behavior for this component/composite.
+  /// Executes `clip` behavior for this component/composite.
   Widget clip({Clip clipBehavior = Clip.hardEdge}) {
     return ClipRect(
       clipBehavior: clipBehavior,
@@ -166,7 +168,7 @@ extension WidgetExtension on Widget {
     );
   }
 
-/// Executes `clipOval` behavior for this component/composite.
+  /// Executes `clipOval` behavior for this component/composite.
   Widget clipOval({Clip clipBehavior = Clip.antiAlias}) {
     return ClipOval(
       clipBehavior: clipBehavior,
@@ -184,7 +186,7 @@ extension WidgetExtension on Widget {
     );
   }
 
-/// Executes `transform` behavior for this component/composite.
+  /// Executes `transform` behavior for this component/composite.
   Widget transform({Key? key, required Matrix4 transform}) {
     return Transform(
       key: key,
@@ -193,7 +195,7 @@ extension WidgetExtension on Widget {
     );
   }
 
-/// Executes `intrinsicWidth` behavior for this component/composite.
+  /// Executes `intrinsicWidth` behavior for this component/composite.
   Widget intrinsicWidth({double? stepWidth, double? stepHeight}) {
     return IntrinsicWidth(
       stepWidth: stepWidth,
@@ -202,14 +204,14 @@ extension WidgetExtension on Widget {
     );
   }
 
-/// Executes `intrinsicHeight` behavior for this component/composite.
+  /// Executes `intrinsicHeight` behavior for this component/composite.
   Widget intrinsicHeight() {
     return IntrinsicHeight(
       child: this,
     );
   }
 
-/// Executes `intrinsic` behavior for this component/composite.
+  /// Executes `intrinsic` behavior for this component/composite.
   Widget intrinsic({double? stepWidth, double? stepHeight}) {
     return IntrinsicWidth(
       stepWidth: stepWidth,
@@ -223,12 +225,12 @@ extension WidgetExtension on Widget {
 
 /// Extension for Column widgets.
 extension ColumnExtension on Column {
-/// Executes `gap` behavior for this component/composite.
+  /// Executes `gap` behavior for this component/composite.
   Widget gap(double gap) {
     return separator(SizedBox(height: gap));
   }
 
-/// Executes `separator` behavior for this component/composite.
+  /// Executes `separator` behavior for this component/composite.
   Widget separator(Widget separator) {
     return SeparatedFlex(
       key: key,
@@ -248,12 +250,12 @@ extension ColumnExtension on Column {
 
 /// Extension for Row widgets.
 extension RowExtension on Row {
-/// Executes `gap` behavior for this component/composite.
+  /// Executes `gap` behavior for this component/composite.
   Widget gap(double gap) {
     return separator(SizedBox(width: gap));
   }
 
-/// Executes `separator` behavior for this component/composite.
+  /// Executes `separator` behavior for this component/composite.
   Widget separator(Widget separator) {
     return SeparatedFlex(
       key: key,
@@ -273,14 +275,14 @@ extension RowExtension on Row {
 
 /// Extension for Flex widgets.
 extension FlexExtension on Flex {
-/// Executes `gap` behavior for this component/composite.
+  /// Executes `gap` behavior for this component/composite.
   Widget gap(double gap) {
     return separator(direction == Axis.vertical
         ? SizedBox(height: gap)
         : SizedBox(width: gap));
   }
 
-/// Executes `separator` behavior for this component/composite.
+  /// Executes `separator` behavior for this component/composite.
   Widget separator(Widget separator) {
     return SeparatedFlex(
       key: key,
@@ -300,17 +302,19 @@ extension FlexExtension on Flex {
 
 /// Extension for double.
 extension DoubleExtension on double {
-/// Executes `min` behavior for this component/composite.
+  /// Executes `min` behavior for this component/composite.
   double min(double other) => this < other ? this : other;
-/// Executes `max` behavior for this component/composite.
+
+  /// Executes `max` behavior for this component/composite.
   double max(double other) => this > other ? this : other;
 }
 
 /// Extension for int.
 extension IntExtension on int {
-/// Executes `min` behavior for this component/composite.
+  /// Executes `min` behavior for this component/composite.
   int min(int other) => this < other ? this : other;
-/// Executes `max` behavior for this component/composite.
+
+  /// Executes `max` behavior for this component/composite.
   int max(int other) => this > other ? this : other;
 }
 
@@ -330,28 +334,37 @@ typedef NeverWidgetBuilder = Widget Function(
 // Reference to SeparatedFlex from util.dart
 /// SeparatedFlex defines a reusable type for this registry module.
 class SeparatedFlex extends StatefulWidget {
-/// Stores `mainAxisAlignment` state/configuration for this implementation.
+  /// Stores `mainAxisAlignment` state/configuration for this implementation.
   final MainAxisAlignment mainAxisAlignment;
-/// Stores `mainAxisSize` state/configuration for this implementation.
+
+  /// Stores `mainAxisSize` state/configuration for this implementation.
   final MainAxisSize mainAxisSize;
-/// Stores `crossAxisAlignment` state/configuration for this implementation.
+
+  /// Stores `crossAxisAlignment` state/configuration for this implementation.
   final CrossAxisAlignment crossAxisAlignment;
-/// Stores `textDirection` state/configuration for this implementation.
+
+  /// Stores `textDirection` state/configuration for this implementation.
   final TextDirection? textDirection;
-/// Stores `verticalDirection` state/configuration for this implementation.
+
+  /// Stores `verticalDirection` state/configuration for this implementation.
   final VerticalDirection verticalDirection;
-/// Stores `textBaseline` state/configuration for this implementation.
+
+  /// Stores `textBaseline` state/configuration for this implementation.
   final TextBaseline? textBaseline;
-/// Stores `children` state/configuration for this implementation.
+
+  /// Stores `children` state/configuration for this implementation.
   final List<Widget> children;
-/// Stores `direction` state/configuration for this implementation.
+
+  /// Stores `direction` state/configuration for this implementation.
   final Axis direction;
-/// Stores `separator` state/configuration for this implementation.
+
+  /// Stores `separator` state/configuration for this implementation.
   final Widget separator;
-/// Stores `clipBehavior` state/configuration for this implementation.
+
+  /// Stores `clipBehavior` state/configuration for this implementation.
   final Clip clipBehavior;
 
-/// Creates a `SeparatedFlex` instance.
+  /// Creates a `SeparatedFlex` instance.
   const SeparatedFlex({
     super.key,
     required this.mainAxisAlignment,
@@ -367,30 +380,33 @@ class SeparatedFlex extends StatefulWidget {
   });
 
   @override
-/// Executes `createState` behavior for this component/composite.
+
+  /// Executes `createState` behavior for this component/composite.
   State<SeparatedFlex> createState() => _SeparatedFlexState();
 }
 
 /// _SeparatedFlexState defines a reusable type for this registry module.
 class _SeparatedFlexState extends State<SeparatedFlex> {
-/// Stores `_children` state/configuration for this implementation.
+  /// Stores `_children` state/configuration for this implementation.
   late List<Widget> _children;
 
   @override
-/// Executes `initState` behavior for this component/composite.
+
+  /// Executes `initState` behavior for this component/composite.
   void initState() {
     super.initState();
     _children = _join(widget.children, widget.separator).toList();
   }
 
   @override
-/// Executes `didUpdateWidget` behavior for this component/composite.
+
+  /// Executes `didUpdateWidget` behavior for this component/composite.
   void didUpdateWidget(covariant SeparatedFlex oldWidget) {
     super.didUpdateWidget(oldWidget);
     _children = _join(widget.children, widget.separator).toList();
   }
 
-/// Executes `_join` behavior for this component/composite.
+  /// Executes `_join` behavior for this component/composite.
   Iterable<Widget> _join(Iterable<Widget> widgets, Widget separator) {
     return widgets
         .map((e) => [separator, e])
@@ -399,7 +415,8 @@ class _SeparatedFlexState extends State<SeparatedFlex> {
   }
 
   @override
-/// Executes `build` behavior for this component/composite.
+
+  /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     return Flex(
       key: widget.key,

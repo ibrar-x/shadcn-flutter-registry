@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../navigation_bar.dart';
 
 /// _NavigationBarState defines a reusable type for this registry module.
@@ -9,12 +11,14 @@ class _NavigationBarState extends State<NavigationBar>
   }
 
   @override
+
   /// Executes `didUpdateWidget` behavior for this component/composite.
   void didUpdateWidget(covariant NavigationBar oldWidget) {
     super.didUpdateWidget(oldWidget);
   }
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -125,8 +129,7 @@ class _NavigationBarState extends State<NavigationBar>
             keepMainAxisSize: widget.keepMainAxisSize ?? false,
           ),
           child: Container(
-            color:
-                backgroundColor ??
+            color: backgroundColor ??
                 theme.colorScheme.background.scaleAlpha(
                   widget.surfaceOpacity ?? 1,
                 ),

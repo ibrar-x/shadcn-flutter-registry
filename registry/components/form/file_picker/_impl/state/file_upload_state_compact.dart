@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../file_picker.dart';
 
 /// Compact/mobile picker interactions and header rendering.
@@ -113,8 +115,8 @@ extension _FileUploadStateCompact on _FileUploadState {
     final onPressed = !widget.enabled || widget.pickFiles == null
         ? null
         : widget.mobileMode == _FileUploadMobileMode.popover
-        ? _openCompactPickerOptions
-        : () => _pickFilesForOption(firstOption);
+            ? _openCompactPickerOptions
+            : () => _pickFilesForOption(firstOption);
     final icon = widget.compactIcon ?? const Icon(RadixIcons.upload);
 
     if (widget.compactTrigger == FileUploadCompactTrigger.button) {

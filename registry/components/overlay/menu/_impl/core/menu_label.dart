@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../menu.dart';
 
 /// MenuLabel defines a reusable type for this registry module.
@@ -25,43 +27,48 @@ class MenuLabel extends StatelessWidget implements MenuItem {
   });
 
   @override
-/// Stores `hasLeading` state/configuration for this implementation.
+
+  /// Stores `hasLeading` state/configuration for this implementation.
   bool get hasLeading => leading != null;
 
   @override
-/// Stores `popoverController` state/configuration for this implementation.
+
+  /// Stores `popoverController` state/configuration for this implementation.
   PopoverController? get popoverController => null;
 
   @override
-/// Executes `build` behavior for this component/composite.
+
+  /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-/// Stores `scaling` state/configuration for this implementation.
+
+    /// Stores `scaling` state/configuration for this implementation.
     final scaling = theme.scaling;
     final menuGroupData = Data.maybeOf<MenuGroupData>(context);
     assert(menuGroupData != null, 'MenuLabel must be a child of MenuGroup');
     return Padding(
       padding:
-/// Creates a `EdgeInsets.only` instance.
+
+          /// Creates a `EdgeInsets.only` instance.
           EdgeInsets.only(
-                left: theme.density.baseGap,
-                top: theme.density.baseGap * 0.75,
-                right: theme.density.baseGap * 0.75,
-                bottom: theme.density.baseGap * 0.75,
-              ) *
-              scaling +
-          menuGroupData!.itemPadding,
+                    left: theme.density.baseGap,
+                    top: theme.density.baseGap * 0.75,
+                    right: theme.density.baseGap * 0.75,
+                    bottom: theme.density.baseGap * 0.75,
+                  ) *
+                  scaling +
+              menuGroupData!.itemPadding,
       child: Basic(
         contentSpacing: 8 * scaling,
         leading: leading == null && menuGroupData.hasLeading
             ? SizedBox(width: theme.density.baseContentPadding * scaling)
             : leading == null
-            ? null
-            : SizedBox(
-                width: 16 * scaling,
-                height: 16 * scaling,
-                child: leading!.iconSmall(),
-              ),
+                ? null
+                : SizedBox(
+                    width: 16 * scaling,
+                    height: 16 * scaling,
+                    child: leading!.iconSmall(),
+                  ),
         trailing: trailing,
         content: child.semiBold(),
         trailingAlignment: Alignment.center,

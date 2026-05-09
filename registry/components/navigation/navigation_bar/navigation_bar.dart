@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:data_widget/data_widget.dart';
 import 'package:flutter/material.dart'
     hide Theme, ThemeData, TextField, ButtonStyle, Tooltip;
@@ -453,8 +455,8 @@ enum NavigationOverflow {
 /// - [selected] (bool): Whether this item is currently selected
 ///
 /// Returns a widget that adapts to selection state.
-typedef NavigationWidgetBuilder =
-    Widget Function(BuildContext context, bool selected);
+typedef NavigationWidgetBuilder = Widget Function(
+    BuildContext context, bool selected);
 
 /// Custom widget wrapper for navigation items.
 ///

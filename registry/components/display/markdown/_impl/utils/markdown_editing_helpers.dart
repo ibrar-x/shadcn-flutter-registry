@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../markdown.dart';
 
 @immutable
@@ -51,8 +53,7 @@ class MarkdownEditingHelpers {
     return _transformSelectedLines(text, selection, (lines) {
       final prefix = '${'#' * normalizedLevel} ';
       final nonEmpty = lines.where((line) => line.trim().isNotEmpty).toList();
-      final shouldRemove =
-          nonEmpty.isNotEmpty &&
+      final shouldRemove = nonEmpty.isNotEmpty &&
           nonEmpty.every(
             (line) =>
                 RegExp('^#{${normalizedLevel.toInt()}}\\s+').hasMatch(line),
@@ -141,8 +142,7 @@ class MarkdownEditingHelpers {
     }
     return _transformSelectedLines(text, selection, (lines) {
       final nonEmpty = lines.where((line) => line.trim().isNotEmpty).toList();
-      final shouldRemove =
-          nonEmpty.isNotEmpty &&
+      final shouldRemove = nonEmpty.isNotEmpty &&
           nonEmpty.every((line) => RegExp(r'^\d+\.\s+').hasMatch(line));
       final nextLines = <String>[];
       var index = 1;
@@ -192,8 +192,7 @@ class MarkdownEditingHelpers {
     final languageLabel = language.trim();
     final openingFence = languageLabel.isEmpty ? '```' : '```$languageLabel';
     final lines = block.split('\n');
-    final isWrapped =
-        lines.length >= 2 &&
+    final isWrapped = lines.length >= 2 &&
         lines.first.trimLeft().startsWith('```') &&
         lines.last.trim() == '```';
 
@@ -267,18 +266,16 @@ class MarkdownEditingHelpers {
     List<String> headers = const <String>['Column 1', 'Column 2', 'Column 3'],
   }) {
     final normalized = _normalizeSelection(text, selection);
-    final safeHeaders = headers.isEmpty
-        ? const <String>['Column 1', 'Column 2']
-        : headers;
+    final safeHeaders =
+        headers.isEmpty ? const <String>['Column 1', 'Column 2'] : headers;
     final headerRow = '| ${safeHeaders.join(' | ')} |';
     final separatorRow =
         '| ${List<String>.filled(safeHeaders.length, '---').join(' | ')} |';
     final placeholderRow =
         '| ${List<String>.filled(safeHeaders.length, 'Value').join(' | ')} |';
     final table = '$headerRow\n$separatorRow\n$placeholderRow';
-    final prefix = normalized.start > 0 && text[normalized.start - 1] != '\n'
-        ? '\n'
-        : '';
+    final prefix =
+        normalized.start > 0 && text[normalized.start - 1] != '\n' ? '\n' : '';
     final suffix = normalized.end < text.length && text[normalized.end] != '\n'
         ? '\n'
         : '';
@@ -303,12 +300,10 @@ class MarkdownEditingHelpers {
     required TextSelection selection,
   }) {
     final normalized = _normalizeSelection(text, selection);
-    final beforeNeedsGap =
-        normalized.start > 1 &&
+    final beforeNeedsGap = normalized.start > 1 &&
         text.substring(0, normalized.start).trimRight().isNotEmpty &&
         !text.substring(0, normalized.start).endsWith('\n\n');
-    final afterNeedsGap =
-        normalized.end < text.length - 1 &&
+    final afterNeedsGap = normalized.end < text.length - 1 &&
         text.substring(normalized.end).trimLeft().isNotEmpty &&
         !text.substring(normalized.end).startsWith('\n\n');
     final before = beforeNeedsGap ? '\n\n' : '';
@@ -366,8 +361,7 @@ class MarkdownEditingHelpers {
       r'^(\s*#{1,6}\s+)(.+)$',
       dotAll: true,
     ).firstMatch(coreSelected);
-    final replacement =
-        switch (headingMatch) {
+    final replacement = switch (headingMatch) {
           null => _toggleDelimitedSegment(coreSelected, delimiter),
           _ =>
             '${headingMatch.group(1)}${_toggleDelimitedSegment(headingMatch.group(2)!, delimiter)}',
@@ -388,8 +382,7 @@ class MarkdownEditingHelpers {
   }
 
   static String _toggleDelimitedSegment(String segment, String delimiter) {
-    final isWrapped =
-        segment.startsWith(delimiter) &&
+    final isWrapped = segment.startsWith(delimiter) &&
         segment.endsWith(delimiter) &&
         segment.length >= delimiter.length * 2;
     return isWrapped
@@ -419,8 +412,7 @@ class MarkdownEditingHelpers {
     }
     return _transformSelectedLines(text, selection, (lines) {
       final nonEmpty = lines.where((line) => line.trim().isNotEmpty).toList();
-      final shouldRemove =
-          nonEmpty.isNotEmpty &&
+      final shouldRemove = nonEmpty.isNotEmpty &&
           nonEmpty.every((line) => line.startsWith(prefix));
       return <String>[
         for (final line in lines)
@@ -458,9 +450,8 @@ class MarkdownEditingHelpers {
     String text,
     TextSelection selection,
   ) {
-    final start = selection.start < 0
-        ? 0
-        : selection.start.clamp(0, text.length);
+    final start =
+        selection.start < 0 ? 0 : selection.start.clamp(0, text.length);
     final end = selection.end < 0 ? start : selection.end.clamp(0, text.length);
     return TextSelection(
       baseOffset: start < end ? start : end,
@@ -469,9 +460,8 @@ class MarkdownEditingHelpers {
   }
 
   static (int, int) _lineBounds(String text, TextSelection selection) {
-    final start = selection.start <= 0
-        ? -1
-        : text.lastIndexOf('\n', selection.start - 1);
+    final start =
+        selection.start <= 0 ? -1 : text.lastIndexOf('\n', selection.start - 1);
     final end = text.indexOf('\n', selection.end);
     final lineStart = start == -1 ? 0 : start + 1;
     final lineEnd = end == -1 ? text.length : end;
@@ -535,9 +525,8 @@ class MarkdownEditingHelpers {
     final headingPrefix = targetLevel == null ? '' : '${'#' * targetLevel} ';
     final stripPattern = RegExp(r'^#{1,6}\s+');
     final stripped = selected.replaceFirst(stripPattern, '');
-    final nextSelected = targetLevel == null
-        ? stripped
-        : '$headingPrefix$stripped';
+    final nextSelected =
+        targetLevel == null ? stripped : '$headingPrefix$stripped';
     final nextText = text.replaceRange(
       normalized.start,
       normalized.end,

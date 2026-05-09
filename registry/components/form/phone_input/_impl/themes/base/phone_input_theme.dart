@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../phone_input.dart';
 
 /// Theme data for [PhoneInput].
@@ -60,9 +62,8 @@ class PhoneInputTheme extends ComponentThemeData {
     return PhoneInputTheme(
       padding: padding != null ? padding() : this.padding,
       borderRadius: borderRadius != null ? borderRadius() : this.borderRadius,
-      popupConstraints: popupConstraints != null
-          ? popupConstraints()
-          : this.popupConstraints,
+      popupConstraints:
+          popupConstraints != null ? popupConstraints() : this.popupConstraints,
       maxWidth: maxWidth != null ? maxWidth() : this.maxWidth,
       flagHeight: flagHeight != null ? flagHeight() : this.flagHeight,
       flagWidth: flagWidth != null ? flagWidth() : this.flagWidth,
@@ -91,16 +92,16 @@ class PhoneInputTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    padding,
-    borderRadius,
-    popupConstraints,
-    maxWidth,
-    flagHeight,
-    flagWidth,
-    flagGap,
-    countryGap,
-    flagShape,
-  );
+        padding,
+        borderRadius,
+        popupConstraints,
+        maxWidth,
+        flagHeight,
+        flagWidth,
+        flagGap,
+        countryGap,
+        flagShape,
+      );
 
   /// Returns a debug-friendly string representation.
   @override

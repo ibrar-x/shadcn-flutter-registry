@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../context_menu.dart';
 
 /// DesktopEditableTextContextMenu defines a reusable type for this registry module.
@@ -25,19 +27,22 @@ class DesktopEditableTextContextMenu extends StatelessWidget {
   });
 
   @override
-/// Executes `build` behavior for this component/composite.
+
+  /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-/// Stores `scaling` state/configuration for this implementation.
+
+    /// Stores `scaling` state/configuration for this implementation.
     final scaling = theme.scaling;
     final localizations = ShadcnLocalizations.of(context);
-/// Stores `undoHistoryController` state/configuration for this implementation.
+
+    /// Stores `undoHistoryController` state/configuration for this implementation.
     var undoHistoryController = this.undoHistoryController;
     var contextMenuButtonItems = List.of(
       editableTextState.contextMenuButtonItems,
     );
 
-/// Executes `take` behavior for this component/composite.
+    /// Executes `take` behavior for this component/composite.
     ContextMenuButtonItem? take(ContextMenuButtonType type) {
       var item = contextMenuButtonItems
           .where((element) => element.type == type)
@@ -98,12 +103,13 @@ class DesktopEditableTextContextMenu extends StatelessWidget {
       ),
       child: Text(localizations.menuSelectAll),
     );
-/// Stores `extras` state/configuration for this implementation.
+
+    /// Stores `extras` state/configuration for this implementation.
     List<MenuItem> extras = [];
     if (shareButton != null) {
-/// Creates a `extras.add` instance.
+      /// Creates a `extras.add` instance.
       extras.add(
-/// Creates a `MenuButton` instance.
+        /// Creates a `MenuButton` instance.
         MenuButton(
           onPressed: (context) {
             shareButton.onPressed?.call();
@@ -113,9 +119,9 @@ class DesktopEditableTextContextMenu extends StatelessWidget {
       );
     }
     if (searchWebButton != null) {
-/// Creates a `extras.add` instance.
+      /// Creates a `extras.add` instance.
       extras.add(
-/// Creates a `MenuButton` instance.
+        /// Creates a `MenuButton` instance.
         MenuButton(
           onPressed: (context) {
             searchWebButton.onPressed?.call();
@@ -125,9 +131,9 @@ class DesktopEditableTextContextMenu extends StatelessWidget {
       );
     }
     if (liveTextInput != null) {
-/// Creates a `extras.add` instance.
+      /// Creates a `extras.add` instance.
       extras.add(
-/// Creates a `MenuButton` instance.
+        /// Creates a `MenuButton` instance.
         MenuButton(
           onPressed: (context) {
             liveTextInput.onPressed?.call();
@@ -142,9 +148,9 @@ class DesktopEditableTextContextMenu extends StatelessWidget {
           child: ContextMenuPopup(
             anchorSize: Size.zero,
             anchorContext: anchorContext,
-            position:
-                editableTextState.contextMenuAnchors.primaryAnchor +
-/// Creates a `Offset` instance.
+            position: editableTextState.contextMenuAnchors.primaryAnchor +
+
+                /// Creates a `Offset` instance.
                 const Offset(8, -8) * scaling,
             children: [
               cutButtonWidget,
@@ -165,12 +171,12 @@ class DesktopEditableTextContextMenu extends StatelessWidget {
           builder: (context, child) {
             return ContextMenuPopup(
               anchorContext: anchorContext,
-              position:
-                  editableTextState.contextMenuAnchors.primaryAnchor +
-/// Creates a `Offset` instance.
+              position: editableTextState.contextMenuAnchors.primaryAnchor +
+
+                  /// Creates a `Offset` instance.
                   const Offset(8, -8) * scaling,
               children: [
-/// Creates a `MenuButton` instance.
+                /// Creates a `MenuButton` instance.
                 MenuButton(
                   enabled: undoHistoryController.value.canUndo,
                   onPressed: (context) {
@@ -184,7 +190,8 @@ class DesktopEditableTextContextMenu extends StatelessWidget {
                   ),
                   child: const Text('Undo'),
                 ),
-/// Creates a `MenuButton` instance.
+
+                /// Creates a `MenuButton` instance.
                 MenuButton(
                   enabled: undoHistoryController.value.canRedo,
                   onPressed: (context) {
@@ -199,7 +206,8 @@ class DesktopEditableTextContextMenu extends StatelessWidget {
                   ),
                   child: const Text('Redo'),
                 ),
-/// Creates a `MenuDivider` instance.
+
+                /// Creates a `MenuDivider` instance.
                 const MenuDivider(),
                 cutButtonWidget,
                 copyButtonWidget,

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../preview.dart';
 
 /// _FilePickerPreviewState stores and manages mutable widget state.
@@ -60,24 +62,24 @@ class _FilePickerPreviewState extends State<FilePickerPreview> {
     return selected.where((file) {
       final extension = file.resolvedExtension;
       final mimeType = file.mimeType?.toLowerCase();
-      final extensionAllowed =
-          request.allowedExtensions == null ||
+      final extensionAllowed = request.allowedExtensions == null ||
               request.allowedExtensions!.isEmpty
           ? true
           : request.allowedExtensions!
-                .map((ext) => ext.toLowerCase().replaceFirst('.', ''))
-                .contains(extension);
+              .map((ext) => ext.toLowerCase().replaceFirst('.', ''))
+              .contains(extension);
       final mimeAllowed =
           request.allowedMimeTypes == null || request.allowedMimeTypes!.isEmpty
-          ? true
-          : request.allowedMimeTypes!.any((allowed) {
-              final normalized = allowed.toLowerCase();
-              if (normalized.endsWith('/*')) {
-                final prefix = normalized.substring(0, normalized.length - 1);
-                return mimeType?.startsWith(prefix) ?? false;
-              }
-              return mimeType == normalized;
-            });
+              ? true
+              : request.allowedMimeTypes!.any((allowed) {
+                  final normalized = allowed.toLowerCase();
+                  if (normalized.endsWith('/*')) {
+                    final prefix =
+                        normalized.substring(0, normalized.length - 1);
+                    return mimeType?.startsWith(prefix) ?? false;
+                  }
+                  return mimeType == normalized;
+                });
       return extensionAllowed && mimeAllowed;
     }).toList();
   }

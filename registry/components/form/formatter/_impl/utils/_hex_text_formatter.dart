@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../formatter.dart';
 
 /// _HexTextFormatter represents a form-related type in the registry.
@@ -21,9 +23,8 @@ class _HexTextFormatter extends TextInputFormatter {
       }
     }
     // make sure all characters are valid hex characters
-    final hexRegExp = hashPrefix
-        ? RegExp(r'^#?[0-9a-fA-F]*$')
-        : RegExp(r'^[0-9a-fA-F]*$');
+    final hexRegExp =
+        hashPrefix ? RegExp(r'^#?[0-9a-fA-F]*$') : RegExp(r'^[0-9a-fA-F]*$');
     if (!hexRegExp.hasMatch(newText)) {
       return oldValue;
     }

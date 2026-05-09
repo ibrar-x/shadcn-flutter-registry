@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../item_picker.dart';
 
 /// A selectable option within an item picker.
@@ -80,9 +82,8 @@ class ItemPickerOption<T> extends StatelessWidget {
     if (data.layout is ListItemPickerLayout) {
       if (label == null) {
         return Button(
-          onPressed: data.onChanged == null
-              ? null
-              : () => data.onChanged!(value),
+          onPressed:
+              data.onChanged == null ? null : () => data.onChanged!(value),
           style: data.value == value
               ? (selectedStyle ?? ButtonVariance.primary)
               : (style ?? ButtonVariance.ghost),

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../file_picker.dart';
 
 /// Stateful engine for [FileUpload].
@@ -52,8 +54,8 @@ class _FileUploadState extends State<_FileUpload> {
   }
 
   bool get _isUploading => _effectiveItems.any(
-    (item) => item.status == FileUploadItemStatus.uploading,
-  );
+        (item) => item.status == FileUploadItemStatus.uploading,
+      );
 
   /// Resolves dropzone visual state from current interactions.
   FileUploadState get _state {
@@ -196,9 +198,8 @@ class _FileUploadState extends State<_FileUpload> {
 
     final hasItems = widget.showFileList && _effectiveItems.isNotEmpty;
     final itemsMaxHeight = widget.itemsMaxHeight ?? 260 * scaling;
-    final listItems = widget.allowMultiple
-        ? _effectiveItems
-        : [_effectiveItems.first];
+    final listItems =
+        widget.allowMultiple ? _effectiveItems : [_effectiveItems.first];
     final surfaceHint = widget.surfaceHint ?? widget.hint;
     final showTileHint =
         widget.surface == _FileUploadSurface.tile && surfaceHint != null;
@@ -267,9 +268,8 @@ class _FileUploadState extends State<_FileUpload> {
                   item: item,
                   statusLabels: widget.statusLabels,
                   itemLoading: widget.itemLoading,
-                  onRemove: widget.files == null
-                      ? () => _removeItem(item)
-                      : null,
+                  onRemove:
+                      widget.files == null ? () => _removeItem(item) : null,
                 ),
           ),
       ],

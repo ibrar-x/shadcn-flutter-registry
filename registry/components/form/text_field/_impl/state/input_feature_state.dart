@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../text_field.dart';
 
 /// Abstract base state class for input features.
@@ -96,9 +98,8 @@ abstract class InputFeatureState<T extends InputFeature> {
       vsync: tickerProvider,
       duration: kDefaultDuration,
     );
-    _visibilityController.value = feature.visibility.canShow(_inputState!)
-        ? 1
-        : 0;
+    _visibilityController.value =
+        feature.visibility.canShow(_inputState!) ? 1 : 0;
     _visibilityController.addListener(_updateAnimation);
     for (var dependency in feature.visibility.getDependencies(_inputState!)) {
       dependency.addListener(_updateVisibility);

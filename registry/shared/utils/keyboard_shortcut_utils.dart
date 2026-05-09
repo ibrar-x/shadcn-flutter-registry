@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
@@ -9,7 +11,7 @@ typedef KeyboardShortcutDisplayBuilder = Widget Function(
 
 /// Handle for accessing keyboard shortcut display builders.
 class KeyboardShortcutDisplayHandle {
-/// Stores `_builder` state/configuration for this implementation.
+  /// Stores `_builder` state/configuration for this implementation.
   final KeyboardShortcutDisplayBuilder _builder;
 
   /// Creates a handle with the specified builder.
@@ -25,7 +27,7 @@ class KeyboardShortcutDisplayHandle {
 List<LogicalKeyboardKey> shortcutActivatorToKeySet(
   ShortcutActivator activator,
 ) {
-/// Stores `keys` state/configuration for this implementation.
+  /// Stores `keys` state/configuration for this implementation.
   List<LogicalKeyboardKey> keys = [];
   if (activator is CharacterActivator) {
     if (activator.control) {

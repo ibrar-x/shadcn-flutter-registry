@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:async';
 
 import 'package:flutter/widgets.dart';
@@ -58,9 +60,9 @@ class FilterBar extends StatefulWidget {
     this.sheetContentPadding,
     this.groups = const [],
   }) : assert(
-         controller != null || (state != null && onStateChanged != null),
-         'Provide either controller or both state and onStateChanged.',
-       );
+          controller != null || (state != null && onStateChanged != null),
+          'Provide either controller or both state and onStateChanged.',
+        );
 
   /// Stores `state` state/configuration for this implementation.
   final FilterState? state;
@@ -147,6 +149,7 @@ class FilterBar extends StatefulWidget {
   final List<FilterGroup> groups;
 
   @override
+
   /// Executes `createState` behavior for this component/composite.
   State<FilterBar> createState() => _FilterBarState();
 }
@@ -162,6 +165,7 @@ class _FilterBarState extends State<FilterBar> {
   FilterState get _effectiveState => widget.controller?.value ?? widget.state!;
 
   @override
+
   /// Executes `initState` behavior for this component/composite.
   void initState() {
     super.initState();
@@ -171,6 +175,7 @@ class _FilterBarState extends State<FilterBar> {
   }
 
   @override
+
   /// Executes `didUpdateWidget` behavior for this component/composite.
   void didUpdateWidget(covariant FilterBar oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -192,6 +197,7 @@ class _FilterBarState extends State<FilterBar> {
   }
 
   @override
+
   /// Executes `dispose` behavior for this component/composite.
   void dispose() {
     widget.controller?.removeListener(_onControllerChanged);
@@ -291,6 +297,7 @@ class _FilterBarState extends State<FilterBar> {
   }
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     return _FilterBarContent(

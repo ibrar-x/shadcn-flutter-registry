@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../navigation_bar.dart';
 
 /// _NavigationRailState defines a reusable type for this registry module.
@@ -37,14 +39,14 @@ class _NavigationRailState extends State<NavigationRail>
   }
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
     /// Stores `scaling` state/configuration for this implementation.
     final scaling = theme.scaling;
-    var parentPadding =
-        widget.padding ??
+    var parentPadding = widget.padding ??
         (EdgeInsets.symmetric(
           vertical: theme.density.baseGap * scaling,
           horizontal: theme.density.baseContentPadding * scaling * 0.75,
@@ -71,8 +73,7 @@ class _NavigationRailState extends State<NavigationRail>
         child: SurfaceBlur(
           surfaceBlur: widget.surfaceBlur,
           child: Container(
-            color:
-                widget.backgroundColor ??
+            color: widget.backgroundColor ??
                 (theme.colorScheme.background.scaleAlpha(
                   widget.surfaceOpacity ?? 1,
                 )),

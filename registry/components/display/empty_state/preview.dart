@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../layout/scaffold/scaffold.dart';
@@ -26,21 +28,15 @@ class EmptyStatePreview extends StatelessWidget {
             padding: EdgeInsets.all(24 * scaling),
             children: [
               Text('Simple (No Actions)', style: sectionStyle),
-
               const DensityGap(gapMd),
-
               const EmptyState(
                 icon: Icon(RadixIcons.archive),
                 title: Text('Nothing Here Yet'),
                 description: Text('Create your first item to get started.'),
               ),
-
               const DensityGap(gap2xl),
-
               Text('Compact Card', style: sectionStyle),
-
               const DensityGap(gapMd),
-
               const EmptyState(
                 size: EmptyStateSize.compact,
                 icon: Icon(RadixIcons.magnifyingGlass),
@@ -50,13 +46,9 @@ class EmptyStatePreview extends StatelessWidget {
                 ),
                 showIconContainer: false,
               ),
-
               const DensityGap(gap2xl),
-
               Text('Single Action', style: sectionStyle),
-
               const DensityGap(gapMd),
-
               const EmptyState(
                 variant: EmptyStateVariant.errorFallback,
                 title: Text('Something Went Wrong'),
@@ -65,13 +57,9 @@ class EmptyStatePreview extends StatelessWidget {
                 ),
                 primaryAction: EmptyStateAction(label: 'Retry'),
               ),
-
               const DensityGap(gap2xl),
-
               Text('Two Actions', style: sectionStyle),
-
               const DensityGap(gapMd),
-
               const EmptyState(
                 icon: Icon(RadixIcons.upload),
                 title: Text('No Files Uploaded'),
@@ -84,13 +72,9 @@ class EmptyStatePreview extends StatelessWidget {
                   style: EmptyStateActionStyle.secondary,
                 ),
               ),
-
               const DensityGap(gap2xl),
-
               Text('Complex / Product Empty Screen', style: sectionStyle),
-
               const DensityGap(gapMd),
-
               const EmptyState(
                 icon: Icon(RadixIcons.filePlus),
                 title: Text('No Projects Yet'),

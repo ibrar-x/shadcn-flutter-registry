@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../../../shared/utils/style_value.dart';
@@ -23,17 +25,18 @@ class ShadcnScrollbar extends RawScrollbar {
     super.interactive,
     super.scrollbarOrientation,
   }) : super(
-         fadeDuration: _kScrollbarFadeDuration,
-         timeToFade: _kScrollbarTimeToFade,
-         pressDuration: Duration.zero,
-         notificationPredicate:
-             notificationPredicate ?? defaultScrollNotificationPredicate,
-       );
+          fadeDuration: _kScrollbarFadeDuration,
+          timeToFade: _kScrollbarTimeToFade,
+          pressDuration: Duration.zero,
+          notificationPredicate:
+              notificationPredicate ?? defaultScrollNotificationPredicate,
+        );
 
   /// Stores `color` state/configuration for this implementation.
   final Color? color;
 
   @override
+
   /// Executes `createState` behavior for this component/composite.
   RawScrollbarState<ShadcnScrollbar> createState() => ShadcnScrollbarState();
 }

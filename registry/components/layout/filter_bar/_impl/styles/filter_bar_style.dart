@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../filter_bar.dart';
 
 /// Type alias for `FilterBarClearResolver` used by public or internal APIs.
@@ -7,29 +9,28 @@ typedef FilterBarClearResolver = FilterState Function(FilterState current);
 typedef FilterStateChanged = void Function(FilterState next);
 
 /// Type alias for `FilterCustomFilterBuilder` used by public or internal APIs.
-typedef FilterCustomFilterBuilder =
-    Widget Function(
-      BuildContext context,
-      FilterState state,
-      FilterStateChanged onStateChanged,
-    );
+typedef FilterCustomFilterBuilder = Widget Function(
+  BuildContext context,
+  FilterState state,
+  FilterStateChanged onStateChanged,
+);
 
 /// Type alias for `FilterTypedCustomFilterBuilder` used by public or internal APIs.
-typedef FilterTypedCustomFilterBuilder<T> =
-    Widget Function(BuildContext context, T? value, ValueChanged<T?> onChanged);
+typedef FilterTypedCustomFilterBuilder<T> = Widget Function(
+    BuildContext context, T? value, ValueChanged<T?> onChanged);
 
 /// Type alias for `FilterSheetItemBuilder` used by public or internal APIs.
-typedef FilterSheetItemBuilder =
-    Widget Function(
-      BuildContext context,
-      FilterState state,
-      FilterStateChanged onStateChanged,
-    );
+typedef FilterSheetItemBuilder = Widget Function(
+  BuildContext context,
+  FilterState state,
+  FilterStateChanged onStateChanged,
+);
 
 /// FilterBarPresentation defines a reusable type for this registry module.
 enum FilterBarPresentation { autoSheet, inline, sheet }
 
 @immutable
+
 /// FilterCustomFilter defines a reusable type for this registry module.
 class FilterCustomFilter {
   /// Stores `id` state/configuration for this implementation.
@@ -57,6 +58,7 @@ class FilterCustomFilter {
 }
 
 @immutable
+
 /// FilterGroup defines a reusable type for this registry module.
 class FilterGroup {
   /// Stores `id` state/configuration for this implementation.
@@ -112,6 +114,7 @@ class FilterBarSheetScaffold extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -163,6 +166,7 @@ class FilterBarSheetScaffold extends StatelessWidget {
 }
 
 @immutable
+
 /// FilterBarStyle defines a reusable type for this registry module.
 class FilterBarStyle {
   /// Stores `spacing` state/configuration for this implementation.
@@ -207,6 +211,7 @@ class FilterBarStyle {
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;

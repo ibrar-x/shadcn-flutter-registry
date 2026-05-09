@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../input.dart';
 
 /// _AutoCompleteFeatureState stores and manages mutable widget state.
@@ -27,9 +29,8 @@ class _AutoCompleteFeatureState
             builder: (context, snapshot) {
               return AutoComplete(
                 key: _key,
-                suggestions: snapshot.hasData
-                    ? snapshot.requireData.toList()
-                    : const [],
+                suggestions:
+                    snapshot.hasData ? snapshot.requireData.toList() : const [],
                 popoverConstraints: feature.popoverConstraints,
                 popoverWidthConstraint: feature.popoverWidthConstraint,
                 popoverAnchorAlignment: feature.popoverAnchorAlignment,

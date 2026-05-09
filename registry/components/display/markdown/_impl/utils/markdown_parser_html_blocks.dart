@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../markdown.dart';
 
 (_MarkdownBlock, int)? _tryParseSemanticHtmlBlock(
@@ -94,8 +96,7 @@ part of '../../markdown.dart';
       r'<code\b([^>]*)>([\s\S]*?)</code>',
       caseSensitive: false,
     ).firstMatch(raw);
-    final language =
-        _extractLanguageFromCodeAttrs(codeMatch?.group(1) ?? '') ??
+    final language = _extractLanguageFromCodeAttrs(codeMatch?.group(1) ?? '') ??
         _extractLanguageFromCodeAttrs(raw);
     final codeInner = codeMatch?.group(2) ?? _extractInnerHtml(raw, 'pre');
     final code = _decodeHtmlEntities(codeInner).trimRight();

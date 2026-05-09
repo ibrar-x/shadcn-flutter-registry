@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../hsv_color_slider.dart';
 
 /// _HSVColorSliderState stores and manages mutable widget state.
@@ -35,14 +37,12 @@ class _HSVColorSliderState extends State<HSVColorSlider> {
 
   /// Performs `_updateColor` logic for this form component.
   void _updateColor(Offset localPosition, Size size) {
-    _currentHorizontal =
-        ((localPosition.dx - widget.padding.left) /
-                (size.width - widget.padding.horizontal))
-            .clamp(0, 1);
-    _currentVertical =
-        ((localPosition.dy - widget.padding.top) /
-                (size.height - widget.padding.vertical))
-            .clamp(0, 1);
+    _currentHorizontal = ((localPosition.dx - widget.padding.left) /
+            (size.width - widget.padding.horizontal))
+        .clamp(0, 1);
+    _currentVertical = ((localPosition.dy - widget.padding.top) /
+            (size.height - widget.padding.vertical))
+        .clamp(0, 1);
     if (widget.reverse) {
       if (widget.sliderType == HSVColorSliderType.hueSat) {
         _hue = _currentHorizontal * 360;
@@ -214,54 +214,54 @@ class _HSVColorSliderState extends State<HSVColorSlider> {
             right: -cursorRadius / radDiv,
             child: isSingleChannel
                 ? (widget.reverse
-                      ? Padding(
-                          padding: EdgeInsets.only(
-                            left: widget.padding.left,
-                            right: widget.padding.right,
+                    ? Padding(
+                        padding: EdgeInsets.only(
+                          left: widget.padding.left,
+                          right: widget.padding.right,
+                        ),
+                        child: Align(
+                          alignment: Alignment(
+                            (_currentHorizontal.clamp(0, 1) * 2) - 1,
+                            (_currentVertical.clamp(0, 1) * 2) - 1,
                           ),
-                          child: Align(
-                            alignment: Alignment(
-                              (_currentHorizontal.clamp(0, 1) * 2) - 1,
-                              (_currentVertical.clamp(0, 1) * 2) - 1,
-                            ),
-                            child: Container(
-                              width: cursorRadius,
-                              height: double.infinity,
-                              decoration: BoxDecoration(
-                                color: widget.value.toColor(),
-                                border: Border.all(
-                                  color: Colors.white,
-                                  width: theme.scaling * 2,
-                                ),
-                                borderRadius: BorderRadius.all(widget.radius),
+                          child: Container(
+                            width: cursorRadius,
+                            height: double.infinity,
+                            decoration: BoxDecoration(
+                              color: widget.value.toColor(),
+                              border: Border.all(
+                                color: Colors.white,
+                                width: theme.scaling * 2,
                               ),
+                              borderRadius: BorderRadius.all(widget.radius),
                             ),
                           ),
-                        )
-                      : Padding(
-                          padding: EdgeInsets.only(
-                            top: widget.padding.top,
-                            bottom: widget.padding.bottom,
+                        ),
+                      )
+                    : Padding(
+                        padding: EdgeInsets.only(
+                          top: widget.padding.top,
+                          bottom: widget.padding.bottom,
+                        ),
+                        child: Align(
+                          alignment: Alignment(
+                            (_currentHorizontal.clamp(0, 1) * 2) - 1,
+                            (_currentVertical.clamp(0, 1) * 2) - 1,
                           ),
-                          child: Align(
-                            alignment: Alignment(
-                              (_currentHorizontal.clamp(0, 1) * 2) - 1,
-                              (_currentVertical.clamp(0, 1) * 2) - 1,
-                            ),
-                            child: Container(
-                              height: cursorRadius,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                color: widget.value.toColor(),
-                                border: Border.all(
-                                  color: Colors.white,
-                                  width: theme.scaling * 2,
-                                ),
-                                borderRadius: BorderRadius.all(widget.radius),
+                          child: Container(
+                            height: cursorRadius,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: widget.value.toColor(),
+                              border: Border.all(
+                                color: Colors.white,
+                                width: theme.scaling * 2,
                               ),
+                              borderRadius: BorderRadius.all(widget.radius),
                             ),
                           ),
-                        ))
+                        ),
+                      ))
                 : Padding(
                     padding: widget.padding,
                     child: Align(

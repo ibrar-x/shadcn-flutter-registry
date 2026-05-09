@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../color_picker.dart';
 
 /// Theme configuration for [ColorPicker] widget styling and layout.
@@ -43,13 +45,11 @@ class ColorPickerTheme extends ComponentThemeData {
   }) {
     return ColorPickerTheme(
       spacing: spacing == null ? this.spacing : spacing(),
-      controlSpacing: controlSpacing == null
-          ? this.controlSpacing
-          : controlSpacing(),
+      controlSpacing:
+          controlSpacing == null ? this.controlSpacing : controlSpacing(),
       orientation: orientation == null ? this.orientation : orientation(),
-      enableEyeDropper: enableEyeDropper == null
-          ? this.enableEyeDropper
-          : enableEyeDropper(),
+      enableEyeDropper:
+          enableEyeDropper == null ? this.enableEyeDropper : enableEyeDropper(),
       sliderSize: sliderSize == null ? this.sliderSize : sliderSize(),
     );
   }
@@ -68,10 +68,10 @@ class ColorPickerTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    spacing,
-    controlSpacing,
-    orientation,
-    enableEyeDropper,
-    sliderSize,
-  );
+        spacing,
+        controlSpacing,
+        orientation,
+        enableEyeDropper,
+        sliderSize,
+      );
 }

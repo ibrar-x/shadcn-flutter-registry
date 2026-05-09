@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:async';
 import 'dart:ui' show ImageFilter;
 
@@ -280,9 +282,8 @@ class _StreamingMarkdownAdapterState extends State<_StreamingMarkdownAdapter> {
       return widget.source;
     }
     return Column(
-      mainAxisSize: widget.source.shrinkWrap
-          ? MainAxisSize.min
-          : MainAxisSize.max,
+      mainAxisSize:
+          widget.source.shrinkWrap ? MainAxisSize.min : MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: children,
     );
@@ -320,8 +321,7 @@ class _StreamingMarkdownAdapterState extends State<_StreamingMarkdownAdapter> {
     required int visibleAnimated,
     required StreamingTextEffectAdapter effect,
   }) {
-    final shouldTick =
-        visibleAnimated < totalAnimated ||
+    final shouldTick = visibleAnimated < totalAnimated ||
         (!settled &&
             totalAnimated > 0 &&
             effect.settleDuration > Duration.zero);
@@ -431,8 +431,8 @@ class _StreamingMarkdownAdapterState extends State<_StreamingMarkdownAdapter> {
     }
     final revealed =
         ((micros / Duration.microsecondsPerSecond) * typewriter.charsPerSecond)
-            .floor() +
-        1;
+                .floor() +
+            1;
     return revealed.clamp(0, total).toInt();
   }
 }

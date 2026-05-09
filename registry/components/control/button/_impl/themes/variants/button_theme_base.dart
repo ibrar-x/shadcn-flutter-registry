@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../../../../shared/theme/theme.dart';
@@ -42,6 +44,7 @@ abstract class ButtonTheme extends ComponentThemeData {
   });
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -56,15 +59,16 @@ abstract class ButtonTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    decoration,
-    mouseCursor,
-    padding,
-    textStyle,
-    iconTheme,
-    margin,
-  );
+        decoration,
+        mouseCursor,
+        padding,
+        textStyle,
+        iconTheme,
+        margin,
+      );
 
   @override
+
   /// Executes `toString` behavior for this component/composite.
   String toString() =>
       '$runtimeType{decoration: $decoration, mouseCursor: $mouseCursor, padding: $padding, textStyle: $textStyle, iconTheme: $iconTheme, margin: $margin}';

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../chip_input.dart';
 
 /// A text editing controller that supports inline chip widgets.
@@ -164,16 +166,13 @@ class ChipEditingController<T> extends TextEditingController {
               buffer.clear();
             }
             T? chip = _chipMap[codeUnit - _chipStart];
-            Widget? chipWidget = chip == null
-                ? null
-                : provider.buildChip(context, chip);
+            Widget? chipWidget =
+                chip == null ? null : provider.buildChip(context, chip);
             if (chipWidget != null) {
-              bool previousIsChip =
-                  i > 0 &&
+              bool previousIsChip = i > 0 &&
                   text.codeUnitAt(i - 1) >= _chipStart &&
                   text.codeUnitAt(i - 1) <= _chipEnd;
-              bool nextIsChip =
-                  i < text.length - 1 &&
+              bool nextIsChip = i < text.length - 1 &&
                   text.codeUnitAt(i + 1) >= _chipStart &&
                   text.codeUnitAt(i + 1) <= _chipEnd;
               children.add(
@@ -184,8 +183,8 @@ class ChipEditingController<T> extends TextEditingController {
                       left: previousIsChip
                           ? spacing / 2
                           : i == 0
-                          ? 0
-                          : spacing,
+                              ? 0
+                              : spacing,
                       right: nextIsChip ? spacing / 2 : spacing,
                     ),
                     child: chipWidget,
@@ -206,7 +205,7 @@ class ChipEditingController<T> extends TextEditingController {
 
       final TextStyle composingStyle =
           style?.merge(const TextStyle(decoration: TextDecoration.underline)) ??
-          const TextStyle(decoration: TextDecoration.underline);
+              const TextStyle(decoration: TextDecoration.underline);
       List<InlineSpan> children = [];
       String text = value.text;
       StringBuffer buffer = StringBuffer();
@@ -219,16 +218,13 @@ class ChipEditingController<T> extends TextEditingController {
             buffer.clear();
           }
           T? chip = _chipMap[codeUnit - _chipStart];
-          Widget? chipWidget = chip == null
-              ? null
-              : provider.buildChip(context, chip);
+          Widget? chipWidget =
+              chip == null ? null : provider.buildChip(context, chip);
           if (chipWidget != null) {
-            bool previousIsChip =
-                i > 0 &&
+            bool previousIsChip = i > 0 &&
                 text.codeUnitAt(i - 1) >= _chipStart &&
                 text.codeUnitAt(i - 1) <= _chipEnd;
-            bool nextIsChip =
-                i < text.length - 1 &&
+            bool nextIsChip = i < text.length - 1 &&
                 text.codeUnitAt(i + 1) >= _chipStart &&
                 text.codeUnitAt(i + 1) <= _chipEnd;
             children.add(
@@ -239,8 +235,8 @@ class ChipEditingController<T> extends TextEditingController {
                     left: previousIsChip
                         ? spacing / 2
                         : i == 0
-                        ? 0
-                        : spacing,
+                            ? 0
+                            : spacing,
                     right: nextIsChip ? spacing / 2 : spacing,
                   ),
                   child: chipWidget,

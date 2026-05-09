@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form_value_supplier.dart';
 
 /// ReplaceResult defines a reusable type for this registry module.
@@ -5,7 +7,7 @@ class ReplaceResult<T> extends ValidationResult {
   /// The replacement value to use.
   final T value;
 
-/// Stores `_key` state/configuration for this implementation.
+  /// Stores `_key` state/configuration for this implementation.
   final FormKey? _key;
 
   /// Creates a [ReplaceResult] with the specified replacement value.
@@ -23,7 +25,8 @@ class ReplaceResult<T> extends ValidationResult {
   }
 
   @override
-/// Executes `attach` behavior for this component/composite.
+
+  /// Executes `attach` behavior for this component/composite.
   ReplaceResult<T> attach(FormKey key) {
     return ReplaceResult.attached(value, key: key, state: state);
   }

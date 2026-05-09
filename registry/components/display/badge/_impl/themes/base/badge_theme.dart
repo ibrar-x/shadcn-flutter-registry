@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../badge.dart';
 
 /// Theme data for customizing badge widget appearance across different styles.
@@ -34,13 +36,11 @@ class BadgeTheme extends ComponentThemeData {
   }) {
     return BadgeTheme(
       primaryStyle: primaryStyle == null ? this.primaryStyle : primaryStyle(),
-      secondaryStyle: secondaryStyle == null
-          ? this.secondaryStyle
-          : secondaryStyle(),
+      secondaryStyle:
+          secondaryStyle == null ? this.secondaryStyle : secondaryStyle(),
       outlineStyle: outlineStyle == null ? this.outlineStyle : outlineStyle(),
-      destructiveStyle: destructiveStyle == null
-          ? this.destructiveStyle
-          : destructiveStyle(),
+      destructiveStyle:
+          destructiveStyle == null ? this.destructiveStyle : destructiveStyle(),
     );
   }
 

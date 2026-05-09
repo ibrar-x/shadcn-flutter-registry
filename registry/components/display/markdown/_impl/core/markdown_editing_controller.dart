@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../markdown.dart';
 
 class MarkdownEditingController extends TextEditingController {
@@ -14,8 +16,7 @@ class MarkdownEditingController extends TextEditingController {
   @override
   set value(TextEditingValue newValue) {
     final previous = super.value;
-    final hasChanged =
-        previous.text != newValue.text ||
+    final hasChanged = previous.text != newValue.text ||
         previous.selection != newValue.selection ||
         previous.composing != newValue.composing;
 
@@ -42,8 +43,7 @@ class MarkdownEditingController extends TextEditingController {
     MarkdownEditResult Function({
       required String text,
       required TextSelection selection,
-    })
-    transformer,
+    }) transformer,
   ) {
     applyEdit(transformer(text: text, selection: selection));
   }

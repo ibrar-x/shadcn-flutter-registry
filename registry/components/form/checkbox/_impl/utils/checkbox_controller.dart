@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../checkbox.dart';
 
 /// Reactive controller for managing checkbox state with convenient methods.
@@ -72,8 +74,8 @@ class CheckboxController extends ValueNotifier<CheckboxState>
     value = value == CheckboxState.checked
         ? CheckboxState.unchecked
         : value == CheckboxState.unchecked
-        ? CheckboxState.indeterminate
-        : CheckboxState.checked;
+            ? CheckboxState.indeterminate
+            : CheckboxState.checked;
   }
 
   /// Returns true if the checkbox is currently checked.

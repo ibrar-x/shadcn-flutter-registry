@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math' as math;
 import 'dart:ui' show lerpDouble;
 
@@ -601,8 +603,7 @@ class _WaveSliderState extends State<WaveSlider> {
 
     final normalizedValue = _normalize(widget.value);
     final denormalizedValue = _denormalize(normalizedValue);
-    final semanticsText =
-        widget.valueFormatter?.call(denormalizedValue) ??
+    final semanticsText = widget.valueFormatter?.call(denormalizedValue) ??
         '${(normalizedValue * 100).round()}%';
 
     final defaultWavePopover = ShadSliderDefaults.valuePopover(
@@ -613,8 +614,8 @@ class _WaveSliderState extends State<WaveSlider> {
         resolvedPopoverBuilder ?? defaultWavePopover;
     final showPopover =
         resolvedPopoverVisibility != ShadPopoverVisibility.never &&
-        (resolvedPopoverVisibility == ShadPopoverVisibility.always ||
-            _dragging);
+            (resolvedPopoverVisibility == ShadPopoverVisibility.always ||
+                _dragging);
 
     Widget body = SizedBox(
       width: double.infinity,
@@ -666,8 +667,7 @@ class _WaveSliderState extends State<WaveSlider> {
             if (showPopover)
               Positioned(
                 left: thumbX + resolvedPopoverOffset.dx,
-                top:
-                    thumbY -
+                top: thumbY -
                     (resolvedShowThumb ? resolvedThumbRadius : 0) +
                     resolvedPopoverOffset.dy,
                 child: FractionalTranslation(

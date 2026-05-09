@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../markdown.dart';
 
 (String, _MarkdownLinkTarget)? _tryParseReferenceDefinition(String line) {
@@ -57,8 +59,8 @@ part of '../../markdown.dart';
   final language = fenceInfo.$2;
   final buffer = <String>[];
   var i = index + 1;
-  while (i < lines.length &&
-      !_isClosingFenceLine(lines[i].trimRight(), marker)) {
+  while (
+      i < lines.length && !_isClosingFenceLine(lines[i].trimRight(), marker)) {
     buffer.add(lines[i]);
     i += 1;
   }
@@ -465,9 +467,8 @@ List<String> _appendTableRowContinuation(
     merged.add(continuation);
     return merged;
   }
-  merged[merged.length - 1] = merged.last.isEmpty
-      ? continuation
-      : '${merged.last}\n$continuation';
+  merged[merged.length - 1] =
+      merged.last.isEmpty ? continuation : '${merged.last}\n$continuation';
   return merged;
 }
 

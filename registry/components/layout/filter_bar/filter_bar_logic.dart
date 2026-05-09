@@ -1,6 +1,9 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/foundation.dart';
 
 @immutable
+
 /// FilterState defines a reusable type for this registry module.
 class FilterState {
   static const Object _sentinel = Object();
@@ -51,27 +54,25 @@ class FilterState {
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    final otherChips = other is FilterState
-        ? other.chips
-        : const <FilterChipData>[];
-    final sameChips =
-        otherChips.length == chips.length &&
+    final otherChips =
+        other is FilterState ? other.chips : const <FilterChipData>[];
+    final sameChips = otherChips.length == chips.length &&
         chips.asMap().entries.every(
-          (entry) => otherChips[entry.key] == entry.value,
-        );
-    final otherCustomFilters = other is FilterState
-        ? other.customFilters
-        : const <String, Object?>{};
+              (entry) => otherChips[entry.key] == entry.value,
+            );
+    final otherCustomFilters =
+        other is FilterState ? other.customFilters : const <String, Object?>{};
     final sameCustomFilters =
         otherCustomFilters.length == customFilters.length &&
-        customFilters.keys.every(
-          (key) =>
-              otherCustomFilters.containsKey(key) &&
-              otherCustomFilters[key] == customFilters[key],
-        );
+            customFilters.keys.every(
+              (key) =>
+                  otherCustomFilters.containsKey(key) &&
+                  otherCustomFilters[key] == customFilters[key],
+            );
     return other is FilterState &&
         other.search == search &&
         other.sortId == sortId &&
@@ -82,12 +83,12 @@ class FilterState {
 
   @override
   int get hashCode => Object.hash(
-    search,
-    sortId,
-    dateRange,
-    Object.hashAll(chips),
-    _hashCustomFilters(customFilters),
-  );
+        search,
+        sortId,
+        dateRange,
+        Object.hashAll(chips),
+        _hashCustomFilters(customFilters),
+      );
 }
 
 int _hashCustomFilters(Map<String, Object?> values) {
@@ -96,6 +97,7 @@ int _hashCustomFilters(Map<String, Object?> values) {
 }
 
 @immutable
+
 /// FilterChipData defines a reusable type for this registry module.
 class FilterChipData {
   /// Stores `key` state/configuration for this implementation.
@@ -107,6 +109,7 @@ class FilterChipData {
   const FilterChipData({required this.key, required this.label});
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -118,6 +121,7 @@ class FilterChipData {
 }
 
 @immutable
+
 /// FilterDateRange defines a reusable type for this registry module.
 class FilterDateRange {
   /// Stores `start` state/configuration for this implementation.
@@ -132,6 +136,7 @@ class FilterDateRange {
   bool get isEmpty => start == null && end == null;
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -143,6 +148,7 @@ class FilterDateRange {
 }
 
 @immutable
+
 /// FilterSortOption defines a reusable type for this registry module.
 class FilterSortOption {
   /// Stores `id` state/configuration for this implementation.
@@ -154,6 +160,7 @@ class FilterSortOption {
   const FilterSortOption({required this.id, required this.label});
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -168,6 +175,7 @@ class FilterSortOption {
 typedef FilterMatcherCallback<T> = bool Function(T selected, Object? candidate);
 
 @immutable
+
 /// FilterMatcher defines a reusable type for this registry module.
 class FilterMatcher<T> {
   final FilterMatcherCallback<T> _matches;
@@ -293,6 +301,7 @@ abstract final class FilterMatchers {
 }
 
 @immutable
+
 /// FilterMatcherOption defines a reusable type for this registry module.
 class FilterMatcherOption<T> {
   final String id;
@@ -307,6 +316,7 @@ class FilterMatcherOption<T> {
 }
 
 @immutable
+
 /// FilterField defines a reusable type for this registry module.
 class FilterField<T> {
   final String id;
@@ -325,6 +335,7 @@ class FilterField<T> {
 }
 
 @immutable
+
 /// FilterBinding defines a reusable type for this registry module.
 abstract class FilterBinding<TModel> {
   const FilterBinding();
@@ -334,6 +345,7 @@ abstract class FilterBinding<TModel> {
 }
 
 @immutable
+
 /// TypedFilterBinding defines a reusable type for this registry module.
 class TypedFilterBinding<TModel, TValue> extends FilterBinding<TModel> {
   final FilterField<TValue> field;
@@ -348,6 +360,7 @@ class TypedFilterBinding<TModel, TValue> extends FilterBinding<TModel> {
 }
 
 @immutable
+
 /// FilterClearPolicy defines a reusable type for this registry module.
 class FilterClearPolicy {
   final bool clearSearch;
@@ -395,12 +408,12 @@ class FilterClearPolicy {
 
   @override
   int get hashCode => Object.hash(
-    clearSearch,
-    clearSort,
-    clearDateRange,
-    clearChips,
-    clearCustomFilters,
-  );
+        clearSearch,
+        clearSort,
+        clearDateRange,
+        clearChips,
+        clearCustomFilters,
+      );
 }
 
 /// FilterBarController defines a reusable type for this registry module.
@@ -457,9 +470,8 @@ extension FilterStateExtensions on FilterState {
   }
 
   FilterState withoutChip(String chipKey) {
-    final next = chips
-        .where((chip) => chip.key != chipKey)
-        .toList(growable: false);
+    final next =
+        chips.where((chip) => chip.key != chipKey).toList(growable: false);
     return copyWith(chips: next);
   }
 
@@ -469,9 +481,8 @@ extension FilterStateExtensions on FilterState {
       sortId: policy.clearSort ? null : sortId,
       dateRange: policy.clearDateRange ? null : dateRange,
       chips: policy.clearChips ? const [] : chips,
-      customFilters: policy.clearCustomFilters
-          ? const <String, Object?>{}
-          : customFilters,
+      customFilters:
+          policy.clearCustomFilters ? const <String, Object?>{} : customFilters,
     );
   }
 

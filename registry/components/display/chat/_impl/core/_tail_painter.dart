@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../chat.dart';
 
 /// Custom painter responsible for drawing chat-specific visuals.
@@ -42,11 +44,9 @@ class _TailPainter extends CustomPainter {
       AxisDirection.right => Axis.horizontal,
     };
 
-    double horizontalOffset =
-        tailAlignment.alongValue(axis, size.width) -
+    double horizontalOffset = tailAlignment.alongValue(axis, size.width) -
         tailAlignment.alongValue(axis, tailSize.width);
-    double verticalOffset =
-        tailAlignment.alongValue(axis, size.height) -
+    double verticalOffset = tailAlignment.alongValue(axis, size.height) -
         tailAlignment.alongValue(axis, tailSize.height);
     double alignVal = tailAlignment.resolveValue(axis);
     double t = (alignVal + 1) / 2;
@@ -111,12 +111,10 @@ class _TailPainter extends CustomPainter {
     d1 = v1.distance;
     d2 = v2.distance;
 
-    Offset pathBeforeTail = d1 == 0
-        ? tip
-        : tip + v1 * (min(d1, tailRadius) / d1);
-    Offset pathAfterTail = d2 == 0
-        ? tip
-        : tip + v2 * (min(d2, tailRadius) / d2);
+    Offset pathBeforeTail =
+        d1 == 0 ? tip : tip + v1 * (min(d1, tailRadius) / d1);
+    Offset pathAfterTail =
+        d2 == 0 ? tip : tip + v2 * (min(d2, tailRadius) / d2);
 
     path.moveTo(base1.dx, base1.dy);
     path.lineTo(pathBeforeTail.dx, pathBeforeTail.dy);

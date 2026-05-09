@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../dot_indicator.dart';
 
 /// Theme data for [DotIndicator] and children.
@@ -63,9 +65,8 @@ class DotIndicatorTheme extends ComponentThemeData {
       size: size == null ? this.size : size(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
       activeColor: activeColor == null ? this.activeColor : activeColor(),
-      inactiveColor: inactiveColor == null
-          ? this.inactiveColor
-          : inactiveColor(),
+      inactiveColor:
+          inactiveColor == null ? this.inactiveColor : inactiveColor(),
       inactiveBorderColor: inactiveBorderColor == null
           ? this.inactiveBorderColor
           : inactiveBorderColor(),
@@ -93,14 +94,14 @@ class DotIndicatorTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    spacing,
-    padding,
-    dotBuilder,
-    size,
-    borderRadius,
-    activeColor,
-    inactiveColor,
-    inactiveBorderColor,
-    inactiveBorderWidth,
-  );
+        spacing,
+        padding,
+        dotBuilder,
+        size,
+        borderRadius,
+        activeColor,
+        inactiveColor,
+        inactiveBorderColor,
+        inactiveBorderWidth,
+      );
 }

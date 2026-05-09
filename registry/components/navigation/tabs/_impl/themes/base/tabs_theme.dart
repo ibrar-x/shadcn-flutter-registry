@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../tabs.dart';
 
 /// TabsTheme defines a reusable type for this registry module.
@@ -58,18 +60,17 @@ class TabsTheme extends ComponentThemeData {
     ValueGetter<BorderRadiusGeometry?>? borderRadius,
   }) {
     return TabsTheme(
-      containerPadding: containerPadding == null
-          ? this.containerPadding
-          : containerPadding(),
+      containerPadding:
+          containerPadding == null ? this.containerPadding : containerPadding(),
       tabPadding: tabPadding == null ? this.tabPadding : tabPadding(),
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
     );
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;

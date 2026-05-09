@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../preview.dart';
 
 /// _StreamingMode enumerates fixed values used by this implementation.
@@ -50,9 +52,8 @@ class _TextAnimatePreviewState extends m.State<TextAnimatePreview> {
   void initState() {
     super.initState();
     _chunksByMode = {
-      _StreamingMode.character: _part2.runes
-          .map((r) => String.fromCharCode(r))
-          .toList(),
+      _StreamingMode.character:
+          _part2.runes.map((r) => String.fromCharCode(r)).toList(),
       _StreamingMode.word: _buildWordChunks(_part2),
       _StreamingMode.chunk: _buildFixedChunks(_part2, 16),
       _StreamingMode.part: [_part1, _part2],
@@ -155,23 +156,16 @@ class _TextAnimatePreviewState extends m.State<TextAnimatePreview> {
                       fontWeight: m.FontWeight.w700,
                     ),
                   ),
-
                   const m.SizedBox(height: 8),
-
                   const m.Text(
                     'Responsive grid preview: each animation is shown with character, word, chunk, and part-stream updates.',
                   ),
-
                   const m.SizedBox(height: 14),
-
                   _buildGrid(),
-
                   const m.SizedBox(height: 16),
-
                   m.Text(
                     'Base stream tick: ${_streamIntervalMs.toStringAsFixed(0)} ms',
                   ),
-
                   m.Slider(
                     value: _streamIntervalMs,
                     min: 30,
@@ -182,9 +176,7 @@ class _TextAnimatePreviewState extends m.State<TextAnimatePreview> {
                       setState(() => _streamIntervalMs = value);
                     },
                   ),
-
                   const m.SizedBox(height: 4),
-
                   m.Wrap(
                     spacing: 10,
                     runSpacing: 10,
@@ -193,7 +185,6 @@ class _TextAnimatePreviewState extends m.State<TextAnimatePreview> {
                         onPressed: _startStream,
                         child: const m.Text('Restart stream'),
                       ),
-
                       m.OutlinedButton(
                         onPressed: () {
                           _timer?.cancel();
@@ -236,10 +227,10 @@ class _TextAnimatePreviewState extends m.State<TextAnimatePreview> {
         final columns = maxWidth >= 1440
             ? 4
             : maxWidth >= 1040
-            ? 3
-            : maxWidth >= 700
-            ? 2
-            : 1;
+                ? 3
+                : maxWidth >= 700
+                    ? 2
+                    : 1;
 
         return m.GridView.builder(
           shrinkWrap: true,
@@ -277,27 +268,21 @@ class _TextAnimatePreviewState extends m.State<TextAnimatePreview> {
               fontWeight: m.FontWeight.w700,
             ),
           ),
-
           const m.SizedBox(height: 2),
-
           m.Text(
             _modeDescription(mode),
             style: const m.TextStyle(fontSize: 11, height: 1.35),
             maxLines: 2,
             overflow: m.TextOverflow.ellipsis,
           ),
-
           const m.SizedBox(height: 2),
-
           m.Text(
             _animationDescription(animation),
             style: const m.TextStyle(fontSize: 11, height: 1.35),
             maxLines: 2,
             overflow: m.TextOverflow.ellipsis,
           ),
-
           const m.SizedBox(height: 10),
-
           m.Container(
             width: double.infinity,
             constraints: const m.BoxConstraints(minHeight: 106),

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../tree.dart';
 
 /// _TreeViewState holds mutable state for the tree implementation.
@@ -284,8 +286,8 @@ class _TreeViewState<T> extends State<TreeView<T>> {
                       (equalSelection
                           ? !children[i].node.selected
                           : (reverseSelection
-                                ? children[i].node.selected
-                                : !children[i].node.selected))) {
+                              ? children[i].node.selected
+                              : !children[i].node.selected))) {
                     _currentFocusedIndex = i;
                     break;
                   }
@@ -297,8 +299,8 @@ class _TreeViewState<T> extends State<TreeView<T>> {
                       (equalSelection
                           ? !children[i].node.selected
                           : (reverseSelection
-                                ? !children[i].node.selected
-                                : children[i].node.selected))) {
+                              ? !children[i].node.selected
+                              : children[i].node.selected))) {
                     _currentFocusedIndex = i;
                     break;
                   }

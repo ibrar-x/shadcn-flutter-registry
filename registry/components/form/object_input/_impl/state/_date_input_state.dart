@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../object_input.dart';
 
 /// _DateInputState stores and manages mutable widget state.
@@ -22,9 +24,8 @@ class _DateInputState extends State<DateInput> {
     int? month = monthString == null || monthString.isEmpty
         ? null
         : int.tryParse(monthString);
-    int? day = dayString == null || dayString.isEmpty
-        ? null
-        : int.tryParse(dayString);
+    int? day =
+        dayString == null || dayString.isEmpty ? null : int.tryParse(dayString);
     return NullableDate(year: year, month: month, day: day);
   }
 

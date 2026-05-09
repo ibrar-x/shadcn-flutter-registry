@@ -1,8 +1,10 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../tabs.dart';
 
 /// Type alias for `TabPaneItemBuilder` used by public or internal APIs.
-typedef TabPaneItemBuilder<T> =
-    TabChild Function(BuildContext context, TabPaneData<T> item, int index);
+typedef TabPaneItemBuilder<T> = TabChild Function(
+    BuildContext context, TabPaneData<T> item, int index);
 
 /// A comprehensive tab pane widget with sortable tabs and integrated content display.
 ///

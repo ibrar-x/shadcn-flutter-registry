@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../markdown.dart';
 
 class _MarkdownState extends State<Markdown> {
@@ -347,27 +349,27 @@ class _MarkdownState extends State<Markdown> {
         unawaited(
           _chunkScrollController
               .animateTo(
-                targetOffset.clamp(
-                  0.0,
-                  _chunkScrollController.position.maxScrollExtent,
-                ),
-                duration: const Duration(milliseconds: 220),
-                curve: Curves.easeOutCubic,
-              )
+            targetOffset.clamp(
+              0.0,
+              _chunkScrollController.position.maxScrollExtent,
+            ),
+            duration: const Duration(milliseconds: 220),
+            curve: Curves.easeOutCubic,
+          )
               .whenComplete(() {
-                WidgetsBinding.instance.addPostFrameCallback((_) {
-                  final contextAfterScroll =
-                      _cachedHeadingAnchorMap[anchor]?.currentContext;
-                  if (contextAfterScroll != null) {
-                    Scrollable.ensureVisible(
-                      contextAfterScroll,
-                      alignment: 0.08,
-                      curve: Curves.easeOutCubic,
-                      duration: const Duration(milliseconds: 140),
-                    );
-                  }
-                });
-              }),
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              final contextAfterScroll =
+                  _cachedHeadingAnchorMap[anchor]?.currentContext;
+              if (contextAfterScroll != null) {
+                Scrollable.ensureVisible(
+                  contextAfterScroll,
+                  alignment: 0.08,
+                  curve: Curves.easeOutCubic,
+                  duration: const Duration(milliseconds: 140),
+                );
+              }
+            });
+          }),
         );
         return true;
       }
@@ -444,12 +446,11 @@ class _MarkdownState extends State<Markdown> {
     TextAlign textAlign = TextAlign.start,
     bool softWrap = true,
   }) {
-    final registrar = widget.selectable
-        ? SelectionContainer.maybeOf(context)
-        : null;
+    final registrar =
+        widget.selectable ? SelectionContainer.maybeOf(context) : null;
     final selectionColor = widget.selectable
         ? (DefaultSelectionStyle.of(context).selectionColor ??
-              const Color(0x406694E8))
+            const Color(0x406694E8))
         : null;
     return RichText(
       text: text,
@@ -539,9 +540,8 @@ class _MarkdownState extends State<Markdown> {
       );
     }
 
-    final assetPath = normalized.startsWith('asset:')
-        ? normalized.substring(6)
-        : normalized;
+    final assetPath =
+        normalized.startsWith('asset:') ? normalized.substring(6) : normalized;
     return Image.asset(
       assetPath,
       fit: fit,
@@ -685,13 +685,15 @@ class _MarkdownState extends State<Markdown> {
       _MarkdownBlockType.heading3 ||
       _MarkdownBlockType.heading4 ||
       _MarkdownBlockType.heading5 ||
-      _MarkdownBlockType.heading6 => MarkdownBlockKind.heading,
+      _MarkdownBlockType.heading6 =>
+        MarkdownBlockKind.heading,
       _MarkdownBlockType.unorderedList => MarkdownBlockKind.unorderedList,
       _MarkdownBlockType.orderedList => MarkdownBlockKind.orderedList,
       _MarkdownBlockType.taskList => MarkdownBlockKind.taskList,
       _MarkdownBlockType.quote => MarkdownBlockKind.quote,
       _MarkdownBlockType.codeFence ||
-      _MarkdownBlockType.indentedCode => MarkdownBlockKind.codeBlock,
+      _MarkdownBlockType.indentedCode =>
+        MarkdownBlockKind.codeBlock,
       _MarkdownBlockType.table => MarkdownBlockKind.table,
       _MarkdownBlockType.image => MarkdownBlockKind.image,
       _MarkdownBlockType.definitionList => MarkdownBlockKind.definitionList,
@@ -723,12 +725,15 @@ class _MarkdownState extends State<Markdown> {
       _MarkdownBlockType.heading3 ||
       _MarkdownBlockType.heading4 ||
       _MarkdownBlockType.heading5 ||
-      _MarkdownBlockType.heading6 => MarkdownTapElementKind.heading,
+      _MarkdownBlockType.heading6 =>
+        MarkdownTapElementKind.heading,
       _MarkdownBlockType.unorderedList ||
       _MarkdownBlockType.orderedList ||
-      _MarkdownBlockType.taskList => MarkdownTapElementKind.listItem,
+      _MarkdownBlockType.taskList =>
+        MarkdownTapElementKind.listItem,
       _MarkdownBlockType.codeFence ||
-      _MarkdownBlockType.indentedCode => MarkdownTapElementKind.codeBlock,
+      _MarkdownBlockType.indentedCode =>
+        MarkdownTapElementKind.codeBlock,
       _MarkdownBlockType.math => MarkdownTapElementKind.math,
       _MarkdownBlockType.footnote => MarkdownTapElementKind.footnote,
       _MarkdownBlockType.rawHtml => MarkdownTapElementKind.rawHtml,
@@ -949,11 +954,9 @@ class _MarkdownState extends State<Markdown> {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        for (
-          var blockIndex = chunk.startBlockIndex;
-          blockIndex < chunk.endBlockIndex;
-          blockIndex++
-        )
+        for (var blockIndex = chunk.startBlockIndex;
+            blockIndex < chunk.endBlockIndex;
+            blockIndex++)
           _buildBlock(
             context,
             chunk.blocks[blockIndex - chunk.startBlockIndex],
@@ -1088,12 +1091,14 @@ class _MarkdownState extends State<Markdown> {
                           baseStyle: baseStyle,
                           markdownTheme: markdownTheme,
                         )
-                      : Text(switch (block.type) {
-                          _MarkdownBlockType.unorderedList => '• ',
-                          _MarkdownBlockType.orderedList =>
-                            '${block.orderedIndex}. ',
-                          _ => '',
-                        }, style: baseStyle),
+                      : Text(
+                          switch (block.type) {
+                            _MarkdownBlockType.unorderedList => '• ',
+                            _MarkdownBlockType.orderedList =>
+                              '${block.orderedIndex}. ',
+                            _ => '',
+                          },
+                          style: baseStyle),
                 ),
                 SizedBox(width: isTaskList ? 8 : 0),
                 Expanded(child: listContent),
@@ -1104,15 +1109,13 @@ class _MarkdownState extends State<Markdown> {
           return Container(
             width: double.infinity,
             margin: const EdgeInsets.symmetric(vertical: 4),
-            padding:
-                markdownTheme?.quotePadding ??
+            padding: markdownTheme?.quotePadding ??
                 const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             decoration: BoxDecoration(
               color: markdownTheme?.quoteBackgroundColor,
               border: Border(
                 left: BorderSide(
-                  color:
-                      markdownTheme?.quoteBorderColor ??
+                  color: markdownTheme?.quoteBorderColor ??
                       baseStyle.color?.withValues(alpha: 0.45) ??
                       const Color(0x66000000),
                   width: markdownTheme?.quoteBorderWidth ?? 3,
@@ -1185,24 +1188,20 @@ class _MarkdownState extends State<Markdown> {
                       ),
                     );
                   },
-            summaryStyle:
-                markdownTheme?.detailsSummaryStyle ??
+            summaryStyle: markdownTheme?.detailsSummaryStyle ??
                 baseStyle.copyWith(fontWeight: FontWeight.w600),
             decoration: BoxDecoration(
               border: Border.all(
-                color:
-                    markdownTheme?.detailsBorderColor ??
+                color: markdownTheme?.detailsBorderColor ??
                     const Color(0x22000000),
               ),
               color: markdownTheme?.detailsBackgroundColor,
               borderRadius:
                   markdownTheme?.detailsRadius ?? BorderRadius.circular(10),
             ),
-            headerPadding:
-                markdownTheme?.detailsHeaderPadding ??
+            headerPadding: markdownTheme?.detailsHeaderPadding ??
                 const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-            bodyPadding:
-                markdownTheme?.detailsBodyPadding ??
+            bodyPadding: markdownTheme?.detailsBodyPadding ??
                 const EdgeInsets.fromLTRB(12, 0, 12, 12),
             child: Markdown(
               data: block.items.isEmpty ? '' : block.items.first,
@@ -1277,8 +1276,7 @@ class _MarkdownState extends State<Markdown> {
       }
     }
 
-    Widget child =
-        widget.blockBuilder?.call(
+    Widget child = widget.blockBuilder?.call(
           context,
           _buildBlockRenderDetails(
             block,
@@ -1396,7 +1394,7 @@ class _MarkdownState extends State<Markdown> {
         final cellPadding = compactMode
             ? const EdgeInsets.symmetric(horizontal: 10, vertical: 8)
             : (markdownTheme?.tableCellPadding ??
-                  const EdgeInsets.symmetric(horizontal: 12, vertical: 10));
+                const EdgeInsets.symmetric(horizontal: 12, vertical: 10));
         final resolvedMinCellWidth = compactMode
             ? (minCellWidth.clamp(72.0, 88.0) as num).toDouble()
             : minCellWidth;
@@ -1428,21 +1426,19 @@ class _MarkdownState extends State<Markdown> {
                     decoration: BoxDecoration(
                       color: rowIndex == 0
                           ? (markdownTheme?.tableHeaderBackgroundColor ??
-                                const Color(0x11000000))
+                              const Color(0x11000000))
                           : Colors.transparent,
                     ),
                     children: [
-                      for (
-                        var colIndex = 0;
-                        colIndex < rows[rowIndex].length;
-                        colIndex++
-                      )
+                      for (var colIndex = 0;
+                          colIndex < rows[rowIndex].length;
+                          colIndex++)
                         () {
                           final cellText = rows[rowIndex][colIndex];
                           final cellTextAlign =
                               colIndex < block.tableAlignments.length
-                              ? block.tableAlignments[colIndex]
-                              : TextAlign.left;
+                                  ? block.tableAlignments[colIndex]
+                                  : TextAlign.left;
                           final effectiveCellStyle = rowIndex == 0
                               ? compactHeaderStyle
                               : compactCellStyle;

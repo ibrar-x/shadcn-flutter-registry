@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../code_snippet.dart';
 
 /// Theme configuration for [CodeSnippet].
@@ -38,9 +40,8 @@ class CodeSnippetTheme extends ComponentThemeData {
     ValueGetter<EdgeInsetsGeometry?>? padding,
   }) {
     return CodeSnippetTheme(
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       borderColor: borderColor == null ? this.borderColor : borderColor(),
       borderWidth: borderWidth == null ? this.borderWidth : borderWidth(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
@@ -62,10 +63,10 @@ class CodeSnippetTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    backgroundColor,
-    borderColor,
-    borderWidth,
-    borderRadius,
-    padding,
-  );
+        backgroundColor,
+        borderColor,
+        borderWidth,
+        borderRadius,
+        padding,
+      );
 }

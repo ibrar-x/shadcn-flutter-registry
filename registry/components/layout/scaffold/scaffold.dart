@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:ui';
 
 import 'package:data_widget/data_widget.dart';
@@ -68,9 +70,8 @@ class ScaffoldTheme extends ComponentThemeData {
     ValueGetter<bool?>? resizeToAvoidBottomInset,
   }) {
     return ScaffoldTheme(
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       headerBackgroundColor: headerBackgroundColor == null
           ? this.headerBackgroundColor
           : headerBackgroundColor(),
@@ -87,7 +88,8 @@ class ScaffoldTheme extends ComponentThemeData {
   }
 
   @override
-/// Executes `operator ==` behavior for this component/composite.
+
+  /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) =>
       other is ScaffoldTheme &&
       other.backgroundColor == backgroundColor &&
@@ -98,15 +100,16 @@ class ScaffoldTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    backgroundColor,
-    headerBackgroundColor,
-    footerBackgroundColor,
-    showLoadingSparks,
-    resizeToAvoidBottomInset,
-  );
+        backgroundColor,
+        headerBackgroundColor,
+        footerBackgroundColor,
+        showLoadingSparks,
+        resizeToAvoidBottomInset,
+      );
 
   @override
-/// Executes `toString` behavior for this component/composite.
+
+  /// Executes `toString` behavior for this component/composite.
   String toString() =>
       'ScaffoldTheme(background: $backgroundColor, header: $headerBackgroundColor, footer: $footerBackgroundColor, showLoadingSparks: $showLoadingSparks, resizeToAvoidBottomInset: $resizeToAvoidBottomInset)';
 }

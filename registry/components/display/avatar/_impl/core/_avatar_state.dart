@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../avatar.dart';
 
 /// _AvatarState holds mutable state for the avatar implementation.
@@ -115,7 +117,6 @@ class _AvatarState extends State<Avatar> {
           borderRadius: widget.badge!.borderRadius,
           child: widget.badge!,
         ),
-
         _AvatarWidget(
           size: size,
           borderRadius: borderRadius,

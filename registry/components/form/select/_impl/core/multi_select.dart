@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../select.dart';
 
 /// A customizable dropdown selection widget for multi-value selection.
@@ -16,7 +18,8 @@ part of '../../select.dart';
 /// ```
 class MultiSelect<T> extends StatelessWidget with SelectBase<Iterable<T>> {
   @override
-  final ValueChanged<Iterable<T>?>? onChanged; // if null, then it's a disabled combobox
+  final ValueChanged<Iterable<T>?>?
+      onChanged; // if null, then it's a disabled combobox
   @override
   final Widget? placeholder; // placeholder when value is null
   /// Field storing `filled` for this form implementation.
@@ -78,8 +81,8 @@ class MultiSelect<T> extends StatelessWidget with SelectBase<Iterable<T>> {
   final SelectPopupBuilder popup;
   @override
   SelectValueBuilder<Iterable<T>> get itemBuilder => (context, value) {
-    return _buildItem(multiItemBuilder, context, value);
-  };
+        return _buildItem(multiItemBuilder, context, value);
+      };
 
   /// Current value stored for `valueSelectionHandler`.
   @override

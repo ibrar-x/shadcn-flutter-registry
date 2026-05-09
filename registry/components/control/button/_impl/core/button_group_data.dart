@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 /// Data class defining border radius multipliers for grouped buttons.
@@ -73,26 +75,26 @@ class ButtonGroupData {
   ///
   /// Both top and bottom on each side use the same value.
   const ButtonGroupData.horizontal({double start = 1.0, double end = 1.0})
-    : topStartValue = start,
-      topEndValue = end,
-      bottomStartValue = start,
-      bottomEndValue = end;
+      : topStartValue = start,
+        topEndValue = end,
+        bottomStartValue = start,
+        bottomEndValue = end;
 
   /// Creates vertical group data with top and bottom multipliers.
   ///
   /// Both start and end on each side use the same value.
   const ButtonGroupData.vertical({double top = 1.0, double bottom = 1.0})
-    : topStartValue = top,
-      topEndValue = top,
-      bottomStartValue = bottom,
-      bottomEndValue = bottom;
+      : topStartValue = top,
+        topEndValue = top,
+        bottomStartValue = bottom,
+        bottomEndValue = bottom;
 
   /// Creates group data with the same multiplier for all corners.
   const ButtonGroupData.all(double value)
-    : topStartValue = value,
-      topEndValue = value,
-      bottomStartValue = value,
-      bottomEndValue = value;
+      : topStartValue = value,
+        topEndValue = value,
+        bottomStartValue = value,
+        bottomEndValue = value;
 
   /// Creates group data for a button at [index] in a horizontal group of [length] buttons.
   ///
@@ -150,18 +152,14 @@ class ButtonGroupData {
     BorderRadiusGeometry borderRadius,
     TextDirection textDirection,
   ) {
-    final topLeftValue = textDirection == TextDirection.ltr
-        ? topStartValue
-        : topEndValue;
-    final topRightValue = textDirection == TextDirection.ltr
-        ? topEndValue
-        : topStartValue;
-    final bottomLeftValue = textDirection == TextDirection.ltr
-        ? bottomStartValue
-        : bottomEndValue;
-    final bottomRightValue = textDirection == TextDirection.ltr
-        ? bottomEndValue
-        : bottomStartValue;
+    final topLeftValue =
+        textDirection == TextDirection.ltr ? topStartValue : topEndValue;
+    final topRightValue =
+        textDirection == TextDirection.ltr ? topEndValue : topStartValue;
+    final bottomLeftValue =
+        textDirection == TextDirection.ltr ? bottomStartValue : bottomEndValue;
+    final bottomRightValue =
+        textDirection == TextDirection.ltr ? bottomEndValue : bottomStartValue;
     final resolvedBorderRadius = borderRadius.resolve(textDirection);
     return BorderRadius.only(
       topLeft: Radius.elliptical(
@@ -205,13 +203,15 @@ class ButtonGroupData {
   }
 
   @override
-/// Executes `toString` behavior for this component/composite.
+
+  /// Executes `toString` behavior for this component/composite.
   String toString() {
     return 'ButtonGroupData(topStartValue: $topStartValue, topEndValue: $topEndValue, bottomStartValue: $bottomStartValue, bottomEndValue: $bottomEndValue)';
   }
 
   @override
-/// Executes `operator ==` behavior for this component/composite.
+
+  /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     if (other.runtimeType != runtimeType) return false;

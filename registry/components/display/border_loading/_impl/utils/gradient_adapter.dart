@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../border_loading.dart';
 
 /// Mathematical constant for one full rotation in radians.
@@ -25,20 +27,20 @@ Shader _createGradientShader({
 }) {
   return switch (spec.type) {
     BorderGradientType.linear => _buildLinearShader(
-      spec: spec,
-      bounds: bounds,
-      progress: progress,
-    ),
+        spec: spec,
+        bounds: bounds,
+        progress: progress,
+      ),
     BorderGradientType.radial => _buildRadialShader(
-      spec: spec,
-      bounds: bounds,
-      progress: progress,
-    ),
+        spec: spec,
+        bounds: bounds,
+        progress: progress,
+      ),
     BorderGradientType.sweep => _buildSweepShader(
-      spec: spec,
-      bounds: bounds,
-      progress: progress,
-    ),
+        spec: spec,
+        bounds: bounds,
+        progress: progress,
+      ),
   };
 }
 

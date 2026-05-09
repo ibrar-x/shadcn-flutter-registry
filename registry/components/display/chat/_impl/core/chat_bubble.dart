@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../chat.dart';
 
 /// A widget that displays a single chat message or content.
@@ -77,8 +79,7 @@ class ChatBubble extends StatelessWidget {
       themeValue: chatTheme?.type,
       defaultValue: ChatBubbleType.tail,
     );
-    final effectiveData =
-        (Data.maybeOf<ChatBubbleData>(context) ??
+    final effectiveData = (Data.maybeOf<ChatBubbleData>(context) ??
         ChatBubbleData(index: 0, length: 1));
     final widthFactor = styleValue(
       widgetValue: this.widthFactor,
@@ -95,8 +96,7 @@ class ChatBubble extends StatelessWidget {
       widthFactor: widthFactor,
       alignment: alignment,
       child: ComponentTheme(
-        data:
-            chatTheme?.copyWith(
+        data: chatTheme?.copyWith(
               color: color == null ? null : () => color,
               type: () => type,
               alignment: () => alignment,

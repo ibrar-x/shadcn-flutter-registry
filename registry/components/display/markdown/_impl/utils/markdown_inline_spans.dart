@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../markdown.dart';
 
 List<InlineSpan> _buildInlineSpans(
@@ -63,8 +65,8 @@ class _MarkdownInlineParser {
         index += remaining.startsWith('<br />')
             ? 6
             : remaining.startsWith('<br/>')
-            ? 5
-            : 4;
+                ? 5
+                : 4;
         continue;
       }
 
@@ -153,8 +155,7 @@ class _MarkdownInlineParser {
         continue;
       }
 
-      final bold =
-          _tryParseStyled(input, index, '**') ??
+      final bold = _tryParseStyled(input, index, '**') ??
           _tryParseStyled(input, index, '__');
       if (bold != null) {
         flushBuffer();
@@ -168,8 +169,7 @@ class _MarkdownInlineParser {
         continue;
       }
 
-      final italic =
-          _tryParseStyled(input, index, '*') ??
+      final italic = _tryParseStyled(input, index, '*') ??
           _tryParseStyled(input, index, '_');
       if (italic != null) {
         flushBuffer();
@@ -221,8 +221,7 @@ class _MarkdownInlineParser {
   }
 
   InlineSpan _buildLinkSpan(String label, String url) {
-    final resolvedLinkStyle =
-        linkStyle ??
+    final resolvedLinkStyle = linkStyle ??
         baseStyle.copyWith(
           color: const Color(0xFF2F6FEB),
           decoration: TextDecoration.underline,
@@ -318,10 +317,9 @@ class _MarkdownInlineParser {
       final refClose = input.indexOf(']', close + 2);
       if (refClose != -1) {
         final refLabel = input.substring(close + 2, refClose);
-        final target =
-            document.references[_normalizeReferenceKey(
-              refLabel.isEmpty ? label : refLabel,
-            )];
+        final target = document.references[_normalizeReferenceKey(
+          refLabel.isEmpty ? label : refLabel,
+        )];
         if (target != null) {
           return (label, target.url, refClose + 1);
         }
@@ -397,36 +395,36 @@ class _MarkdownInlineParser {
       final content = input.substring(start + open.length, end);
       final span = switch (tag) {
         'strong' => TextSpan(
-          style: baseStyle.copyWith(fontWeight: FontWeight.w700),
-          children: parse(content),
-        ),
+            style: baseStyle.copyWith(fontWeight: FontWeight.w700),
+            children: parse(content),
+          ),
         'em' => TextSpan(
-          style: baseStyle.copyWith(fontStyle: FontStyle.italic),
-          children: parse(content),
-        ),
+            style: baseStyle.copyWith(fontStyle: FontStyle.italic),
+            children: parse(content),
+          ),
         'code' => TextSpan(
-          text: _decodeHtmlEntities(content),
-          style: baseStyle.copyWith(fontFamily: 'GeistMono'),
-        ),
+            text: _decodeHtmlEntities(content),
+            style: baseStyle.copyWith(fontFamily: 'GeistMono'),
+          ),
         'kbd' => WidgetSpan(
-          alignment: PlaceholderAlignment.middle,
-          child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 1),
-            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(6),
-              border: Border.all(color: const Color(0x22000000)),
-              color: const Color(0x11000000),
-            ),
-            child: Text(
-              _decodeHtmlEntities(content),
-              style: baseStyle.copyWith(
-                fontFamily: 'GeistMono',
-                fontSize: (baseStyle.fontSize ?? 14) * 0.9,
+            alignment: PlaceholderAlignment.middle,
+            child: Container(
+              margin: const EdgeInsets.symmetric(horizontal: 1),
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6),
+                border: Border.all(color: const Color(0x22000000)),
+                color: const Color(0x11000000),
+              ),
+              child: Text(
+                _decodeHtmlEntities(content),
+                style: baseStyle.copyWith(
+                  fontFamily: 'GeistMono',
+                  fontSize: (baseStyle.fontSize ?? 14) * 0.9,
+                ),
               ),
             ),
           ),
-        ),
         _ => TextSpan(text: _decodeHtmlEntities(content)),
       };
       return (span, end + close.length);

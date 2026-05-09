@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../calendar.dart';
 
 /// _CalendarState holds mutable state for the calendar implementation.
@@ -116,7 +118,7 @@ class _CalendarState extends State<Calendar> {
         DateTime date = item.date;
         CalendarValueLookup lookup =
             widget.value?.lookup(date.year, date.month, date.day) ??
-            CalendarValueLookup.none;
+                CalendarValueLookup.none;
 
         CalendarItemType type = CalendarItemType.none;
         switch (lookup) {

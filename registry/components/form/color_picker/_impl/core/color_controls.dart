@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../color_picker.dart';
 
 /// Widget providing color input controls with multiple color space modes.
@@ -97,8 +99,7 @@ class ColorControls extends StatelessWidget {
           if (enableEyeDropper)
             IconButton.outline(
               icon: const Icon(Icons.colorize),
-              onPressed:
-                  onEyeDropperRequested ??
+              onPressed: onEyeDropperRequested ??
                   () async {
                     final result = await pickColorFromScreen(context);
                     if (result != null) {
@@ -111,9 +112,8 @@ class ColorControls extends StatelessWidget {
             ),
           if (showHistoryButton)
             IconButton(
-              variance: showHistory
-                  ? ButtonVariance.primary
-                  : ButtonVariance.outline,
+              variance:
+                  showHistory ? ButtonVariance.primary : ButtonVariance.outline,
               icon: Icon(
                 showHistory ? Icons.history_toggle_off : Icons.history,
               ),

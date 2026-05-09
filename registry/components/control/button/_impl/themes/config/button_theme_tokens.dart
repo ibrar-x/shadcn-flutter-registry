@@ -1,4 +1,4 @@
-// ignore_for_file: unused_element_parameter
+// ignore_for_file: dead_code,deprecated_member_use,duplicate_import,sort_child_properties_last,unnecessary_import,unnecessary_null_comparison,unused_element_parameter,unused_import,use_null_aware_elements
 
 import 'package:flutter/widgets.dart';
 
@@ -61,15 +61,14 @@ class _ButtonVariantThemeTokens {
   final bool ignoreGlobalRadius;
 }
 
-typedef _ButtonThemeBuilder<T extends ButtonTheme> =
-    T Function({
-      ButtonStatePropertyDelegate<Decoration>? decoration,
-      ButtonStatePropertyDelegate<MouseCursor>? mouseCursor,
-      ButtonStatePropertyDelegate<EdgeInsetsGeometry>? padding,
-      ButtonStatePropertyDelegate<TextStyle>? textStyle,
-      ButtonStatePropertyDelegate<IconThemeData>? iconTheme,
-      ButtonStatePropertyDelegate<EdgeInsetsGeometry>? margin,
-    });
+typedef _ButtonThemeBuilder<T extends ButtonTheme> = T Function({
+  ButtonStatePropertyDelegate<Decoration>? decoration,
+  ButtonStatePropertyDelegate<MouseCursor>? mouseCursor,
+  ButtonStatePropertyDelegate<EdgeInsetsGeometry>? padding,
+  ButtonStatePropertyDelegate<TextStyle>? textStyle,
+  ButtonStatePropertyDelegate<IconThemeData>? iconTheme,
+  ButtonStatePropertyDelegate<EdgeInsetsGeometry>? margin,
+});
 
 ButtonStatePropertyDelegate<T> _asThemeDelegate<T>(
   ButtonStateProperty<T> property,
@@ -93,146 +92,146 @@ T _buildButtonTheme<T extends ButtonTheme>(
 
 class PrimaryButtonThemeTokens extends _ButtonVariantThemeTokens {
   const PrimaryButtonThemeTokens()
-    : super(
-        decoration: buttonPrimaryDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonPadding,
-        textStyle: buttonPrimaryTextStyle,
-        iconTheme: buttonPrimaryIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonPrimaryDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonPadding,
+          textStyle: buttonPrimaryTextStyle,
+          iconTheme: buttonPrimaryIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class SecondaryButtonThemeTokens extends _ButtonVariantThemeTokens {
   const SecondaryButtonThemeTokens()
-    : super(
-        decoration: buttonSecondaryDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonPadding,
-        textStyle: buttonSecondaryTextStyle,
-        iconTheme: buttonSecondaryIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonSecondaryDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonPadding,
+          textStyle: buttonSecondaryTextStyle,
+          iconTheme: buttonSecondaryIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class OutlineButtonThemeTokens extends _ButtonVariantThemeTokens {
   const OutlineButtonThemeTokens()
-    : super(
-        decoration: buttonOutlineDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonPadding,
-        textStyle: buttonOutlineTextStyle,
-        iconTheme: buttonOutlineIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonOutlineDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonPadding,
+          textStyle: buttonOutlineTextStyle,
+          iconTheme: buttonOutlineIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class GhostButtonThemeTokens extends _ButtonVariantThemeTokens {
   const GhostButtonThemeTokens()
-    : super(
-        decoration: buttonGhostDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonPadding,
-        textStyle: buttonGhostTextStyle,
-        iconTheme: buttonGhostIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonGhostDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonPadding,
+          textStyle: buttonGhostTextStyle,
+          iconTheme: buttonGhostIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class LinkButtonThemeTokens extends _ButtonVariantThemeTokens {
   const LinkButtonThemeTokens()
-    : super(
-        decoration: buttonLinkDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonPadding,
-        textStyle: buttonLinkTextStyle,
-        iconTheme: buttonLinkIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonLinkDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonPadding,
+          textStyle: buttonLinkTextStyle,
+          iconTheme: buttonLinkIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class TextButtonThemeTokens extends _ButtonVariantThemeTokens {
   const TextButtonThemeTokens()
-    : super(
-        decoration: buttonTextDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonPadding,
-        textStyle: buttonTextTextStyle,
-        iconTheme: buttonTextIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonTextDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonPadding,
+          textStyle: buttonTextTextStyle,
+          iconTheme: buttonTextIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class DestructiveButtonThemeTokens extends _ButtonVariantThemeTokens {
   const DestructiveButtonThemeTokens()
-    : super(
-        decoration: buttonDestructiveDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonPadding,
-        textStyle: buttonDestructiveTextStyle,
-        iconTheme: buttonDestructiveIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonDestructiveDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonPadding,
+          textStyle: buttonDestructiveTextStyle,
+          iconTheme: buttonDestructiveIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class FixedButtonThemeTokens extends _ButtonVariantThemeTokens {
   const FixedButtonThemeTokens()
-    : super(
-        decoration: buttonTextDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonPadding,
-        textStyle: buttonStaticTextStyle,
-        iconTheme: buttonStaticIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonTextDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonPadding,
+          textStyle: buttonStaticTextStyle,
+          iconTheme: buttonStaticIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class MenuButtonThemeTokens extends _ButtonVariantThemeTokens {
   const MenuButtonThemeTokens()
-    : super(
-        decoration: buttonMenuDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonMenuPadding,
-        textStyle: buttonMenuTextStyle,
-        iconTheme: buttonMenuIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonMenuDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonMenuPadding,
+          textStyle: buttonMenuTextStyle,
+          iconTheme: buttonMenuIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class MenubarButtonThemeTokens extends _ButtonVariantThemeTokens {
   const MenubarButtonThemeTokens()
-    : super(
-        decoration: buttonMenuDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonMenubarPadding,
-        textStyle: buttonMenuTextStyle,
-        iconTheme: buttonMenuIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonMenuDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonMenubarPadding,
+          textStyle: buttonMenuTextStyle,
+          iconTheme: buttonMenuIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class MutedButtonThemeTokens extends _ButtonVariantThemeTokens {
   const MutedButtonThemeTokens()
-    : super(
-        decoration: buttonTextDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonPadding,
-        textStyle: buttonMutedTextStyle,
-        iconTheme: buttonMutedIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonTextDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonPadding,
+          textStyle: buttonMutedTextStyle,
+          iconTheme: buttonMutedIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class CardButtonThemeTokens extends _ButtonVariantThemeTokens {
   const CardButtonThemeTokens()
-    : super(
-        decoration: buttonCardDecoration,
-        mouseCursor: buttonMouseCursor,
-        padding: buttonCardPadding,
-        textStyle: buttonCardTextStyle,
-        iconTheme: buttonCardIconTheme,
-        margin: buttonZeroMargin,
-      );
+      : super(
+          decoration: buttonCardDecoration,
+          mouseCursor: buttonMouseCursor,
+          padding: buttonCardPadding,
+          textStyle: buttonCardTextStyle,
+          iconTheme: buttonCardIconTheme,
+          margin: buttonZeroMargin,
+        );
 }
 
 class ButtonCoreWidgetTokens {

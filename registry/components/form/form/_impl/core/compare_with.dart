@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form.dart';
 
 /// A validator that compares a field's value with another form field's value.
@@ -22,7 +24,7 @@ class CompareWith<T extends Comparable<T>> extends Validator<T> {
 
   /// Custom error message, or null to use default localized message.
   final String?
-  message; // if null, use default message from ShadcnLocalizations
+      message; // if null, use default message from ShadcnLocalizations
 
   /// Creates a [CompareWith] validator with the specified comparison type.
   const CompareWith(this.key, this.type, {this.message});
@@ -32,18 +34,18 @@ class CompareWith<T extends Comparable<T>> extends Validator<T> {
 
   /// Creates a validator that checks if value is greater than another field.
   const CompareWith.greater(this.key, {this.message})
-    : type = CompareType.greater;
+      : type = CompareType.greater;
 
   /// Creates a validator that checks if value is greater than or equal to another field.
   const CompareWith.greaterOrEqual(this.key, {this.message})
-    : type = CompareType.greaterOrEqual;
+      : type = CompareType.greaterOrEqual;
 
   /// Creates a validator that checks if value is less than another field.
   const CompareWith.less(this.key, {this.message}) : type = CompareType.less;
 
   /// Creates a validator that checks if value is less than or equal to another field.
   const CompareWith.lessOrEqual(this.key, {this.message})
-    : type = CompareType.lessOrEqual;
+      : type = CompareType.lessOrEqual;
 
   /// Performs `_compare` logic for this form component.
   int _compare(T? a, T? b) {

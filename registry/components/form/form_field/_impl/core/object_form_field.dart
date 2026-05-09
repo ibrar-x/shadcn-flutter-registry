@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form_field.dart';
 
 /// A form field widget for complex object values.
@@ -43,7 +45,7 @@ class ObjectFormField<T> extends StatefulWidget {
 
   /// Builds the editor widget.
   final Widget Function(BuildContext context, ObjectFormHandler<T> handler)
-  editorBuilder;
+      editorBuilder;
 
   /// Popover alignment relative to the trigger.
   final AlignmentGeometry? popoverAlignment;
@@ -70,8 +72,7 @@ class ObjectFormField<T> extends StatefulWidget {
   final List<Widget> Function(
     BuildContext context,
     ObjectFormHandler<T> handler,
-  )?
-  dialogActions;
+  )? dialogActions;
 
   /// Whether the field is enabled.
   final bool? enabled;

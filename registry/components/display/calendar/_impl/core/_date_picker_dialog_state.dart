@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../calendar.dart';
 
 /// _DatePickerDialogState holds mutable state for the calendar implementation.
@@ -115,9 +117,7 @@ class _DatePickerDialogState extends State<DatePickerDialog> {
                           color: arrowColor,
                         ).iconXSmall(),
                       ),
-
                       SizedBox(width: theme.scaling * 16),
-
                       Expanded(
                         child: SizedBox(
                           height: theme.scaling * 32,
@@ -155,7 +155,6 @@ class _DatePickerDialogState extends State<DatePickerDialog> {
                       if (_viewType == CalendarViewType.date &&
                           viewMode == CalendarSelectionMode.range)
                         SizedBox(width: theme.scaling * 32),
-
                       SizedBox(width: theme.scaling * 16),
                       if (_viewType != CalendarViewType.date ||
                           viewMode != CalendarSelectionMode.range)
@@ -197,7 +196,6 @@ class _DatePickerDialogState extends State<DatePickerDialog> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         SizedBox(width: theme.scaling * (32 + 16)),
-
                         Expanded(
                           child: SizedBox(
                             height: theme.scaling * 32,
@@ -235,9 +233,7 @@ class _DatePickerDialogState extends State<DatePickerDialog> {
                             ),
                           ),
                         ),
-
                         SizedBox(width: theme.scaling * 16),
-
                         OutlineButton(
                           density: ButtonDensity.icon,
                           onPressed: () {
@@ -267,9 +263,7 @@ class _DatePickerDialogState extends State<DatePickerDialog> {
                   ),
               ],
             ),
-
             SizedBox(height: theme.density.baseGap * theme.scaling * gapLg),
-
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: viewMode == CalendarSelectionMode.range
@@ -356,9 +350,7 @@ class _DatePickerDialogState extends State<DatePickerDialog> {
                   color: arrowColor,
                 ).iconXSmall(),
               ),
-
               SizedBox(width: theme.scaling * 16),
-
               Expanded(
                 child: SizedBox(
                   height: theme.scaling * 32,
@@ -392,9 +384,7 @@ class _DatePickerDialogState extends State<DatePickerDialog> {
                   ),
                 ),
               ),
-
               SizedBox(width: theme.scaling * 16),
-
               OutlineButton(
                 density: ButtonDensity.icon,
                 onPressed: () {
@@ -420,9 +410,7 @@ class _DatePickerDialogState extends State<DatePickerDialog> {
               ),
             ],
           ),
-
           SizedBox(height: theme.density.baseGap * theme.scaling * gapLg),
-
           buildView(
             context,
             _yearSelectStart,

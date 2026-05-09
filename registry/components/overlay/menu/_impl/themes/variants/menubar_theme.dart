@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../menu.dart';
 
 /// MenubarTheme defines a reusable type for this registry module.
@@ -63,19 +65,18 @@ class MenubarTheme extends ComponentThemeData {
   }) {
     return MenubarTheme(
       border: border == null ? this.border : border(),
-      subMenuOffset: subMenuOffset == null
-          ? this.subMenuOffset
-          : subMenuOffset(),
+      subMenuOffset:
+          subMenuOffset == null ? this.subMenuOffset : subMenuOffset(),
       padding: padding == null ? this.padding : padding(),
       borderColor: borderColor == null ? this.borderColor : borderColor(),
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
     );
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -90,13 +91,13 @@ class MenubarTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    border,
-    subMenuOffset,
-    padding,
-    borderColor,
-    backgroundColor,
-    borderRadius,
-  );
+        border,
+        subMenuOffset,
+        padding,
+        borderColor,
+        backgroundColor,
+        borderRadius,
+      );
 }
 
 /// A horizontal menubar widget for displaying application menus and menu items.

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../eye_dropper.dart';
 
 /// EyeDropperResult defines a reusable type for this registry module.
@@ -21,8 +23,8 @@ class EyeDropperResult {
   ///
   /// Returns: The color at that position.
   Color operator [](Offset position) {
-    int index = (position.dy.floor() * size.width + position.dx.floor())
-        .toInt();
+    int index =
+        (position.dy.floor() * size.width + position.dx.floor()).toInt();
     return colors[index];
   }
 }

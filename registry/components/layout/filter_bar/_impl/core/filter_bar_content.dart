@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../filter_bar.dart';
 
 /// _FilterBarContent defines a reusable type for this registry module.
@@ -131,6 +133,7 @@ class _FilterBarContent extends StatelessWidget {
   final FilterStateChanged onStateChanged;
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final resolvedTheme = _FilterBarResolvedTheme.resolve(context, style);
@@ -193,6 +196,7 @@ class _FilterBarContent extends StatelessWidget {
                       ),
                     ),
                     if (sortOptions.isNotEmpty && !useSheet)
+
                       /// Creates a `_buildSortControl` instance.
                       _buildSortControl(
                         layout.sortWidth,
@@ -208,9 +212,8 @@ class _FilterBarContent extends StatelessWidget {
                       ),
                     if (useSheet)
                       SecondaryButton(
-                        size: style.dense
-                            ? ButtonSize.small
-                            : ButtonSize.normal,
+                        size:
+                            style.dense ? ButtonSize.small : ButtonSize.normal,
                         onPressed: () => _openMobileSheet(context),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -229,16 +232,18 @@ class _FilterBarContent extends StatelessWidget {
                       if (!showInlineGrouped)
                         ...customFilters.map(
                           (customFilter) =>
+
                               /// Creates a `customFilter.builder` instance.
                               customFilter.builder(
-                                context,
-                                state,
-                                onStateChanged,
-                              ),
+                            context,
+                            state,
+                            onStateChanged,
+                          ),
                         ),
                       if (!showInlineGrouped) ...trailingFilters,
                     ],
                     if (countLabel != null)
+
                       /// Creates a `Padding` instance.
                       Padding(
                         padding: EdgeInsets.only(
@@ -250,11 +255,11 @@ class _FilterBarContent extends StatelessWidget {
                         ),
                       ),
                     if (showClearAll)
+
                       /// Creates a `GhostButton` instance.
                       GhostButton(
-                        size: style.dense
-                            ? ButtonSize.small
-                            : ButtonSize.normal,
+                        size:
+                            style.dense ? ButtonSize.small : ButtonSize.normal,
                         onPressed: state.hasActiveFilters ? onClearAll : null,
                         child: Text(clearAllLabel),
                       ),
@@ -528,8 +533,7 @@ class _FilterBarContent extends StatelessWidget {
   }
 
   Future<void> _openMobileSheet(BuildContext context) async {
-    final hasControls =
-        sortOptions.isNotEmpty ||
+    final hasControls = sortOptions.isNotEmpty ||
         enableDateRange ||
         customFilters.isNotEmpty ||
         trailingFilters.isNotEmpty ||
@@ -567,11 +571,11 @@ class _FilterBarContent extends StatelessWidget {
           ),
           buildDateRangeControl: (sheetState, onChanged) =>
               _buildDateRangeControl(
-                context,
-                state: sheetState,
-                onStateChanged: onChanged,
-                width: double.infinity,
-              ),
+            context,
+            state: sheetState,
+            onStateChanged: onChanged,
+            width: double.infinity,
+          ),
           onClearAll: onClearAll,
         );
       },
@@ -580,8 +584,8 @@ class _FilterBarContent extends StatelessWidget {
 }
 
 /// _FilterBarMobileSheetBuilder defines a reusable type for this registry module.
-typedef _FilterBarMobileSheetBuilder =
-    Widget Function(FilterState state, FilterStateChanged onStateChanged);
+typedef _FilterBarMobileSheetBuilder = Widget Function(
+    FilterState state, FilterStateChanged onStateChanged);
 
 /// _FilterBarMobileSheet defines a reusable type for this registry module.
 class _FilterBarMobileSheet extends StatefulWidget {
@@ -654,6 +658,7 @@ class _FilterBarMobileSheet extends StatefulWidget {
   final VoidCallback onClearAll;
 
   @override
+
   /// Executes `createState` behavior for this component/composite.
   State<_FilterBarMobileSheet> createState() => _FilterBarMobileSheetState();
 }
@@ -665,6 +670,7 @@ class _FilterBarMobileSheetState extends State<_FilterBarMobileSheet> {
   bool _closeScheduled = false;
 
   @override
+
   /// Executes `initState` behavior for this component/composite.
   void initState() {
     super.initState();
@@ -680,6 +686,7 @@ class _FilterBarMobileSheetState extends State<_FilterBarMobileSheet> {
   }
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -687,8 +694,8 @@ class _FilterBarMobileSheetState extends State<_FilterBarMobileSheet> {
         final width = constraints.maxWidth;
         final shouldCloseForDesktop =
             widget.presentation == FilterBarPresentation.inline ||
-            (widget.presentation == FilterBarPresentation.autoSheet &&
-                !_useSheetForStagedWidth(width, widget.sheetBreakpoint));
+                (widget.presentation == FilterBarPresentation.autoSheet &&
+                    !_useSheetForStagedWidth(width, widget.sheetBreakpoint));
         if (shouldCloseForDesktop) {
           if (!_closeScheduled) {
             _closeScheduled = true;

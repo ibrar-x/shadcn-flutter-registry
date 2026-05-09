@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart' hide Form;
 
 import '../form/form.dart';
@@ -14,12 +16,11 @@ part '_impl/state/_validated_state.dart';
 /// - [child] (`Widget?`): Optional child widget passed through.
 ///
 /// Returns: `Widget` — the built widget reflecting the validation state.
-typedef ValidatedBuilder =
-    Widget Function(
-      BuildContext context,
-      ValidationResult? error,
-      Widget? child,
-    );
+typedef ValidatedBuilder = Widget Function(
+  BuildContext context,
+  ValidationResult? error,
+  Widget? child,
+);
 
 /// A widget that displays validation feedback for form entries.
 ///

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of 'preview.dart';
 
 /// _NumberTickerPreviewState holds mutable state for the number ticker implementation.
@@ -32,9 +34,7 @@ class _NumberTickerPreviewState extends State<NumberTickerPreview> {
               'Example 1',
               style: TextStyle(fontWeight: FontWeight.w600),
             ),
-
             const DensityGap(gapSm),
-
             NumberTicker(
               initialNumber: 0,
               number: _number,
@@ -43,9 +43,7 @@ class _NumberTickerPreviewState extends State<NumberTickerPreview> {
                 return NumberFormat.compact().format(number);
               },
             ),
-
             const DensityGap(gap2xl),
-
             TextField(
               initialValue: _number.toString(),
               controller: _controller,
@@ -59,20 +57,14 @@ class _NumberTickerPreviewState extends State<NumberTickerPreview> {
                 }
               },
             ),
-
             const DensityGap(gap2xl),
-
             const Divider(),
-
             const DensityGap(gap2xl),
-
             const Text(
               'Example 2',
               style: TextStyle(fontWeight: FontWeight.w600),
             ),
-
             const DensityGap(gapSm),
-
             NumberTicker(
               initialNumber: 100,
               number: _currentNumber,
@@ -83,9 +75,7 @@ class _NumberTickerPreviewState extends State<NumberTickerPreview> {
               ),
               formatter: (value) => value.toInt().toString(),
             ),
-
             const DensityGap(gapLg),
-
             ElevatedButton(
               onPressed: () {
                 /// Implements `setState` behavior for number ticker.

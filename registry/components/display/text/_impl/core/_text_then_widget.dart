@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../text.dart';
 
 /// Internal helper class used by the text component implementation.
@@ -31,21 +33,18 @@ class _TextThenWidget extends StatelessWidget {
       textDirection: text.textDirection,
       locale: text.locale,
       softWrap: text.softWrap ?? defaultTextStyle.softWrap,
-      overflow:
-          text.overflow ??
+      overflow: text.overflow ??
           effectiveTextStyle?.overflow ??
           defaultTextStyle.overflow,
       textScaler: text.textScaler ?? TextScaler.noScaling,
       maxLines: text.maxLines ?? defaultTextStyle.maxLines,
       strutStyle: text.strutStyle,
       textWidthBasis: text.textWidthBasis ?? defaultTextStyle.textWidthBasis,
-      textHeightBehavior:
-          text.textHeightBehavior ??
+      textHeightBehavior: text.textHeightBehavior ??
           defaultTextStyle.textHeightBehavior ??
           DefaultTextHeightBehavior.maybeOf(context),
       selectionRegistrar: registrar,
-      selectionColor:
-          text.selectionColor ??
+      selectionColor: text.selectionColor ??
           DefaultSelectionStyle.of(context).selectionColor ??
           DefaultSelectionStyle.defaultColor,
       text: TextSpan(
@@ -58,8 +57,7 @@ class _TextThenWidget extends StatelessWidget {
     );
     if (registrar != null) {
       result = MouseRegion(
-        cursor:
-            DefaultSelectionStyle.of(context).mouseCursor ??
+        cursor: DefaultSelectionStyle.of(context).mouseCursor ??
             SystemMouseCursors.text,
         child: result,
       );

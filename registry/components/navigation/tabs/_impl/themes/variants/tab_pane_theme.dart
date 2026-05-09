@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../tabs.dart';
 
 /// TabPaneTheme defines a reusable type for this registry module.
@@ -72,15 +74,15 @@ class TabPaneTheme extends ComponentThemeData {
   }) {
     return TabPaneTheme(
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       border: border == null ? this.border : border(),
       barHeight: barHeight == null ? this.barHeight : barHeight(),
     );
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;

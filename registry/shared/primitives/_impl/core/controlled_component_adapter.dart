@@ -1,19 +1,25 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form_control.dart';
 
 /// ControlledComponentAdapter defines a reusable type for this registry module.
 class ControlledComponentAdapter<T> extends StatefulWidget
     with ControlledComponent<T> {
   @override
-/// Stores `initialValue` state/configuration for this implementation.
+
+  /// Stores `initialValue` state/configuration for this implementation.
   final T? initialValue;
   @override
-/// Stores `onChanged` state/configuration for this implementation.
+
+  /// Stores `onChanged` state/configuration for this implementation.
   final ValueChanged<T>? onChanged;
   @override
-/// Stores `enabled` state/configuration for this implementation.
+
+  /// Stores `enabled` state/configuration for this implementation.
   final bool enabled;
   @override
-/// Stores `controller` state/configuration for this implementation.
+
+  /// Stores `controller` state/configuration for this implementation.
   final ComponentController<T>? controller;
 
   /// A builder function that creates the widget UI using the provided state data.
@@ -62,7 +68,8 @@ class ControlledComponentAdapter<T> extends StatefulWidget
             'Either controller or initialValue must be provided');
 
   @override
-/// Executes `createState` behavior for this component/composite.
+
+  /// Executes `createState` behavior for this component/composite.
   State<ControlledComponentAdapter<T>> createState() =>
       _ControlledComponentAdapterState<T>();
 }

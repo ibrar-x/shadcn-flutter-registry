@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of 'preview.dart';
 
 /// _DotIndicatorPreviewState holds mutable state for the dot indicator implementation.
@@ -23,9 +25,7 @@ class _DotIndicatorPreviewState extends State<DotIndicatorPreview> {
                 });
               },
             ),
-
             const SizedBox(height: 12),
-
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -40,9 +40,7 @@ class _DotIndicatorPreviewState extends State<DotIndicatorPreview> {
                       : null,
                   icon: const Icon(Icons.chevron_left),
                 ),
-
                 Text('Index: $_index'),
-
                 IconButton(
                   onPressed: _index < 4
                       ? () {

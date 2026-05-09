@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../markdown.dart';
 
 int _computeStableMarkdownPrefixLength(String data) {
@@ -262,9 +264,8 @@ List<String> _buildHtmlTableLines(
       lines.add('    <tr>');
       for (var col = 0; col < maxColumns; col++) {
         final value = col < row.length ? row[col] : '';
-        final align = col < alignments.length
-            ? alignments[col]
-            : TextAlign.left;
+        final align =
+            col < alignments.length ? alignments[col] : TextAlign.left;
         lines.add(
           '      <td style="text-align: ${_alignmentToCss(align)}">${_escapeHtmlText(value)}</td>',
         );

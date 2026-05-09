@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:data_widget/data_widget.dart';
 import 'package:flutter/material.dart' hide Theme, ThemeData;
 
@@ -66,16 +68,16 @@ class TabPaneTheme extends ComponentThemeData {
   }) {
     return TabPaneTheme(
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       border: border == null ? this.border : border(),
       barHeight: barHeight == null ? this.barHeight : barHeight(),
     );
   }
 
   @override
-/// Executes `operator ==` behavior for this component/composite.
+
+  /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     return other is TabPaneTheme &&
@@ -113,8 +115,8 @@ class TabPaneTheme extends ComponentThemeData {
 /// - [index] (int): Zero-based index of this tab in the list
 ///
 /// Returns: A [TabChild] widget for the tab button
-typedef TabPaneItemBuilder<T> =
-    TabChild Function(BuildContext context, TabPaneData<T> item, int index);
+typedef TabPaneItemBuilder<T> = TabChild Function(
+    BuildContext context, TabPaneData<T> item, int index);
 
 /// A comprehensive tab pane widget with sortable tabs and integrated content display.
 ///

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../divider.dart';
 
 /// Theme data for divider widgets.
@@ -53,9 +55,8 @@ class DividerTheme extends ComponentThemeData {
       indent: indent == null ? this.indent : indent(),
       endIndent: endIndent == null ? this.endIndent : endIndent(),
       padding: padding == null ? this.padding : padding(),
-      childAlignment: childAlignment == null
-          ? this.childAlignment
-          : childAlignment(),
+      childAlignment:
+          childAlignment == null ? this.childAlignment : childAlignment(),
     );
   }
 
@@ -74,12 +75,12 @@ class DividerTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    color,
-    height,
-    thickness,
-    indent,
-    endIndent,
-    padding,
-    childAlignment,
-  );
+        color,
+        height,
+        thickness,
+        indent,
+        endIndent,
+        padding,
+        childAlignment,
+      );
 }

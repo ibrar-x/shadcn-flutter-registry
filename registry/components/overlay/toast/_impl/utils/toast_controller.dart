@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../toast.dart';
 
 /// Controller that displays toast entries using Overlay.
@@ -96,13 +98,11 @@ class ToastController {
       builder: (overlayContext) {
         final theme = Theme.of(overlayContext);
         final toastTheme = ComponentTheme.maybeOf<ToastTheme>(overlayContext);
-        final padding =
-            toastTheme?.padding ??
+        final padding = toastTheme?.padding ??
             EdgeInsets.all(theme.density.baseContentPadding);
         final resolvedPauseOnHover =
             pauseOnHover ?? toastTheme?.pauseOnHover ?? false;
-        final resolvedDismissDirections =
-            item.dismissDirections ??
+        final resolvedDismissDirections = item.dismissDirections ??
             toastTheme?.dismissDirections ??
             _autoDismissDirections(
               top: top,
@@ -110,8 +110,7 @@ class ToastController {
               bottom: bottom,
               left: left,
             );
-        final resolvedDismissDragThreshold =
-            item.dismissDragThreshold ??
+        final resolvedDismissDragThreshold = item.dismissDragThreshold ??
             toastTheme?.dismissDragThreshold ??
             72.0;
 

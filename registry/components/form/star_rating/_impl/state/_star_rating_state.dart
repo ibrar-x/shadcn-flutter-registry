@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../star_rating.dart';
 
 /// _StarRatingState stores and manages mutable widget state.
@@ -37,8 +39,7 @@ class _StarRatingState extends State<StarRating>
     var starSquash = widget.starSquash ?? 0.0;
     var starInnerRadiusRatio = widget.starInnerRadiusRatio ?? 0.4;
     var starRotation = widget.starRotation ?? 0.0;
-    var starSize =
-        styleValue(
+    var starSize = styleValue(
           widgetValue: widget.starSize,
           themeValue: compTheme?.starSize,
           defaultValue: 24.0,
@@ -178,8 +179,8 @@ class _StarRatingState extends State<StarRating>
                 if (widget.onChanged == null) return;
                 double totalStarSize =
                     starSize + (starSpacing * (widget.max.ceil() - 1));
-                double progress = (details.localPosition.dx / totalStarSize)
-                    .clamp(0.0, 1.0);
+                double progress =
+                    (details.localPosition.dx / totalStarSize).clamp(0.0, 1.0);
                 double newValue = (progress * widget.max).clamp(
                   0.0,
                   widget.max,
@@ -192,8 +193,8 @@ class _StarRatingState extends State<StarRating>
                 int totalStars = widget.max.ceil();
                 double totalStarSize =
                     starSize * totalStars + (starSpacing * (totalStars - 1));
-                double progress = (details.localPosition.dx / totalStarSize)
-                    .clamp(0.0, 1.0);
+                double progress =
+                    (details.localPosition.dx / totalStarSize).clamp(0.0, 1.0);
                 double newValue = (progress * widget.max).clamp(
                   0.0,
                   widget.max,

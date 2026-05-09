@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 export '../../display/divider/divider.dart' show Divider;
 export '../scaffold/scaffold.dart' show AppBar, Scaffold;
 
@@ -92,15 +94,15 @@ class ShadcnApp extends StatelessWidget {
     this.enableThemeAnimation = false,
     this.materialFallback = true,
     this.preloadComponentThemeGlobals = true,
-  }) : navigatorKey = null,
-       home = null,
-       routes = const <String, WidgetBuilder>{},
-       initialRoute = null,
-       onGenerateRoute = null,
-       onGenerateInitialRoutes = null,
-       onUnknownRoute = null,
-       pageRouteBuilder = null,
-       navigatorObservers = const <NavigatorObserver>[];
+  })  : navigatorKey = null,
+        home = null,
+        routes = const <String, WidgetBuilder>{},
+        initialRoute = null,
+        onGenerateRoute = null,
+        onGenerateInitialRoutes = null,
+        onUnknownRoute = null,
+        pageRouteBuilder = null,
+        navigatorObservers = const <NavigatorObserver>[];
 
   final GlobalKey<NavigatorState>? navigatorKey;
   final Widget? home;
@@ -146,8 +148,7 @@ class ShadcnApp extends StatelessWidget {
   ThemeData _resolveTheme(BuildContext context) {
     final platformBrightness =
         MediaQuery.maybeOf(context)?.platformBrightness ?? Brightness.light;
-    final useDark =
-        themeMode == ThemeMode.dark ||
+    final useDark = themeMode == ThemeMode.dark ||
         (themeMode == ThemeMode.system &&
             platformBrightness == Brightness.dark);
     var resolved = useDark ? (darkTheme ?? theme) : theme;
@@ -191,7 +192,7 @@ class ShadcnApp extends StatelessWidget {
   }
 
   Iterable<LocalizationsDelegate<dynamic>>
-  get _effectiveLocalizationsDelegates {
+      get _effectiveLocalizationsDelegates {
     final delegates = <LocalizationsDelegate<dynamic>>[
       if (localizationsDelegates != null) ...localizationsDelegates!,
       ...ShadcnLocalizations.localizationsDelegates,
@@ -300,7 +301,8 @@ class ShadcnApp extends StatelessWidget {
 PageRoute<T> _defaultPageRouteBuilder<T>(
   RouteSettings settings,
   WidgetBuilder builder,
-) => PageRouteBuilder<T>(
-  settings: settings,
-  pageBuilder: (context, animation, secondaryAnimation) => builder(context),
-);
+) =>
+    PageRouteBuilder<T>(
+      settings: settings,
+      pageBuilder: (context, animation, secondaryAnimation) => builder(context),
+    );

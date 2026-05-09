@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../feature_carousel.dart';
 
 /// _FeatureCardCarouselState holds mutable state for the feature carousel implementation.
@@ -209,8 +211,8 @@ class _FeatureCardCarouselState extends State<FeatureCardCarousel>
     if (!_config.cycleAnimationStyles) {
       return _config.animationStyle;
     }
-    return FeatureCarouselAnimationStyle.values[_animationIndex %
-        FeatureCarouselAnimationStyle.values.length];
+    return FeatureCarouselAnimationStyle
+        .values[_animationIndex % FeatureCarouselAnimationStyle.values.length];
   }
 
   /// Implements `_buildTransition` behavior for feature carousel.
@@ -357,8 +359,7 @@ class _FeatureCardCarouselState extends State<FeatureCardCarousel>
       fontWeight: FontWeight.w400,
     );
 
-    final background =
-        widget.backgroundBuilder?.call(context, resolvedTheme) ??
+    final background = widget.backgroundBuilder?.call(context, resolvedTheme) ??
         Container(
           decoration: BoxDecoration(color: resolvedTheme.backgroundColor),
         );
@@ -374,9 +375,7 @@ class _FeatureCardCarouselState extends State<FeatureCardCarousel>
                     textAlign: TextAlign.center,
                   )
                 : const SizedBox.shrink()),
-
         SizedBox(height: densityGap * 2.25),
-
         RepaintBoundary(
           child: SizedBox(
             width: width,
@@ -391,7 +390,6 @@ class _FeatureCardCarouselState extends State<FeatureCardCarousel>
                   animation: _controller,
                   indexFromFront: 3,
                 ),
-
                 _GhostCard(
                   cardWidth: cardWidth,
                   cardHeight: cardHeight,
@@ -399,7 +397,6 @@ class _FeatureCardCarouselState extends State<FeatureCardCarousel>
                   animation: _controller,
                   indexFromFront: 2,
                 ),
-
                 _GhostCard(
                   cardWidth: cardWidth,
                   cardHeight: cardHeight,
@@ -407,7 +404,6 @@ class _FeatureCardCarouselState extends State<FeatureCardCarousel>
                   animation: _controller,
                   indexFromFront: 1,
                 ),
-
                 GestureDetector(
                   onHorizontalDragUpdate: _handleDragUpdate,
                   onHorizontalDragEnd: _handleDragEnd,
@@ -417,8 +413,7 @@ class _FeatureCardCarouselState extends State<FeatureCardCarousel>
                     switchOutCurve: _theme.transitionCurve,
                     transitionBuilder: (child, animation) =>
                         _buildTransition(child, animation),
-                    child:
-                        widget.cardBuilder?.call(
+                    child: widget.cardBuilder?.call(
                           context,
                           widget.items[_index],
                           _index,
@@ -483,17 +478,14 @@ class _FeatureCardCarouselState extends State<FeatureCardCarousel>
             ),
           ),
         ),
-
         SizedBox(height: densityGap * 2.75),
-
         ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 760),
           child: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: densityContentPadding * 1.25,
             ),
-            child:
-                widget.descriptionBuilder?.call(
+            child: widget.descriptionBuilder?.call(
                   context,
                   widget.items[_index],
                   _index,
@@ -542,11 +534,8 @@ class _FeatureCardCarouselState extends State<FeatureCardCarousel>
       autofocus: false,
       shortcuts: {
         LogicalKeySet(LogicalKeyboardKey.arrowLeft): _CarouselIntent.left,
-
         LogicalKeySet(LogicalKeyboardKey.arrowRight): _CarouselIntent.right,
-
         LogicalKeySet(LogicalKeyboardKey.enter): _CarouselIntent.action,
-
         LogicalKeySet(LogicalKeyboardKey.space): _CarouselIntent.action,
       },
       actions: {

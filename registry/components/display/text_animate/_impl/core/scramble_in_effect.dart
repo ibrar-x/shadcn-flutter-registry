@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../text_animate.dart';
 
 /// Scrambles newly revealed text before settling into final glyphs.
@@ -12,9 +14,9 @@ class ScrambleInEffect extends StreamingTextEffectAdapter
     this.characters =
         'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#%&*+=?',
   }) : assert(
-         scrambleUntil > 0 && scrambleUntil <= 1,
-         'scrambleUntil must be in (0, 1].',
-       );
+          scrambleUntil > 0 && scrambleUntil <= 1,
+          'scrambleUntil must be in (0, 1].',
+        );
 
   final Duration duration;
 
@@ -62,9 +64,8 @@ class ScrambleInEffect extends StreamingTextEffectAdapter
     final showScramble = char.trim().isNotEmpty && t < scrambleUntil;
 
     final targetOpacity = fadeIn ? t.clamp(0.0, 1.0) : 1.0;
-    final scrambleOpacity = showScramble
-        ? (1 - (t / scrambleUntil)).clamp(0.0, 1.0)
-        : 0.0;
+    final scrambleOpacity =
+        showScramble ? (1 - (t / scrambleUntil)).clamp(0.0, 1.0) : 0.0;
 
     final displayedChar = showScramble
         ? _scrambledCharacter(char: char, index: index, age: age)
@@ -77,7 +78,6 @@ class ScrambleInEffect extends StreamingTextEffectAdapter
         clipBehavior: Clip.none,
         children: [
           current,
-
           Opacity(
             opacity: scrambleOpacity,
             child: Text(displayedChar, style: baseStyle),

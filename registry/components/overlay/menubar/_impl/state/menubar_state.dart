@@ -1,22 +1,27 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../menubar.dart';
 
 /// MenubarState defines a reusable type for this registry module.
 class MenubarState extends State<Menubar> {
   @override
-/// Executes `build` behavior for this component/composite.
+
+  /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final compTheme = ComponentTheme.maybeOf<MenubarTheme>(context);
-/// Stores `border` state/configuration for this implementation.
+
+    /// Stores `border` state/configuration for this implementation.
     final bool border = compTheme?.border ?? widget.border;
-/// Stores `borderColor` state/configuration for this implementation.
+
+    /// Stores `borderColor` state/configuration for this implementation.
     final borderColor = compTheme?.borderColor ?? theme.colorScheme.border;
     final backgroundColor =
         compTheme?.backgroundColor ?? theme.colorScheme.background;
-/// Stores `borderRadius` state/configuration for this implementation.
+
+    /// Stores `borderRadius` state/configuration for this implementation.
     final borderRadius = compTheme?.borderRadius ?? theme.borderRadiusMd;
-    final padding =
-        compTheme?.padding ??
+    final padding = compTheme?.padding ??
         EdgeInsets.all(theme.density.baseGap * theme.scaling * 0.5);
 
     if (border) {
@@ -59,10 +64,9 @@ class MenubarState extends State<Menubar> {
     Offset? subMenuOffset,
     bool border,
   ) {
-/// Stores `scaling` state/configuration for this implementation.
+    /// Stores `scaling` state/configuration for this implementation.
     final scaling = theme.scaling;
-    final offset =
-        subMenuOffset ??
+    final offset = subMenuOffset ??
         ((border ? const Offset(-4, 8) : const Offset(0, 4)) * scaling);
     return Data.inherit(
       data: this,

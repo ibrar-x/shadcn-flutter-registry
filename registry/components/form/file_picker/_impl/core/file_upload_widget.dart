@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../file_picker.dart';
 
 /// Internal surface discriminator for [FileUpload] rendering.
@@ -49,42 +51,42 @@ class FileUpload extends _FileUpload {
     super.helpfulInfoPlacement = FileUploadHelpfulInfoPlacement.automatic,
     super.helpfulInfoBuilder,
     FileUploadOptions options = const FileUploadDragDropOptions(),
-  }) : assert(
-         maxConcurrentUploads > 0,
-         'maxConcurrentUploads must be greater than 0.',
-       ),
-       assert(
-         options is! FileUploadMobileOptions ||
-             !options.popover ||
-             (options.popoverItems?.isNotEmpty ?? false),
-         'popoverItems must be provided and non-empty when mobile popover is enabled.',
-       ),
-       super._internal(
-         surface: _surfaceFromOptions(options),
-         loading: _loadingFromOptions(options),
-         itemLoading: _itemLoadingFromOptions(options),
-         icon: _iconFromOptions(options),
-         surfaceSubtitle: _surfaceSubtitleFromOptions(options),
-         surfaceHint: _surfaceHintFromOptions(options),
-         actionLabel: _actionLabelFromOptions(options),
-         enableDragDrop: _enableDragDropFromOptions(options),
-         enableDropzoneClick: _enableDropzoneClickFromOptions(options),
-         dragDropIdleLabel: _dragDropIdleLabelFromOptions(options),
-         dragDropClickToPickLabel: _dragDropClickToPickLabelFromOptions(
-           options,
-         ),
-         dragDropDraggingLabel: _dragDropDraggingLabelFromOptions(options),
-         dragDropUploadingLabel: _dragDropUploadingLabelFromOptions(options),
-         dragDropSuccessLabel: _dragDropSuccessLabelFromOptions(options),
-         dragDropErrorLabel: _dragDropErrorLabelFromOptions(options),
-         dragDropDisabledLabel: _dragDropDisabledLabelFromOptions(options),
-         dropTargetBuilder: _dropTargetBuilderFromOptions(options),
-         mobileMode: _mobileModeFromOptions(options),
-         compactIcon: _compactIconFromOptions(options),
-         compactTrigger: _compactTriggerFromOptions(options),
-         compactButtonLabel: _compactButtonLabelFromOptions(options),
-         compactOptions: _compactOptionsFromOptions(options),
-       );
+  })  : assert(
+          maxConcurrentUploads > 0,
+          'maxConcurrentUploads must be greater than 0.',
+        ),
+        assert(
+          options is! FileUploadMobileOptions ||
+              !options.popover ||
+              (options.popoverItems?.isNotEmpty ?? false),
+          'popoverItems must be provided and non-empty when mobile popover is enabled.',
+        ),
+        super._internal(
+          surface: _surfaceFromOptions(options),
+          loading: _loadingFromOptions(options),
+          itemLoading: _itemLoadingFromOptions(options),
+          icon: _iconFromOptions(options),
+          surfaceSubtitle: _surfaceSubtitleFromOptions(options),
+          surfaceHint: _surfaceHintFromOptions(options),
+          actionLabel: _actionLabelFromOptions(options),
+          enableDragDrop: _enableDragDropFromOptions(options),
+          enableDropzoneClick: _enableDropzoneClickFromOptions(options),
+          dragDropIdleLabel: _dragDropIdleLabelFromOptions(options),
+          dragDropClickToPickLabel: _dragDropClickToPickLabelFromOptions(
+            options,
+          ),
+          dragDropDraggingLabel: _dragDropDraggingLabelFromOptions(options),
+          dragDropUploadingLabel: _dragDropUploadingLabelFromOptions(options),
+          dragDropSuccessLabel: _dragDropSuccessLabelFromOptions(options),
+          dragDropErrorLabel: _dragDropErrorLabelFromOptions(options),
+          dragDropDisabledLabel: _dragDropDisabledLabelFromOptions(options),
+          dropTargetBuilder: _dropTargetBuilderFromOptions(options),
+          mobileMode: _mobileModeFromOptions(options),
+          compactIcon: _compactIconFromOptions(options),
+          compactTrigger: _compactTriggerFromOptions(options),
+          compactButtonLabel: _compactButtonLabelFromOptions(options),
+          compactOptions: _compactOptionsFromOptions(options),
+        );
 
   /// Performs `_surfaceFromOptions` logic for this form component.
   static _FileUploadSurface _surfaceFromOptions(FileUploadOptions options) {

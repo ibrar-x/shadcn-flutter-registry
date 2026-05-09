@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../calendar.dart';
 
 /// Theme configuration for calendar widgets.
@@ -22,9 +24,8 @@ class CalendarTheme extends ComponentThemeData {
   /// Creates a copy of this theme with the given fields replaced.
   CalendarTheme copyWith({ValueGetter<Color?>? arrowIconColor}) {
     return CalendarTheme(
-      arrowIconColor: arrowIconColor == null
-          ? this.arrowIconColor
-          : arrowIconColor(),
+      arrowIconColor:
+          arrowIconColor == null ? this.arrowIconColor : arrowIconColor(),
     );
   }
 

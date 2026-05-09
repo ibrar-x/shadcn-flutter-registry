@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form.dart';
 
 /// Widget builder for displaying form entry validation errors.
@@ -9,8 +11,7 @@ class FormEntryErrorBuilder extends StatelessWidget {
     BuildContext context,
     ValidationResult? error,
     Widget? child,
-  )
-  builder;
+  ) builder;
 
   /// Optional child widget passed to the builder.
   final Widget? child;

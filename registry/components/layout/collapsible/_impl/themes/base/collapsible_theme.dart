@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../collapsible.dart';
 
 /// Theme data for collapsible widgets and triggers.
@@ -45,9 +47,8 @@ class CollapsibleTheme extends ComponentThemeData {
     return CollapsibleTheme(
       padding: padding == null ? this.padding : padding(),
       iconExpanded: iconExpanded == null ? this.iconExpanded : iconExpanded(),
-      iconCollapsed: iconCollapsed == null
-          ? this.iconCollapsed
-          : iconCollapsed(),
+      iconCollapsed:
+          iconCollapsed == null ? this.iconCollapsed : iconCollapsed(),
       crossAxisAlignment: crossAxisAlignment == null
           ? this.crossAxisAlignment
           : crossAxisAlignment(),
@@ -59,6 +60,7 @@ class CollapsibleTheme extends ComponentThemeData {
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     return other is CollapsibleTheme &&
@@ -72,11 +74,11 @@ class CollapsibleTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    padding,
-    iconExpanded,
-    iconCollapsed,
-    crossAxisAlignment,
-    mainAxisAlignment,
-    iconGap,
-  );
+        padding,
+        iconExpanded,
+        iconCollapsed,
+        crossAxisAlignment,
+        mainAxisAlignment,
+        iconGap,
+      );
 }

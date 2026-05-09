@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../shared/primitives/animated_value_builder.dart';
@@ -7,8 +9,8 @@ import '../../../shared/utils/style_value.dart';
 part '_impl/themes/base/number_ticker_theme.dart';
 
 /// Builder signature for custom ticker content.
-typedef NumberTickerBuilder =
-    Widget Function(BuildContext context, double value, Widget? child);
+typedef NumberTickerBuilder = Widget Function(
+    BuildContext context, double value, Widget? child);
 
 /// Formatter signature for textual tickers.
 typedef NumberTickerFormatted = String Function(double value);
@@ -24,8 +26,8 @@ class NumberTicker extends StatelessWidget {
     this.child,
     this.duration,
     this.curve,
-  }) : formatter = null,
-       style = null;
+  })  : formatter = null,
+        style = null;
 
   /// Creates `NumberTicker` for configuring or rendering number ticker.
   const NumberTicker({
@@ -36,8 +38,8 @@ class NumberTicker extends StatelessWidget {
     this.duration,
     this.curve,
     this.style,
-  }) : builder = null,
-       child = null;
+  })  : builder = null,
+        child = null;
 
   /// Input parameter used by `NumberTicker` during rendering and behavior handling.
   final num? initialNumber;

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../locale_utils.dart';
 
 /// Represents a part of a date (year, month, or day).
@@ -25,7 +27,7 @@ enum DatePart {
   /// minimum and maximum valid values for this component, considering
   /// constraints like month lengths or leap years.
   final (int? min, int? max) Function(Map<DatePart, int> values)
-  computeValueRange;
+      computeValueRange;
 
   const DatePart(this.getter, this.computeValueRange, {this.length = 2});
 }

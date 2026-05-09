@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form.dart';
 
 /// A validator that checks if a numeric value does not exceed a maximum threshold.
@@ -22,7 +24,7 @@ class MaxValidator<T extends num> extends Validator<T> {
 
   /// Custom error message, or null to use default localized message.
   final String?
-  message; // if null, use default message from ShadcnLocalizations
+      message; // if null, use default message from ShadcnLocalizations
 
   /// Creates a [MaxValidator] with the specified maximum value.
   const MaxValidator(this.max, {this.inclusive = true, this.message});

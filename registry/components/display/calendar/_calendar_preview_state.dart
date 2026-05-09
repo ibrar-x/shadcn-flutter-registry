@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of 'preview.dart';
 
 /// _CalendarPreviewState holds mutable state for the calendar implementation.
@@ -32,7 +34,6 @@ class _CalendarPreviewState extends State<CalendarPreview> {
                       },
                       child: const Icon(Icons.arrow_back).iconXSmall(),
                     ),
-
                     Expanded(
                       child: Center(
                         child: Text(
@@ -40,7 +41,6 @@ class _CalendarPreviewState extends State<CalendarPreview> {
                         ).small().medium(),
                       ),
                     ),
-
                     OutlineButton(
                       density: ButtonDensity.icon,
                       onPressed: () {
@@ -53,9 +53,7 @@ class _CalendarPreviewState extends State<CalendarPreview> {
                     ),
                   ],
                 ),
-
                 const DensityGap(gapLg),
-
                 Calendar(
                   value: _value,
                   view: _view,

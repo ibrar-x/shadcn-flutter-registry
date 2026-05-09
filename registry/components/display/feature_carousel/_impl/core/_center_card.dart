@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../feature_carousel.dart';
 
 /// Internal helper class used by the feature carousel component implementation.
@@ -32,8 +34,8 @@ class _CenterCard extends StatelessWidget {
     final iconWidget = item.iconBuilder != null
         ? item.iconBuilder!(context, accent, iconSize)
         : (item.icon != null
-              ? Icon(item.icon, size: iconSize, color: accent)
-              : const SizedBox.shrink());
+            ? Icon(item.icon, size: iconSize, color: accent)
+            : const SizedBox.shrink());
 
     return Semantics(
       label: 'Feature preview: ${item.title ?? 'item'}',

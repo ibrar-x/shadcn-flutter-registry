@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../radio_group.dart';
 
 /// Theme data for the [RadioCard] widget.
@@ -69,12 +71,10 @@ class RadioCardTheme extends ComponentThemeData {
     ValueGetter<Color?>? selectedBorderColor,
   }) {
     return RadioCardTheme(
-      enabledCursor: enabledCursor != null
-          ? enabledCursor()
-          : this.enabledCursor,
-      disabledCursor: disabledCursor != null
-          ? disabledCursor()
-          : this.disabledCursor,
+      enabledCursor:
+          enabledCursor != null ? enabledCursor() : this.enabledCursor,
+      disabledCursor:
+          disabledCursor != null ? disabledCursor() : this.disabledCursor,
       hoverColor: hoverColor != null ? hoverColor() : this.hoverColor,
       color: color != null ? color() : this.color,
       borderWidth: borderWidth != null ? borderWidth() : this.borderWidth,
@@ -110,15 +110,15 @@ class RadioCardTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    enabledCursor,
-    disabledCursor,
-    hoverColor,
-    color,
-    borderWidth,
-    selectedBorderWidth,
-    borderRadius,
-    padding,
-    borderColor,
-    selectedBorderColor,
-  );
+        enabledCursor,
+        disabledCursor,
+        hoverColor,
+        color,
+        borderWidth,
+        selectedBorderWidth,
+        borderRadius,
+        padding,
+        borderColor,
+        selectedBorderColor,
+      );
 }

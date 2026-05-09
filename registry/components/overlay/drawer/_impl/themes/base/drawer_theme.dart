@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../drawer.dart';
 
 /// DrawerTheme defines a reusable type for this registry module.
@@ -65,21 +67,19 @@ class DrawerTheme extends ComponentThemeData {
     ValueGetter<Size?>? dragHandleSize,
   }) {
     return DrawerTheme(
-      surfaceOpacity: surfaceOpacity == null
-          ? this.surfaceOpacity
-          : surfaceOpacity(),
+      surfaceOpacity:
+          surfaceOpacity == null ? this.surfaceOpacity : surfaceOpacity(),
       surfaceBlur: surfaceBlur == null ? this.surfaceBlur : surfaceBlur(),
       barrierColor: barrierColor == null ? this.barrierColor : barrierColor(),
-      showDragHandle: showDragHandle == null
-          ? this.showDragHandle
-          : showDragHandle(),
-      dragHandleSize: dragHandleSize == null
-          ? this.dragHandleSize
-          : dragHandleSize(),
+      showDragHandle:
+          showDragHandle == null ? this.showDragHandle : showDragHandle(),
+      dragHandleSize:
+          dragHandleSize == null ? this.dragHandleSize : dragHandleSize(),
     );
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) =>
       other is DrawerTheme &&
@@ -91,14 +91,15 @@ class DrawerTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    surfaceOpacity,
-    surfaceBlur,
-    barrierColor,
-    showDragHandle,
-    dragHandleSize,
-  );
+        surfaceOpacity,
+        surfaceBlur,
+        barrierColor,
+        showDragHandle,
+        dragHandleSize,
+      );
 
   @override
+
   /// Executes `toString` behavior for this component/composite.
   String toString() =>
       'DrawerTheme(surfaceOpacity: $surfaceOpacity, surfaceBlur: $surfaceBlur, barrierColor: $barrierColor, showDragHandle: $showDragHandle, dragHandleSize: $dragHandleSize)';

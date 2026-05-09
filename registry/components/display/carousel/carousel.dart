@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math';
 
 import 'package:flutter/scheduler.dart';
@@ -113,9 +115,9 @@ class Carousel extends StatefulWidget {
     this.disableDraggingVelocity = false,
     required this.transition,
   }) : assert(
-         wrap || itemCount != null,
-         'itemCount must be provided if wrap is false',
-       );
+          wrap || itemCount != null,
+          'itemCount must be provided if wrap is false',
+        );
 
   /// Creates the State object used by this carousel widget.
   @override

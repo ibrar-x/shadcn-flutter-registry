@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math';
 
 import 'package:flutter/foundation.dart';
@@ -21,10 +23,9 @@ part '_impl/themes/base/scrollable_client_theme.dart';
 /// - [offset] (`Offset`): Current scroll offset.
 /// - [viewportSize] (`Size`): Size of the visible viewport.
 /// - [child] (`Widget?`): Optional child widget.
-typedef ScrollableBuilder =
-    Widget Function(
-      BuildContext context,
-      Offset offset,
-      Size viewportSize,
-      Widget? child,
-    );
+typedef ScrollableBuilder = Widget Function(
+  BuildContext context,
+  Offset offset,
+  Size viewportSize,
+  Widget? child,
+);

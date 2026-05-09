@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../border_loading.dart';
 
 /// Owns the unbounded animation timeline for border loading effects.
@@ -6,8 +8,8 @@ class _BorderLoadingController {
   _BorderLoadingController({
     required TickerProvider vsync,
     required Duration duration,
-  }) : _controller = AnimationController.unbounded(vsync: vsync, value: 0),
-       _duration = duration;
+  })  : _controller = AnimationController.unbounded(vsync: vsync, value: 0),
+        _duration = duration;
 
   /// Underlying controller used as a time source.
   final AnimationController _controller;

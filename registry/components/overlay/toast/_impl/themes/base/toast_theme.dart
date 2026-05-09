@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../toast.dart';
 
 /// Theme data for toast notifications.
@@ -109,14 +111,12 @@ class ToastTheme extends ComponentThemeData {
       animationDuration: animationDuration == null
           ? this.animationDuration
           : animationDuration(),
-      animationCurve: animationCurve == null
-          ? this.animationCurve
-          : animationCurve(),
+      animationCurve:
+          animationCurve == null ? this.animationCurve : animationCurve(),
       width: width == null ? this.width : width(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       pauseOnHover: pauseOnHover == null ? this.pauseOnHover : pauseOnHover(),
       dismissDirections: dismissDirections == null
           ? this.dismissDirections
@@ -139,9 +139,8 @@ class ToastTheme extends ComponentThemeData {
       stackAnimationCurve: stackAnimationCurve == null
           ? this.stackAnimationCurve
           : stackAnimationCurve(),
-      maxVisibleCount: maxVisibleCount == null
-          ? this.maxVisibleCount
-          : maxVisibleCount(),
+      maxVisibleCount:
+          maxVisibleCount == null ? this.maxVisibleCount : maxVisibleCount(),
       dismissWholeStackWhenMultiple: dismissWholeStackWhenMultiple == null
           ? this.dismissWholeStackWhenMultiple
           : dismissWholeStackWhenMultiple(),

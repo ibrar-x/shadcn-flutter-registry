@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../calendar.dart';
 
 /// Core class used by the calendar component.
@@ -47,6 +49,7 @@ class MonthCalendar extends StatelessWidget {
         switch (lookup) {
           case CalendarValueLookup.none:
             if (now != null &&
+
                 /// Implements `DateTime` behavior for calendar.
                 DateTime(now!.year, now!.month).isAtSameMomentAs(date)) {
               type = CalendarItemType.today;
@@ -67,6 +70,7 @@ class MonthCalendar extends StatelessWidget {
         }
       } else {
         if (now != null &&
+
             /// Implements `DateTime` behavior for calendar.
             DateTime(now!.year, now!.month).isAtSameMomentAs(date)) {
           type = CalendarItemType.today;

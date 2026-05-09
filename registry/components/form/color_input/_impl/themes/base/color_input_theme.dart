@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../color_input.dart';
 
 /// Theme configuration for [ColorInput] widget styling and behavior.
@@ -102,20 +104,17 @@ class ColorInputTheme extends ComponentThemeData {
   }) {
     return ColorInputTheme(
       showAlpha: showAlpha == null ? this.showAlpha : showAlpha(),
-      popoverAlignment: popoverAlignment == null
-          ? this.popoverAlignment
-          : popoverAlignment(),
+      popoverAlignment:
+          popoverAlignment == null ? this.popoverAlignment : popoverAlignment(),
       popoverAnchorAlignment: popoverAnchorAlignment == null
           ? this.popoverAnchorAlignment
           : popoverAnchorAlignment(),
-      popoverPadding: popoverPadding == null
-          ? this.popoverPadding
-          : popoverPadding(),
+      popoverPadding:
+          popoverPadding == null ? this.popoverPadding : popoverPadding(),
       mode: mode == null ? this.mode : mode(),
       pickerMode: pickerMode == null ? this.pickerMode : pickerMode(),
-      enableEyeDropper: enableEyeDropper == null
-          ? this.enableEyeDropper
-          : enableEyeDropper(),
+      enableEyeDropper:
+          enableEyeDropper == null ? this.enableEyeDropper : enableEyeDropper(),
       orientation: orientation == null ? this.orientation : orientation(),
       showLabel: showLabel == null ? this.showLabel : showLabel(),
       showHistory: showHistory == null ? this.showHistory : showHistory(),
@@ -141,15 +140,15 @@ class ColorInputTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    showAlpha,
-    popoverAlignment,
-    popoverAnchorAlignment,
-    popoverPadding,
-    mode,
-    pickerMode,
-    enableEyeDropper,
-    orientation,
-    showHistory,
-    showLabel,
-  );
+        showAlpha,
+        popoverAlignment,
+        popoverAnchorAlignment,
+        popoverPadding,
+        mode,
+        pickerMode,
+        enableEyeDropper,
+        orientation,
+        showHistory,
+        showLabel,
+      );
 }

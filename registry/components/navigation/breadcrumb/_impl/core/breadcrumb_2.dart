@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../breadcrumb.dart';
 
 /// Breadcrumb defines a reusable type for this registry module.
@@ -26,6 +28,7 @@ class Breadcrumb extends StatelessWidget {
   });
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final compTheme = ComponentTheme.maybeOf<BreadcrumbTheme>(context);
@@ -53,6 +56,7 @@ class Breadcrumb extends StatelessWidget {
                   if (i == children.length - 1)
                     children[i].medium().foreground()
                   else
+
                     /// Creates a `Row` instance.
                     Row(children: [children[i].medium(), sep]),
             ],

@@ -1,26 +1,28 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
 /// Builds the base track layer for the current slider state.
-typedef ShadTrackBuilder =
-    Widget Function(BuildContext context, ShadSliderStateView state);
+typedef ShadTrackBuilder = Widget Function(
+    BuildContext context, ShadSliderStateView state);
 
 /// Builds active/remaining fill layers for the current slider state.
-typedef ShadFillBuilder =
-    Widget Function(BuildContext context, ShadSliderStateView state);
+typedef ShadFillBuilder = Widget Function(
+    BuildContext context, ShadSliderStateView state);
 
 /// Builds a single thumb widget from a thumb state snapshot.
-typedef ShadThumbBuilder =
-    Widget Function(BuildContext context, ShadThumbStateView thumb);
+typedef ShadThumbBuilder = Widget Function(
+    BuildContext context, ShadThumbStateView thumb);
 
 /// Builds ticks/marks layer.
-typedef ShadTicksBuilder =
-    Widget Function(BuildContext context, ShadSliderStateView state);
+typedef ShadTicksBuilder = Widget Function(
+    BuildContext context, ShadSliderStateView state);
 
 /// Builds optional overlay layer above thumbs.
-typedef ShadOverlayBuilder =
-    Widget Function(BuildContext context, ShadSliderStateView state);
+typedef ShadOverlayBuilder = Widget Function(
+    BuildContext context, ShadSliderStateView state);
 
 /// Data payload for generic slider popover builders.
 class ShadPopoverData {
@@ -70,8 +72,8 @@ class ShadPopoverData {
 }
 
 /// Builds a popover for any slider variant.
-typedef ShadPopoverBuilder =
-    Widget Function(BuildContext context, ShadPopoverData data);
+typedef ShadPopoverBuilder = Widget Function(
+    BuildContext context, ShadPopoverData data);
 
 /// Controls when slider popovers are visible.
 enum ShadPopoverVisibility {
@@ -98,12 +100,11 @@ enum ShadPopoverShape {
 }
 
 /// Resolves per-segment style during segmented rendering.
-typedef ShadSegmentStyleResolver =
-    ShadSegmentStyle Function(
-      BuildContext context,
-      ShadSliderStateView view,
-      ShadSegment segment,
-    );
+typedef ShadSegmentStyleResolver = ShadSegmentStyle Function(
+  BuildContext context,
+  ShadSliderStateView view,
+  ShadSegment segment,
+);
 
 /// Declarative style for one rendered segment.
 class ShadSegmentStyle {
@@ -421,15 +422,15 @@ class ShadJoinGapLayout extends ShadSegmentLayout {
       // center so no residual tail/gap appears at ends.
       final edgeX = isRtl
           ? (atMin
-                ? trackRect.right
-                : atMax
-                ? trackRect.left
-                : cx)
+              ? trackRect.right
+              : atMax
+                  ? trackRect.left
+                  : cx)
           : (atMin
-                ? trackRect.left
-                : atMax
-                ? trackRect.right
-                : cx);
+              ? trackRect.left
+              : atMax
+                  ? trackRect.right
+                  : cx);
       final anchor = (atMin || atMax) ? edgeX : cx;
       final gapHalf = gap / 2;
       final gapL = (anchor - gapHalf).clamp(trackRect.left, trackRect.right);
@@ -620,7 +621,6 @@ class ShadRangeValue {
 
     /// End value for range selection.
     this.end, {
-
     /// Minimum allowed distance between start and end.
     ///
     /// `0` allows touching thumbs.

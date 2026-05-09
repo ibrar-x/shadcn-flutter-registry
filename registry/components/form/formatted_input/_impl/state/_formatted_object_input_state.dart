@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../formatted_input.dart';
 
 /// _FormattedObjectInputState stores and manages mutable widget state.
@@ -48,8 +50,8 @@ class _FormattedObjectInputState<T> extends State<FormattedObjectInput<T>> {
     if (!listEquals(widget.parts, oldWidget.parts)) {
       List<String?> values = widget.converter.convertA(_controller.value);
       List<FormattedValuePart> valueParts = [];
-      List<FormattedValuePart> oldValues = _formattedController.value.values
-          .toList();
+      List<FormattedValuePart> oldValues =
+          _formattedController.value.values.toList();
       int partIndex = 0;
       for (var i = 0; i < widget.parts.length; i++) {
         var part = widget.parts[i];
@@ -58,9 +60,8 @@ class _FormattedObjectInputState<T> extends State<FormattedObjectInput<T>> {
           if (value != null) {
             valueParts.add(part.withValue(value));
           } else {
-            var oldValue = partIndex < oldValues.length
-                ? oldValues[partIndex]
-                : null;
+            var oldValue =
+                partIndex < oldValues.length ? oldValues[partIndex] : null;
             if (oldValue != null) {
               valueParts.add(oldValue);
             } else {
@@ -107,8 +108,8 @@ class _FormattedObjectInputState<T> extends State<FormattedObjectInput<T>> {
       List<String?> values = widget.converter.convertA(_controller.value);
       List<FormattedValuePart> valueParts = [];
       int partIndex = 0;
-      List<FormattedValuePart> oldValues = _formattedController.value.values
-          .toList();
+      List<FormattedValuePart> oldValues =
+          _formattedController.value.values.toList();
       for (var i = 0; i < widget.parts.length; i++) {
         var part = widget.parts[i];
         if (part.canHaveValue) {
@@ -116,9 +117,8 @@ class _FormattedObjectInputState<T> extends State<FormattedObjectInput<T>> {
           if (value != null) {
             valueParts.add(part.withValue(value));
           } else {
-            var oldValue = partIndex < oldValues.length
-                ? oldValues[partIndex]
-                : null;
+            var oldValue =
+                partIndex < oldValues.length ? oldValues[partIndex] : null;
             if (oldValue != null) {
               valueParts.add(oldValue);
             } else {

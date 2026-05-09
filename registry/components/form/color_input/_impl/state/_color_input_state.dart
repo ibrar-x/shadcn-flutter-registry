@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../color_input.dart';
 
 /// _ColorInputState stores and manages mutable widget state.
@@ -99,9 +101,8 @@ class _ColorInputState extends State<ColorInput>
       popoverAnchorAlignment: popoverAnchorAlignment,
       popoverPadding: popoverPadding,
       mode: promptMode,
-      density: promptMode == PromptMode.popover
-          ? ButtonDensity.iconDense
-          : null,
+      density:
+          promptMode == PromptMode.popover ? ButtonDensity.iconDense : null,
       enabled: widget.enabled,
       builder: (context, value) {
         if (!showLabel) {
@@ -185,8 +186,7 @@ class _ColorInputState extends State<ColorInput>
               child: ColorPicker(
                 // force rebuild when showHistory changes
                 key: ValueKey(_showHistoryNotifier.value),
-                value:
-                    handler.value ??
+                value: handler.value ??
                     ColorDerivative.fromColor(Color(0x00000000)),
                 initialShowHistory: _showHistoryNotifier.value,
                 enableEyeDropper:

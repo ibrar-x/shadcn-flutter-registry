@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -79,8 +81,8 @@ class ShadSliderLogic {
       final cx = nearMin
           ? minCenterX
           : nearMax
-          ? maxCenterX
-          : rawCx;
+              ? maxCenterX
+              : rawCx;
       final center = Offset(cx, trackRect.center.dy + thumbVerticalOffsetPx);
 
       thumbs = [
@@ -165,12 +167,10 @@ class ShadSliderLogic {
     final rangeRect = isRange ? firstOf(ShadSegmentKind.fill) : null;
     final leftGapRect = firstOf(ShadSegmentKind.gap);
     final rightGapRect = nthOf(ShadSegmentKind.gap, 1);
-    final leftRemainingRect = isRange
-        ? firstOf(ShadSegmentKind.remaining)
-        : null;
-    final rightRemainingRect = isRange
-        ? nthOf(ShadSegmentKind.remaining, 1)
-        : null;
+    final leftRemainingRect =
+        isRange ? firstOf(ShadSegmentKind.remaining) : null;
+    final rightRemainingRect =
+        isRange ? nthOf(ShadSegmentKind.remaining, 1) : null;
 
     final marks = _defaultMarks(
       min: min,

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form_field.dart';
 
 /// State class for [ObjectFormField] managing form value and user interactions.
@@ -98,39 +100,38 @@ class ObjectFormFieldState<T> extends State<ObjectFormField<T>>
     T? delayedResult = value;
     _popoverController
         .show(
-          context: context,
-          alignment: widget.popoverAlignment ?? Alignment.topLeft,
-          anchorAlignment:
-              widget.popoverAnchorAlignment ?? Alignment.bottomLeft,
-          overlayBarrier: OverlayBarrier(
-            borderRadius: BorderRadius.circular(theme.radiusLg),
-          ),
-          modal: true,
-          offset: Offset(0, 8 * scaling),
-          builder: (context) {
-            return _ObjectFormFieldPopup<T>(
-              value: value,
-              editorBuilder: widget.editorBuilder,
-              popoverPadding: widget.popoverPadding,
-              prompt: prompt,
-              decorate: widget.decorate,
-              onChanged: (value) {
-                // by default, popover will immediately inform any changes
-                // but if its explicitly set to false, then we should not inform
-                if (mounted && widget.immediateValueChange != false) {
-                  this.value = value;
-                } else {
-                  delayedResult = value;
-                }
-              },
-            );
+      context: context,
+      alignment: widget.popoverAlignment ?? Alignment.topLeft,
+      anchorAlignment: widget.popoverAnchorAlignment ?? Alignment.bottomLeft,
+      overlayBarrier: OverlayBarrier(
+        borderRadius: BorderRadius.circular(theme.radiusLg),
+      ),
+      modal: true,
+      offset: Offset(0, 8 * scaling),
+      builder: (context) {
+        return _ObjectFormFieldPopup<T>(
+          value: value,
+          editorBuilder: widget.editorBuilder,
+          popoverPadding: widget.popoverPadding,
+          prompt: prompt,
+          decorate: widget.decorate,
+          onChanged: (value) {
+            // by default, popover will immediately inform any changes
+            // but if its explicitly set to false, then we should not inform
+            if (mounted && widget.immediateValueChange != false) {
+              this.value = value;
+            } else {
+              delayedResult = value;
+            }
           },
-        )
+        );
+      },
+    )
         .then((_) {
-          if (mounted && widget.immediateValueChange == false) {
-            this.value = delayedResult;
-          }
-        });
+      if (mounted && widget.immediateValueChange == false) {
+        this.value = delayedResult;
+      }
+    });
   }
 
   /// Prompts the user to select or edit a value via dialog or popover.

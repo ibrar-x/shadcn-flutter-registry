@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../outlined_container.dart';
 
 /// Theme data for [OutlinedContainer].
@@ -58,23 +60,22 @@ class OutlinedContainerTheme extends ComponentThemeData {
     ValueGetter<double?>? surfaceBlur,
   }) {
     return OutlinedContainerTheme(
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       borderColor: borderColor == null ? this.borderColor : borderColor(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
       borderStyle: borderStyle == null ? this.borderStyle : borderStyle(),
       borderWidth: borderWidth == null ? this.borderWidth : borderWidth(),
       boxShadow: boxShadow == null ? this.boxShadow : boxShadow(),
       padding: padding == null ? this.padding : padding(),
-      surfaceOpacity: surfaceOpacity == null
-          ? this.surfaceOpacity
-          : surfaceOpacity(),
+      surfaceOpacity:
+          surfaceOpacity == null ? this.surfaceOpacity : surfaceOpacity(),
       surfaceBlur: surfaceBlur == null ? this.surfaceBlur : surfaceBlur(),
     );
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     return other is OutlinedContainerTheme &&
@@ -91,14 +92,14 @@ class OutlinedContainerTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    backgroundColor,
-    borderColor,
-    borderRadius,
-    borderStyle,
-    borderWidth,
-    boxShadow,
-    padding,
-    surfaceOpacity,
-    surfaceBlur,
-  );
+        backgroundColor,
+        borderColor,
+        borderRadius,
+        borderStyle,
+        borderWidth,
+        boxShadow,
+        padding,
+        surfaceOpacity,
+        surfaceBlur,
+      );
 }

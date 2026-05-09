@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math';
 
 import 'package:flutter/widgets.dart';
@@ -64,10 +66,12 @@ class ConstantBreakpoint implements StageBreakpoint {
   final double breakpoint;
 
   @override
+
   /// Stores `minSize` state/configuration for this implementation.
   final double minSize;
 
   @override
+
   /// Stores `maxSize` state/configuration for this implementation.
   final double maxSize;
 
@@ -79,6 +83,7 @@ class ConstantBreakpoint implements StageBreakpoint {
   });
 
   @override
+
   /// Executes `getMinWidth` behavior for this component/composite.
   double getMinWidth(double width) {
     // 0 < width < breakpoint * 1 ? breakpoint * 1 : width
@@ -88,6 +93,7 @@ class ConstantBreakpoint implements StageBreakpoint {
   }
 
   @override
+
   /// Executes `getMaxWidth` behavior for this component/composite.
   double getMaxWidth(double width) {
     return breakpoint * (width / breakpoint).ceil();

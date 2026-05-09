@@ -1,8 +1,10 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../tabs.dart';
 
 /// Type alias for `TabBuilder` used by public or internal APIs.
-typedef TabBuilder =
-    Widget Function(BuildContext context, List<Widget> children);
+typedef TabBuilder = Widget Function(
+    BuildContext context, List<Widget> children);
 
 /// Builder function for creating individual tab child widgets.
 ///
@@ -12,8 +14,8 @@ typedef TabBuilder =
 /// - [child] (`Widget`): child widget to wrap
 ///
 /// Returns: `Widget` — the wrapped child widget
-typedef TabChildBuilder =
-    Widget Function(BuildContext context, TabContainerData data, Widget child);
+typedef TabChildBuilder = Widget Function(
+    BuildContext context, TabContainerData data, Widget child);
 
 /// Container widget for managing multiple tabs.
 ///

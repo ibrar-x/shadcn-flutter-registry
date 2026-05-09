@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../badge.dart';
 
 /// An outline-styled badge for displaying labels, counts, or status indicators.
@@ -31,8 +33,7 @@ class OutlineBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final compTheme = ComponentTheme.maybeOf<BadgeTheme>(context);
-    final baseStyle =
-        style ??
+    final baseStyle = style ??
         compTheme?.outlineStyle ??
         const ButtonStyle.outline(
           size: ButtonSize.small,

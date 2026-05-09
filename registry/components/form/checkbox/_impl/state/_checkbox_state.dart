@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../checkbox.dart';
 
 /// _CheckboxState stores and manages mutable widget state.
@@ -120,13 +122,13 @@ class _CheckboxState extends State<Checkbox>
                   : backgroundColor,
               borderRadius:
                   optionallyResolveBorderRadius(context, borderRadius) ??
-                  BorderRadius.circular(theme.radiusSm),
+                      BorderRadius.circular(theme.radiusSm),
               border: Border.all(
                 color: !enabled
                     ? theme.colorScheme.muted
                     : widget.state == CheckboxState.checked
-                    ? activeColor
-                    : borderColor,
+                        ? activeColor
+                        : borderColor,
                 width: (_focusing ? 2 : 1) * scaling,
               ),
             ),

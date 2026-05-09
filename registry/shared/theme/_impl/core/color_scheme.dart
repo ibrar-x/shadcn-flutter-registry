@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../color_scheme.dart';
 
 /// ColorScheme defines a reusable type for this registry module.
@@ -129,19 +131,24 @@ class ColorScheme implements ChartColorScheme {
   final Color sidebarRing;
 
   @override
-/// Stores `chart1` state/configuration for this implementation.
+
+  /// Stores `chart1` state/configuration for this implementation.
   final Color chart1;
   @override
-/// Stores `chart2` state/configuration for this implementation.
+
+  /// Stores `chart2` state/configuration for this implementation.
   final Color chart2;
   @override
-/// Stores `chart3` state/configuration for this implementation.
+
+  /// Stores `chart3` state/configuration for this implementation.
   final Color chart3;
   @override
-/// Stores `chart4` state/configuration for this implementation.
+
+  /// Stores `chart4` state/configuration for this implementation.
   final Color chart4;
   @override
-/// Stores `chart5` state/configuration for this implementation.
+
+  /// Stores `chart5` state/configuration for this implementation.
   final Color chart5;
 
   /// Creates a color scheme with all required colors.
@@ -473,7 +480,8 @@ class ColorScheme implements ChartColorScheme {
   }
 
   @override
-/// Stores `chartColors` state/configuration for this implementation.
+
+  /// Stores `chartColors` state/configuration for this implementation.
   List<Color> get chartColors => [chart1, chart2, chart3, chart4, chart5];
 
   /// Linearly interpolates between two ColorSchemes.
@@ -496,15 +504,18 @@ class ColorScheme implements ChartColorScheme {
       cardForeground: Color.lerp(a.cardForeground, b.cardForeground, t)!,
       popover: Color.lerp(a.popover, b.popover, t)!,
       popoverForeground:
-/// Creates a `Color.lerp` instance.
+
+          /// Creates a `Color.lerp` instance.
           Color.lerp(a.popoverForeground, b.popoverForeground, t)!,
       primary: Color.lerp(a.primary, b.primary, t)!,
       primaryForeground:
-/// Creates a `Color.lerp` instance.
+
+          /// Creates a `Color.lerp` instance.
           Color.lerp(a.primaryForeground, b.primaryForeground, t)!,
       secondary: Color.lerp(a.secondary, b.secondary, t)!,
       secondaryForeground:
-/// Creates a `Color.lerp` instance.
+
+          /// Creates a `Color.lerp` instance.
           Color.lerp(a.secondaryForeground, b.secondaryForeground, t)!,
       muted: Color.lerp(a.muted, b.muted, t)!,
       mutedForeground: Color.lerp(a.mutedForeground, b.mutedForeground, t)!,
@@ -521,14 +532,16 @@ class ColorScheme implements ChartColorScheme {
       chart5: Color.lerp(a.chart5, b.chart5, t)!,
       sidebar: Color.lerp(a.sidebar, b.sidebar, t)!,
       sidebarForeground:
-/// Creates a `Color.lerp` instance.
+
+          /// Creates a `Color.lerp` instance.
           Color.lerp(a.sidebarForeground, b.sidebarForeground, t)!,
       sidebarPrimary: Color.lerp(a.sidebarPrimary, b.sidebarPrimary, t)!,
       sidebarPrimaryForeground: Color.lerp(
           a.sidebarPrimaryForeground, b.sidebarPrimaryForeground, t)!,
       sidebarAccent: Color.lerp(a.sidebarAccent, b.sidebarAccent, t)!,
       sidebarAccentForeground:
-/// Creates a `Color.lerp` instance.
+
+          /// Creates a `Color.lerp` instance.
           Color.lerp(a.sidebarAccentForeground, b.sidebarAccentForeground, t)!,
       sidebarBorder: Color.lerp(a.sidebarBorder, b.sidebarBorder, t)!,
       sidebarRing: Color.lerp(a.sidebarRing, b.sidebarRing, t)!,
@@ -536,9 +549,11 @@ class ColorScheme implements ChartColorScheme {
   }
 
   @override
-/// Executes `operator ==` behavior for this component/composite.
+
+  /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) =>
-/// Creates a `identical` instance.
+
+      /// Creates a `identical` instance.
       identical(this, other) ||
       other is ColorScheme &&
           runtimeType == other.runtimeType &&
@@ -577,7 +592,7 @@ class ColorScheme implements ChartColorScheme {
 
   @override
   int get hashCode => Object.hash(
-/// Creates a `Object.hash` instance.
+        /// Creates a `Object.hash` instance.
         Object.hash(
           brightness,
           background,
@@ -601,7 +616,8 @@ class ColorScheme implements ChartColorScheme {
           input,
           ring,
         ),
-/// Creates a `Object.hash` instance.
+
+        /// Creates a `Object.hash` instance.
         Object.hash(
             chart1,
             chart2,
@@ -619,7 +635,8 @@ class ColorScheme implements ChartColorScheme {
       );
 
   @override
-/// Executes `toString` behavior for this component/composite.
+
+  /// Executes `toString` behavior for this component/composite.
   String toString() {
     // ignore: deprecated_member_use_from_same_package
     return 'ColorScheme{brightness: $brightness, background: $background, foreground: $foreground, card: $card, cardForeground: $cardForeground, popover: $popover, popoverForeground: $popoverForeground, primary: $primary, primaryForeground: $primaryForeground, secondary: $secondary, secondaryForeground: $secondaryForeground, muted: $muted, mutedForeground: $mutedForeground, accent: $accent, accentForeground: $accentForeground, destructive: $destructive, destructiveForeground: $destructiveForeground, border: $border, input: $input, ring: $ring, chart1: $chart1, chart2: $chart2, chart3: $chart3, chart4: $chart4, chart5: $chart5, sidebar: $sidebar, sidebarForeground: $sidebarForeground, sidebarPrimary: $sidebarPrimary, sidebarPrimaryForeground: $sidebarPrimaryForeground, sidebarAccent: $sidebarAccent, sidebarAccentForeground: $sidebarAccentForeground, sidebarBorder: $sidebarBorder, sidebarRing: $sidebarRing}';
@@ -628,9 +645,9 @@ class ColorScheme implements ChartColorScheme {
 
 /// Extension helpers used by this registry module.
 extension _MapColorGetter on Map<String, Color> {
-/// Executes `_col` behavior for this component/composite.
+  /// Executes `_col` behavior for this component/composite.
   Color _col(String name) {
-/// Stores `color` state/configuration for this implementation.
+    /// Stores `color` state/configuration for this implementation.
     Color? color = this[name];
     assert(color != null, 'ColorScheme: Missing color for $name');
     return color!;
@@ -639,9 +656,9 @@ extension _MapColorGetter on Map<String, Color> {
 
 /// Extension helpers used by this registry module.
 extension _DynamicMapColorGetter on Map<String, dynamic> {
-/// Executes `_col` behavior for this component/composite.
+  /// Executes `_col` behavior for this component/composite.
   Color _col(String name) {
-/// Stores `value` state/configuration for this implementation.
+    /// Stores `value` state/configuration for this implementation.
     String? value = this[name];
     assert(value != null, 'ColorScheme: Missing color for $name');
     if (value!.startsWith('#')) {

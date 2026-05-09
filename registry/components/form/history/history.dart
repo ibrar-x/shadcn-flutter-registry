@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:data_widget/data_widget.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
@@ -104,12 +106,10 @@ class ColorHistoryGrid extends StatelessWidget {
         listenable: storage,
         builder: (context, child) {
           List<Widget> rows = [];
-          for (
-            int i = 0;
-            i < storage.capacity &&
-                (maxTotalColors == null || i < maxTotalColors!);
-            i += crossAxisCount
-          ) {
+          for (int i = 0;
+              i < storage.capacity &&
+                  (maxTotalColors == null || i < maxTotalColors!);
+              i += crossAxisCount) {
             List<Widget> tiles = [];
             for (int j = 0; j < crossAxisCount; j++) {
               final index = i + j;

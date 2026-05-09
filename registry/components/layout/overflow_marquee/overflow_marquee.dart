@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/material.dart' show Colors;
@@ -81,9 +83,8 @@ class OverflowMarqueeTheme extends ComponentThemeData {
     return OverflowMarqueeTheme(
       direction: direction == null ? this.direction : direction(),
       duration: duration == null ? this.duration : duration(),
-      delayDuration: delayDuration == null
-          ? this.delayDuration
-          : delayDuration(),
+      delayDuration:
+          delayDuration == null ? this.delayDuration : delayDuration(),
       step: step == null ? this.step : step(),
       fadePortion: fadePortion == null ? this.fadePortion : fadePortion(),
       curve: curve == null ? this.curve : curve(),
@@ -91,7 +92,8 @@ class OverflowMarqueeTheme extends ComponentThemeData {
   }
 
   @override
-/// Executes `operator ==` behavior for this component/composite.
+
+  /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     return other is OverflowMarqueeTheme &&

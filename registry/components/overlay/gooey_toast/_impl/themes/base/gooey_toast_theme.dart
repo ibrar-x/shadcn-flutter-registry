@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../gooey_toast.dart';
 
 class GooeyToastTheme extends shad.ComponentThemeData {
@@ -286,13 +288,11 @@ class GooeyToastTheme extends shad.ComponentThemeData {
       fill: fill == null ? this.fill : fill(),
       roundness: roundness == null ? this.roundness : roundness(),
       titleStyle: titleStyle == null ? this.titleStyle : titleStyle(),
-      descriptionStyle: descriptionStyle == null
-          ? this.descriptionStyle
-          : descriptionStyle(),
+      descriptionStyle:
+          descriptionStyle == null ? this.descriptionStyle : descriptionStyle(),
       pauseOnHover: pauseOnHover == null ? this.pauseOnHover : pauseOnHover(),
-      swipeToDismiss: swipeToDismiss == null
-          ? this.swipeToDismiss
-          : swipeToDismiss(),
+      swipeToDismiss:
+          swipeToDismiss == null ? this.swipeToDismiss : swipeToDismiss(),
       dismissDirections: dismissDirections == null
           ? this.dismissDirections
           : dismissDirections(),
@@ -315,22 +315,19 @@ class GooeyToastTheme extends shad.ComponentThemeData {
       stackAnimationCurve: stackAnimationCurve == null
           ? this.stackAnimationCurve
           : stackAnimationCurve(),
-      maxVisibleCount: maxVisibleCount == null
-          ? this.maxVisibleCount
-          : maxVisibleCount(),
+      maxVisibleCount:
+          maxVisibleCount == null ? this.maxVisibleCount : maxVisibleCount(),
       dismissWholeStackWhenMultiple: dismissWholeStackWhenMultiple == null
           ? this.dismissWholeStackWhenMultiple
           : dismissWholeStackWhenMultiple(),
-      animationStyle: animationStyle == null
-          ? this.animationStyle
-          : animationStyle(),
+      animationStyle:
+          animationStyle == null ? this.animationStyle : animationStyle(),
       shapeStyle: shapeStyle == null ? this.shapeStyle : shapeStyle(),
       bodyAnimationStyle: bodyAnimationStyle == null
           ? this.bodyAnimationStyle
           : bodyAnimationStyle(),
-      enableGooeyBlur: enableGooeyBlur == null
-          ? this.enableGooeyBlur
-          : enableGooeyBlur(),
+      enableGooeyBlur:
+          enableGooeyBlur == null ? this.enableGooeyBlur : enableGooeyBlur(),
       successTone: successTone == null ? this.successTone : successTone(),
       loadingTone: loadingTone == null ? this.loadingTone : loadingTone(),
       errorTone: errorTone == null ? this.errorTone : errorTone(),

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 // ErrorState: full-page/section error UI built from shadcn Card/Divider/Button primitives.
 // Renders optional illustration + icon + title/message and maps ErrorAction list to buttons.
 
@@ -37,6 +39,7 @@ class ErrorState extends StatelessWidget {
   final double? maxWidth;
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -44,8 +47,8 @@ class ErrorState extends StatelessWidget {
     /// Stores `scaling` state/configuration for this implementation.
     final scaling = theme.scaling;
     final compTheme = ComponentTheme.maybeOf<ErrorSystemTheme>(context);
-    final resolvedIcon =
-        icon ??
+    final resolvedIcon = icon ??
+
         /// Creates a `Icon` instance.
         Icon(
           RadixIcons.exclamationTriangle,
@@ -55,16 +58,13 @@ class ErrorState extends StatelessWidget {
 
     /// Stores `resolvedIllustration` state/configuration for this implementation.
     final resolvedIllustration = illustration;
-    final titleStyle =
-        compTheme?.titleStyle ??
+    final titleStyle = compTheme?.titleStyle ??
         theme.typography.medium.merge(theme.typography.semiBold);
-    final messageStyle =
-        compTheme?.messageStyle ??
+    final messageStyle = compTheme?.messageStyle ??
         theme.typography.small.copyWith(
           color: theme.colorScheme.mutedForeground,
         );
-    final padding =
-        compTheme?.cardPadding ??
+    final padding = compTheme?.cardPadding ??
         EdgeInsets.all(theme.density.baseContainerPadding * scaling * 1.5);
 
     /// Stores `borderRadius` state/configuration for this implementation.
@@ -128,6 +128,7 @@ class ErrorState extends StatelessWidget {
                   alignment: WrapAlignment.center,
                   children: [
                     for (final action in error.actions)
+
                       /// Creates a `_buildAction` instance.
                       _buildAction(context, action),
                   ],

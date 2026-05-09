@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:async';
 import 'dart:ui';
 
@@ -52,7 +54,8 @@ void showToast({
   final isTop = switch (location) {
     ToastLocation.topLeft ||
     ToastLocation.topCenter ||
-    ToastLocation.topRight => true,
+    ToastLocation.topRight =>
+      true,
     _ => false,
   };
   final isCenter = switch (location) {

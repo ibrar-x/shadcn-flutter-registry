@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of 'preview.dart';
 
 /// _CarouselPreviewState holds mutable state for the carousel implementation.
@@ -26,9 +28,7 @@ class _CarouselPreviewState extends m.State<CarouselPreview> {
                         },
                         child: const m.Icon(m.Icons.arrow_back),
                       ),
-
                       const m.SizedBox(width: 24),
-
                       m.Expanded(
                         child: m.SizedBox(
                           height: 200,
@@ -44,9 +44,8 @@ class _CarouselPreviewState extends m.State<CarouselPreview> {
                             itemBuilder: (context, index) {
                               return m.Container(
                                 decoration: m.BoxDecoration(
-                                  color:
-                                      m.Colors.primaries[index %
-                                          m.Colors.primaries.length],
+                                  color: m.Colors.primaries[
+                                      index % m.Colors.primaries.length],
                                   borderRadius: m.BorderRadius.circular(8),
                                 ),
                                 child: m.Center(
@@ -65,9 +64,7 @@ class _CarouselPreviewState extends m.State<CarouselPreview> {
                           ),
                         ),
                       ),
-
                       const m.SizedBox(width: 24),
-
                       OutlineButton(
                         shape: ButtonShape.circle,
                         onPressed: () {

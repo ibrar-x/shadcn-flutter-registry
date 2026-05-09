@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../progress.dart';
 
 /// Theme data for [Progress].
@@ -33,9 +35,8 @@ class ProgressTheme extends ComponentThemeData {
   }) {
     return ProgressTheme(
       color: color == null ? this.color : color(),
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
       minHeight: minHeight == null ? this.minHeight : minHeight(),
     );

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../preview.dart';
 
 enum _StreamMode { character, word, chunk, part }
@@ -275,21 +277,21 @@ Use [links](https://flutter.dev) and `inline code` without the table feeling ove
     final durationMs = (300 / _speed).clamp(120, 480).round();
     return switch (_animation) {
       _AnimationKind.blur => ta.BlurInEffect(
-        duration: Duration(milliseconds: durationMs),
-        maxBlurSigma: 12,
-        fadeIn: true,
-        slideUpPx: 2,
-      ),
+          duration: Duration(milliseconds: durationMs),
+          maxBlurSigma: 12,
+          fadeIn: true,
+          slideUpPx: 2,
+        ),
       _AnimationKind.fade => ta.FadeInEffect(
-        duration: Duration(milliseconds: durationMs),
-      ),
+          duration: Duration(milliseconds: durationMs),
+        ),
       _AnimationKind.slide => ta.SlideInEffect(
-        duration: Duration(milliseconds: durationMs),
-        offsetY: 8,
-      ),
+          duration: Duration(milliseconds: durationMs),
+          offsetY: 8,
+        ),
       _AnimationKind.scramble => ta.ScrambleInEffect(
-        duration: Duration(milliseconds: durationMs),
-      ),
+          duration: Duration(milliseconds: durationMs),
+        ),
     };
   }
 
@@ -407,15 +409,15 @@ Use [links](https://flutter.dev) and `inline code` without the table feeling ove
     final label = details.error != null
         ? 'Preview held on last valid parse'
         : details.isValidating
-        ? 'Validating markdown...'
-        : details.hasPendingChanges
-        ? 'Pending update'
-        : 'Preview synced';
+            ? 'Validating markdown...'
+            : details.hasPendingChanges
+                ? 'Pending update'
+                : 'Preview synced';
     final color = details.error != null
         ? const m.Color(0xFF7F1D1D)
         : details.hasPendingChanges || details.isValidating
-        ? const m.Color(0xFF1D4ED8)
-        : const m.Color(0xFF166534);
+            ? const m.Color(0xFF1D4ED8)
+            : const m.Color(0xFF166534);
 
     return m.Align(
       alignment: m.Alignment.topRight,
@@ -1379,7 +1381,7 @@ class _MarkdownFullPageDemo extends m.StatelessWidget {
 
   final String data;
   final m.Widget Function(m.BuildContext context, String url, String alt)
-  imageBuilder;
+      imageBuilder;
   final MarkdownTapLinkDetailsCallback onTapLinkDetails;
   final MarkdownTapImageCallback onTapImage;
   final MarkdownTapHeadingCallback onTapHeading;

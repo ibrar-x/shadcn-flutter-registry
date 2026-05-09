@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../feature_carousel.dart';
 
 /// Core class used by the feature carousel component.
@@ -36,29 +38,25 @@ class FeatureCardCarousel extends StatefulWidget {
     FeatureCarouselItem item,
     int index,
     FeatureCarouselThemeData theme,
-  )?
-  cardBuilder;
+  )? cardBuilder;
   final Widget Function(
     BuildContext context,
     FeatureCarouselItem item,
     int index,
-  )?
-  titleBuilder;
+  )? titleBuilder;
   final Widget Function(
     BuildContext context,
     FeatureCarouselItem item,
     int index,
-  )?
-  descriptionBuilder;
+  )? descriptionBuilder;
   final Widget Function(
     BuildContext context,
     FeatureCarouselItem item,
     int index,
     VoidCallback onAction,
-  )?
-  ctaBuilder;
+  )? ctaBuilder;
   final Widget Function(BuildContext context, FeatureCarouselThemeData theme)?
-  backgroundBuilder;
+      backgroundBuilder;
 
   /// Creates the State object used by this feature carousel widget.
   @override

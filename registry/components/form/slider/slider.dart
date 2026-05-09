@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart' hide Slider, SliderTheme, Theme;
@@ -822,31 +824,27 @@ class _SliderState extends State<Slider> {
     final defaults = ShadSliderDefaults.of(context);
     final effectiveThumbBuilder =
         (identical(resolved.thumbBuilder, defaults.thumbBuilder) &&
-            resolvedThumbRadius != null)
-        ? ShadSliderDefaults.barThumb(radius: resolvedThumbRadius)
-        : resolved.thumbBuilder;
+                resolvedThumbRadius != null)
+            ? ShadSliderDefaults.barThumb(radius: resolvedThumbRadius)
+            : resolved.thumbBuilder;
     final isCircleThumb = identical(
       effectiveThumbBuilder,
       ShadSliderDefaults.circleThumb,
     );
     final resolvedJoinGapForThumb = resolvedJoinGapPx;
-    final resolvedThumbSize =
-        resolvedThumbSizeOverride ??
+    final resolvedThumbSize = resolvedThumbSizeOverride ??
         (isCircleThumb
             ? Size(baseGap * 3.0, baseGap * 3.0)
             : Size(baseGap * 2.5, baseGap * 3.5));
-    final resolvedThumbEdgeOffsetPx =
-        resolvedThumbEdgeOffsetOverride ??
+    final resolvedThumbEdgeOffsetPx = resolvedThumbEdgeOffsetOverride ??
         (isCircleThumb ? resolvedThumbSize.width / 2 : 0.0);
-    final effectiveSegmentLayout =
-        resolvedSegmentLayout ??
+    final effectiveSegmentLayout = resolvedSegmentLayout ??
         ShadJoinGapLayout(
           gapPx: resolvedJoinGapForThumb,
           endsPolicy: ShadGapEndsPolicy.noneAtMinMax,
           segmentRadius: ShadSegmentRadiusPolicy.fullPills,
         );
-    final effectiveTrackRenderer =
-        resolvedTrackRenderer ??
+    final effectiveTrackRenderer = resolvedTrackRenderer ??
         ShadLegacyBuildersRenderer(
           trackBuilder: resolved.trackBuilder,
           fillBuilder: resolved.fillBuilder,
@@ -913,8 +911,7 @@ class _SliderState extends State<Slider> {
                     final active = view.thumbs[idx];
                     return Positioned(
                       left: active.center.dx + resolvedDragPopoverOffset.dx,
-                      top:
-                          active.center.dy -
+                      top: active.center.dy -
                           active.size.height / 2 +
                           resolvedDragPopoverOffset.dy,
                       child: FractionalTranslation(
@@ -967,12 +964,12 @@ class _SliderState extends State<Slider> {
               : null,
           onHorizontalDragStart: widget.enabled
               ? (d) => setState(() {
-                  _dragging = true;
-                  _activeThumb = _logic.pickActiveThumb(
-                    view: view,
-                    dx: d.localPosition.dx,
-                  );
-                })
+                    _dragging = true;
+                    _activeThumb = _logic.pickActiveThumb(
+                      view: view,
+                      dx: d.localPosition.dx,
+                    );
+                  })
               : null,
           onHorizontalDragUpdate: widget.enabled
               ? (d) {
@@ -988,15 +985,15 @@ class _SliderState extends State<Slider> {
               : null,
           onHorizontalDragEnd: widget.enabled
               ? (_) => setState(() {
-                  _dragging = false;
-                  _activeThumb = null;
-                })
+                    _dragging = false;
+                    _activeThumb = null;
+                  })
               : null,
           onHorizontalDragCancel: widget.enabled
               ? () => setState(() {
-                  _dragging = false;
-                  _activeThumb = null;
-                })
+                    _dragging = false;
+                    _activeThumb = null;
+                  })
               : null,
           child: content,
         );

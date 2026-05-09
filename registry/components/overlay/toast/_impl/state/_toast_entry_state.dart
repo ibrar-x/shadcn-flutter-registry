@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../toast.dart';
 
 /// _ToastEntryState defines a reusable type for this registry module.
@@ -22,6 +24,7 @@ class _ToastEntryState extends State<ToastEntry>
       widget.dismissDirections.contains(ToastSwipeDirection.down);
 
   @override
+
   /// Executes `initState` behavior for this component/composite.
   void initState() {
     super.initState();
@@ -162,14 +165,12 @@ class _ToastEntryState extends State<ToastEntry>
       return;
     }
     final direction = _dominantDirection(_dragOffset);
-    final distance = direction == null
-        ? 0.0
-        : _distanceInDirection(_dragOffset, direction);
+    final distance =
+        direction == null ? 0.0 : _distanceInDirection(_dragOffset, direction);
     final velocity = direction == null
         ? 0.0
         : _distanceInDirection(details.velocity.pixelsPerSecond, direction);
-    final shouldDismiss =
-        direction != null &&
+    final shouldDismiss = direction != null &&
         widget.dismissDirections.contains(direction) &&
         (distance >= widget.dismissDragThreshold || velocity >= 850);
 
@@ -286,6 +287,7 @@ class _ToastEntryState extends State<ToastEntry>
   }
 
   @override
+
   /// Executes `dispose` behavior for this component/composite.
   void dispose() {
     _endInteraction();
@@ -296,6 +298,7 @@ class _ToastEntryState extends State<ToastEntry>
   }
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     Widget child = FadeTransition(

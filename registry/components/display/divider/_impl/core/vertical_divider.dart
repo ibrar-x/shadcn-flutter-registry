@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../divider.dart';
 
 /// Vertical line that divides horizontal layouts.
@@ -47,8 +49,8 @@ class VerticalDivider extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final textDirection = Directionality.maybeOf(context) ?? TextDirection.ltr;
-    final resolvedChildAlignment = (childAlignment ?? AxisAlignment.center)
-        .resolve(textDirection);
+    final resolvedChildAlignment =
+        (childAlignment ?? AxisAlignment.center).resolve(textDirection);
     if (child != null) {
       final clampedAlignmentValue = resolvedChildAlignment.value.clamp(
         -1.0,
@@ -95,10 +97,9 @@ class VerticalDivider extends StatelessWidget implements PreferredSizeWidget {
               else
                 const SizedBox.shrink(),
               child!.muted().small().withPadding(
-                padding:
-                    padding ??
-                    EdgeInsets.symmetric(vertical: theme.density.baseGap),
-              ),
+                    padding: padding ??
+                        EdgeInsets.symmetric(vertical: theme.density.baseGap),
+                  ),
               if (bottomFlex > 0)
                 Expanded(
                   flex: bottomFlex,

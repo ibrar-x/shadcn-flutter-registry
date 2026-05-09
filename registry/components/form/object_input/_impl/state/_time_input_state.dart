@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../object_input.dart';
 
 /// _TimeInputState stores and manages mutable widget state.
@@ -15,8 +17,8 @@ class _TimeInputState extends State<TimeInput> {
         : int.tryParse(values[1]!);
     int? second = widget.showSeconds && values.length > 2
         ? (values[2] == null || values[2]!.isEmpty
-              ? null
-              : int.tryParse(values[2]!))
+            ? null
+            : int.tryParse(values[2]!))
         : null;
     return NullableTimeOfDay(hour: hour, minute: minute, second: second);
   }
@@ -119,16 +121,14 @@ class _TimeInputState extends State<TimeInput> {
         InputPart.editable(
           length: _getLength(TimePart.hour),
           width: _getWidth(TimePart.hour),
-          placeholder:
-              widget.placeholders?[TimePart.hour] ??
+          placeholder: widget.placeholders?[TimePart.hour] ??
               _getPlaceholder(TimePart.hour),
         ),
         widget.separator ?? const InputPart.static(':'),
         InputPart.editable(
           length: _getLength(TimePart.minute),
           width: _getWidth(TimePart.minute),
-          placeholder:
-              widget.placeholders?[TimePart.minute] ??
+          placeholder: widget.placeholders?[TimePart.minute] ??
               _getPlaceholder(TimePart.minute),
         ),
         if (widget.showSeconds) ...[
@@ -136,8 +136,7 @@ class _TimeInputState extends State<TimeInput> {
           InputPart.editable(
             length: _getLength(TimePart.second),
             width: _getWidth(TimePart.second),
-            placeholder:
-                widget.placeholders?[TimePart.second] ??
+            placeholder: widget.placeholders?[TimePart.second] ??
                 _getPlaceholder(TimePart.second),
           ),
         ],

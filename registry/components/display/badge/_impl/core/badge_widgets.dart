@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../badge.dart';
 
 /// A primary style badge widget for highlighting important information or status.
@@ -31,8 +33,7 @@ class PrimaryBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final compTheme = ComponentTheme.maybeOf<BadgeTheme>(context);
-    final baseStyle =
-        style ??
+    final baseStyle = style ??
         compTheme?.primaryStyle ??
         const ButtonStyle.primary(
           size: ButtonSize.small,

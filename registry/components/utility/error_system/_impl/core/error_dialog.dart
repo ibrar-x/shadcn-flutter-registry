@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 // ErrorDialog: modal error UI using shadcn Dialog + AlertDialog components.
 // ErrorDialog.show(...) opens the dialog and renders ErrorAction buttons in the footer.
 
@@ -39,6 +41,7 @@ class ErrorDialog extends StatelessWidget {
   }
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -46,19 +49,17 @@ class ErrorDialog extends StatelessWidget {
     /// Stores `scaling` state/configuration for this implementation.
     final scaling = theme.scaling;
     final compTheme = ComponentTheme.maybeOf<ErrorSystemTheme>(context);
-    final resolvedIcon =
-        icon ??
+    final resolvedIcon = icon ??
+
         /// Creates a `Icon` instance.
         Icon(
           RadixIcons.exclamationTriangle,
           size: compTheme?.iconSize ?? 24 * scaling,
           color: compTheme?.iconColor ?? theme.colorScheme.destructive,
         );
-    final titleStyle =
-        compTheme?.titleStyle ??
+    final titleStyle = compTheme?.titleStyle ??
         theme.typography.medium.merge(theme.typography.semiBold);
-    final messageStyle =
-        compTheme?.messageStyle ??
+    final messageStyle = compTheme?.messageStyle ??
         theme.typography.small.copyWith(
           color: theme.colorScheme.mutedForeground,
         );

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../color.dart';
 
 /// A non-directional gradient angle that uses standard [Alignment].
@@ -13,6 +15,7 @@ part of '../../color.dart';
 /// ```
 class GradientAngle extends GradientAngleGeometry {
   @override
+
   /// The angle of the gradient in radians.
   final double angle;
 
@@ -20,6 +23,7 @@ class GradientAngle extends GradientAngleGeometry {
   const GradientAngle(this.angle);
 
   @override
+
   /// The beginning alignment calculated from the angle.
   AlignmentGeometry get begin {
     final x = 0.5 + 0.5 * cos(angle);
@@ -28,6 +32,7 @@ class GradientAngle extends GradientAngleGeometry {
   }
 
   @override
+
   /// The ending alignment calculated from the angle.
   AlignmentGeometry get end {
     final x = 0.5 + 0.5 * cos(angle + pi);

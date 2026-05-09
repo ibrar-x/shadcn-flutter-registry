@@ -1,17 +1,17 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../file_picker.dart';
 
 /// File intake, upload queueing, and status lifecycle methods.
 extension _FileUploadStateUploads on _FileUploadState {
   /// Validates and inserts new files, then starts uploads when configured.
   void _handleNewFiles(List<FileLike> files) {
-    final effectiveMaxFiles = widget.allowMultiple
-        ? widget.maxFiles
-        : (widget.maxFiles ?? 1);
+    final effectiveMaxFiles =
+        widget.allowMultiple ? widget.maxFiles : (widget.maxFiles ?? 1);
 
     if (widget.controller != null) {
-      final beforeIds = widget.controller!.items
-          .map((item) => item.file.id)
-          .toSet();
+      final beforeIds =
+          widget.controller!.items.map((item) => item.file.id).toSet();
       widget.controller!.addFiles(files);
       _syncControllerState();
       if (widget.uploadFn != null) {
@@ -87,9 +87,8 @@ extension _FileUploadStateUploads on _FileUploadState {
 
   /// Starts uploads up to [widget.maxConcurrentUploads].
   void _pumpUploadQueue() {
-    final maxConcurrent = widget.maxConcurrentUploads < 1
-        ? 1
-        : widget.maxConcurrentUploads;
+    final maxConcurrent =
+        widget.maxConcurrentUploads < 1 ? 1 : widget.maxConcurrentUploads;
     while (_activeUploads < maxConcurrent && _uploadQueue.isNotEmpty) {
       final file = _uploadQueue.removeFirst();
       _startSingleUpload(file);

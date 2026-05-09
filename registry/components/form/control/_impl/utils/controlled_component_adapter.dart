@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../control.dart';
 
 /// A widget adapter that bridges controlled component logic with custom UI implementations.
@@ -45,7 +47,7 @@ class ControlledComponentAdapter<T> extends StatefulWidget
   /// should create a widget that displays the current value and calls the
   /// onChanged callback when user interaction occurs.
   final Widget Function(BuildContext context, ControlledComponentData<T> data)
-  builder;
+      builder;
 
   /// Creates a [ControlledComponentAdapter].
   ///
@@ -81,9 +83,9 @@ class ControlledComponentAdapter<T> extends StatefulWidget
     this.controller,
     this.enabled = true,
   }) : assert(
-         controller != null || initialValue is T,
-         'Either controller or initialValue must be provided',
-       );
+          controller != null || initialValue is T,
+          'Either controller or initialValue must be provided',
+        );
 
   /// Creates the `State` object for this widget.
   @override

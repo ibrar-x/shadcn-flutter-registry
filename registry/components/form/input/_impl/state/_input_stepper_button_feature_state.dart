@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../input.dart';
 
 /// _InputStepperButtonFeatureState stores and manages mutable widget state.
@@ -81,9 +83,8 @@ class _InputStepperButtonFeatureState
       builder: (context, value, child) {
         final theme = Theme.of(context);
         final currentValue = _effectiveValue();
-        final clampedValue = currentValue == null
-            ? null
-            : _clampValue(currentValue);
+        final clampedValue =
+            currentValue == null ? null : _clampValue(currentValue);
         final canApplyStep = _canApplyStep(clampedValue);
         return SizedBox.square(
           dimension: 32 * theme.scaling,

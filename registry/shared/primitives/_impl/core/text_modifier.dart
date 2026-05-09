@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../text.dart';
 
 /// TextModifier defines a reusable type for this registry module.
@@ -338,7 +340,8 @@ extension TextExtension on Widget {
   TextModifier get li => WrappedText(
         wrapper: (context, child) {
           UnorderedListData? data = Data.maybeOf(context);
-/// Stores `depth` state/configuration for this implementation.
+
+          /// Stores `depth` state/configuration for this implementation.
           int depth = data?.depth ?? 0;
           TextStyle style = DefaultTextStyle.of(context).style;
           double size = (style.fontSize ?? 12) / 16 * 6;
@@ -346,14 +349,16 @@ extension TextExtension on Widget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-/// Creates a `SizedBox` instance.
+                /// Creates a `SizedBox` instance.
                 SizedBox(
                   height: ((style.fontSize ?? 12) * (style.height ?? 1)) * 1.2,
                   child: getBullet(context, depth, size),
                 ),
-/// Creates a `SizedBox` instance.
+
+                /// Creates a `SizedBox` instance.
                 const SizedBox(width: 8),
-/// Creates a `Expanded` instance.
+
+                /// Creates a `Expanded` instance.
                 Expanded(
                   child: Data.inherit(
                       data: UnorderedListData(depth: depth + 1), child: child),
@@ -370,9 +375,11 @@ extension TextExtension on Widget {
         style: (context, theme) => theme.typography.inlineCode,
         wrapper: (context, child) {
           final style = DefaultTextStyle.of(context).style;
-/// Stores `paddingVertical` state/configuration for this implementation.
+
+          /// Stores `paddingVertical` state/configuration for this implementation.
           final double paddingVertical = style.fontSize! * 0.2;
-/// Stores `paddingHorizontal` state/configuration for this implementation.
+
+          /// Stores `paddingHorizontal` state/configuration for this implementation.
           final double paddingHorizontal = style.fontSize! * 0.3;
           final ThemeData themeData = Theme.of(context);
           return Container(
@@ -495,22 +502,22 @@ extension TextExtension on Widget {
   /// ```
   Widget then(InlineSpan span) {
     if (this is RichText) {
-/// Stores `text` state/configuration for this implementation.
+      /// Stores `text` state/configuration for this implementation.
       final text = this as RichText;
       return _RichTextThenWidget(text: text, then: [span]);
     }
     if (this is SelectableText) {
-/// Stores `text` state/configuration for this implementation.
+      /// Stores `text` state/configuration for this implementation.
       final text = this as SelectableText;
       return _SelectableTextThenWidget(text: text, then: [span]);
     }
     if (this is Text) {
-/// Stores `text` state/configuration for this implementation.
+      /// Stores `text` state/configuration for this implementation.
       final text = this as Text;
       return _TextThenWidget(text: text, then: [span]);
     }
     if (this is _RichTextThenWidget) {
-/// Stores `text` state/configuration for this implementation.
+      /// Stores `text` state/configuration for this implementation.
       final text = this as _RichTextThenWidget;
       return _RichTextThenWidget(
         text: text.text,
@@ -518,7 +525,7 @@ extension TextExtension on Widget {
       );
     }
     if (this is _TextThenWidget) {
-/// Stores `text` state/configuration for this implementation.
+      /// Stores `text` state/configuration for this implementation.
       final text = this as _TextThenWidget;
       return _TextThenWidget(
         text: text.text,
@@ -526,7 +533,7 @@ extension TextExtension on Widget {
       );
     }
     if (this is _SelectableTextThenWidget) {
-/// Stores `text` state/configuration for this implementation.
+      /// Stores `text` state/configuration for this implementation.
       final text = this as _SelectableTextThenWidget;
       return _SelectableTextThenWidget(
         text: text.text,
@@ -542,5 +549,6 @@ extension TextExtension on Widget {
 /// Type alias for `WrappedTextDataBuilder` used by public or internal APIs.
 typedef WrappedTextDataBuilder<T> = T Function(
     BuildContext context, ThemeData theme);
+
 /// Type alias for `WidgetTextWrapper` used by public or internal APIs.
 typedef WidgetTextWrapper = Widget Function(BuildContext context, Widget child);

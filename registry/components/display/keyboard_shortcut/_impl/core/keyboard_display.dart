@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../keyboard_shortcut.dart';
 
 /// A widget that displays keyboard shortcuts in a visually appealing format.
@@ -23,16 +25,16 @@ class KeyboardDisplay extends StatelessWidget {
     super.key,
     required List<LogicalKeyboardKey> keys,
     this.spacing,
-  }) : _keys = keys,
-       _activator = null;
+  })  : _keys = keys,
+        _activator = null;
 
   /// Creates a [KeyboardDisplay] from a shortcut activator.
   const KeyboardDisplay.fromActivator({
     super.key,
     required ShortcutActivator activator,
     this.spacing,
-  }) : _keys = null,
-       _activator = activator;
+  })  : _keys = null,
+        _activator = activator;
 
   /// Builds the widget tree for keyboard shortcut.
   @override
@@ -47,9 +49,8 @@ class KeyboardDisplay extends StatelessWidget {
     );
     return Row(
       mainAxisSize: MainAxisSize.min,
-      children: keys
-          .map((key) => KeyboardKeyDisplay(keyboardKey: key))
-          .toList(),
+      children:
+          keys.map((key) => KeyboardKeyDisplay(keyboardKey: key)).toList(),
     ).gap(spacing);
   }
 }

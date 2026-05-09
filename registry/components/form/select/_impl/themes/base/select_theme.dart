@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../select.dart';
 
 /// Theme data for customizing [Select] widget appearance and behavior.
@@ -58,12 +60,10 @@ class SelectTheme extends ComponentThemeData {
     ValueGetter<bool?>? autoClosePopover,
   }) {
     return SelectTheme(
-      popupConstraints: popupConstraints == null
-          ? this.popupConstraints
-          : popupConstraints(),
-      popoverAlignment: popoverAlignment == null
-          ? this.popoverAlignment
-          : popoverAlignment(),
+      popupConstraints:
+          popupConstraints == null ? this.popupConstraints : popupConstraints(),
+      popoverAlignment:
+          popoverAlignment == null ? this.popoverAlignment : popoverAlignment(),
       popoverAnchorAlignment: popoverAnchorAlignment == null
           ? this.popoverAnchorAlignment
           : popoverAnchorAlignment(),
@@ -73,9 +73,8 @@ class SelectTheme extends ComponentThemeData {
           ? this.disableHoverEffect
           : disableHoverEffect(),
       canUnselect: canUnselect == null ? this.canUnselect : canUnselect(),
-      autoClosePopover: autoClosePopover == null
-          ? this.autoClosePopover
-          : autoClosePopover(),
+      autoClosePopover:
+          autoClosePopover == null ? this.autoClosePopover : autoClosePopover(),
     );
   }
 
@@ -95,13 +94,13 @@ class SelectTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    popupConstraints,
-    popoverAlignment,
-    popoverAnchorAlignment,
-    borderRadius,
-    padding,
-    disableHoverEffect,
-    canUnselect,
-    autoClosePopover,
-  );
+        popupConstraints,
+        popoverAlignment,
+        popoverAnchorAlignment,
+        borderRadius,
+        padding,
+        disableHoverEffect,
+        canUnselect,
+        autoClosePopover,
+      );
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../switch.dart';
 
 /// _SwitchState stores and manages mutable widget state.
@@ -68,8 +70,7 @@ class _SwitchState extends State<Switch> with FormValueSupplier<bool, Switch> {
     );
     return FocusOutline(
       focused: _focusing && _enabled,
-      borderRadius:
-          optionallyResolveBorderRadius(context, borderRadius) ??
+      borderRadius: optionallyResolveBorderRadius(context, borderRadius) ??
           BorderRadius.circular(theme.radiusXl),
       child: GestureDetector(
         onTap: _enabled
@@ -114,12 +115,12 @@ class _SwitchState extends State<Switch> with FormValueSupplier<bool, Switch> {
                 decoration: BoxDecoration(
                   borderRadius:
                       optionallyResolveBorderRadius(context, borderRadius) ??
-                      BorderRadius.circular(theme.radiusXl),
+                          BorderRadius.circular(theme.radiusXl),
                   color: !_enabled
                       ? theme.colorScheme.muted
                       : widget.value
-                      ? activeColor
-                      : inactiveColor,
+                          ? activeColor
+                          : inactiveColor,
                 ),
                 child: Stack(
                   children: [
@@ -137,8 +138,8 @@ class _SwitchState extends State<Switch> with FormValueSupplier<bool, Switch> {
                             color: !_enabled
                                 ? theme.colorScheme.mutedForeground
                                 : widget.value
-                                ? activeThumbColor
-                                : inactiveThumbColor,
+                                    ? activeThumbColor
+                                    : inactiveThumbColor,
                           ),
                         ),
                       ),

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../input_otp.dart';
 
 /// _InputOTPChild renders form UI and wires input behavior.
@@ -34,11 +36,11 @@ class _InputOTPChild {
 
   /// Constructs `_InputOTPChild` using the `withNewChild` named constructor.
   _InputOTPChild.withNewChild(_InputOTPChild old, InputOTPChild newChild)
-    : focusNode = old.focusNode,
-      value = old.value,
-      groupIndex = old.groupIndex,
-      relativeIndex = old.relativeIndex,
-      child = newChild,
-      groupLength = old.groupLength,
-      key = old.key;
+      : focusNode = old.focusNode,
+        value = old.value,
+        groupIndex = old.groupIndex,
+        relativeIndex = old.relativeIndex,
+        child = newChild,
+        groupLength = old.groupLength,
+        key = old.key;
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:data_widget/data_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart' show Icons;
@@ -135,9 +137,8 @@ class TreeTheme extends ComponentThemeData {
       branchLine: branchLine == null ? this.branchLine : branchLine(),
       padding: padding == null ? this.padding : padding(),
       expandIcon: expandIcon == null ? this.expandIcon : expandIcon(),
-      allowMultiSelect: allowMultiSelect == null
-          ? this.allowMultiSelect
-          : allowMultiSelect(),
+      allowMultiSelect:
+          allowMultiSelect == null ? this.allowMultiSelect : allowMultiSelect(),
       recursiveSelection: recursiveSelection == null
           ? this.recursiveSelection
           : recursiveSelection(),
@@ -156,12 +157,12 @@ class TreeTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    branchLine,
-    padding,
-    expandIcon,
-    allowMultiSelect,
-    recursiveSelection,
-  );
+        branchLine,
+        padding,
+        expandIcon,
+        allowMultiSelect,
+        recursiveSelection,
+      );
 
   /// Returns a debug string for this tree value.
   @override
@@ -193,8 +194,8 @@ typedef TreeNodeUnaryOperator<K> = TreeNode<K>? Function(TreeNode<K> node);
 ///
 /// Similar to [TreeNodeUnaryOperator] but provides access to the parent node.
 /// Useful for operations that need parent-child relationship information.
-typedef TreeNodeUnaryOperatorWithParent<K> =
-    TreeNode<K>? Function(TreeNode<K>? parent, TreeNode<K> node);
+typedef TreeNodeUnaryOperatorWithParent<K> = TreeNode<K>? Function(
+    TreeNode<K>? parent, TreeNode<K> node);
 
 /// Extension methods for manipulating lists of tree nodes.
 ///
@@ -491,20 +492,18 @@ extension TreeNodeListExtension<K> on List<TreeNode<K>> {
 /// - [selectedNodes]: The nodes affected by the selection change
 /// - [multiSelect]: Whether the operation allows multiple selection
 /// - [selected]: Whether the nodes are being selected (true) or deselected (false)
-typedef TreeNodeSelectionChanged<T> =
-    void Function(
-      List<TreeNode<T>> selectedNodes,
-      bool multiSelect,
-      bool selected,
-    );
+typedef TreeNodeSelectionChanged<T> = void Function(
+  List<TreeNode<T>> selectedNodes,
+  bool multiSelect,
+  bool selected,
+);
 
 /// Function/type signature used by tree APIs.
-typedef _TreeWalker<T> =
-    void Function(
-      bool parentExpanded,
-      TreeNode<T> node,
-      List<TreeNodeDepth> depth,
-    );
+typedef _TreeWalker<T> = void Function(
+  bool parentExpanded,
+  TreeNode<T> node,
+  List<TreeNodeDepth> depth,
+);
 
 /// Function/type signature used by tree APIs.
 typedef _NodeWalker<T> = void Function(TreeNode<T> node);

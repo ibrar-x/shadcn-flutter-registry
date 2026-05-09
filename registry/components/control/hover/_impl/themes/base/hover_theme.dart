@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../../../../shared/theme/theme.dart';
@@ -62,12 +64,10 @@ class HoverTheme extends ComponentThemeData {
     ValueGetter<Duration?>? showDuration,
   }) {
     return HoverTheme(
-      debounceDuration: debounceDuration == null
-          ? this.debounceDuration
-          : debounceDuration(),
-      hitTestBehavior: hitTestBehavior == null
-          ? this.hitTestBehavior
-          : hitTestBehavior(),
+      debounceDuration:
+          debounceDuration == null ? this.debounceDuration : debounceDuration(),
+      hitTestBehavior:
+          hitTestBehavior == null ? this.hitTestBehavior : hitTestBehavior(),
       waitDuration: waitDuration == null ? this.waitDuration : waitDuration(),
       minDuration: minDuration == null ? this.minDuration : minDuration(),
       showDuration: showDuration == null ? this.showDuration : showDuration(),
@@ -75,6 +75,7 @@ class HoverTheme extends ComponentThemeData {
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     return other is HoverTheme &&
@@ -87,10 +88,10 @@ class HoverTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    debounceDuration,
-    hitTestBehavior,
-    waitDuration,
-    minDuration,
-    showDuration,
-  );
+        debounceDuration,
+        hitTestBehavior,
+        waitDuration,
+        minDuration,
+        showDuration,
+      );
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of 'preview.dart';
 
 /// _LinearProgressIndicatorPreviewState holds mutable state for the linear progress indicator implementation.
@@ -14,13 +16,9 @@ class _LinearProgressIndicatorPreviewState
           mainAxisSize: MainAxisSize.min,
           children: [
             const SizedBox(width: 200, child: LinearProgressIndicator()),
-
             const DensityGap(gap2xl),
-
             SizedBox(width: 200, child: LinearProgressIndicator(value: value)),
-
             const DensityGap(gap2xl),
-
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -33,9 +31,7 @@ class _LinearProgressIndicatorPreviewState
                   },
                   child: const Text('Reset'),
                 ),
-
                 const DensityGap(gap2xl),
-
                 PrimaryButton(
                   onPressed: () {
                     /// Implements `setState` behavior for linear progress indicator.

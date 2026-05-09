@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../avatar.dart';
 
 /// AvatarTheme defines theme tokens and defaults for the avatar widget.
@@ -44,12 +46,10 @@ class AvatarTheme extends ComponentThemeData {
     return AvatarTheme(
       size: size == null ? this.size : size(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
-      badgeAlignment: badgeAlignment == null
-          ? this.badgeAlignment
-          : badgeAlignment(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
+      badgeAlignment:
+          badgeAlignment == null ? this.badgeAlignment : badgeAlignment(),
       badgeGap: badgeGap == null ? this.badgeGap : badgeGap(),
       textStyle: textStyle == null ? this.textStyle : textStyle(),
     );
@@ -70,11 +70,11 @@ class AvatarTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    size,
-    borderRadius,
-    backgroundColor,
-    badgeAlignment,
-    badgeGap,
-    textStyle,
-  );
+        size,
+        borderRadius,
+        backgroundColor,
+        badgeAlignment,
+        badgeGap,
+        textStyle,
+      );
 }

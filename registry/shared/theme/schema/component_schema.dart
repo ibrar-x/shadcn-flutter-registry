@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:convert';
 
 enum ClampBehavior {
@@ -129,9 +131,8 @@ class TokenBinding {
     final rawFamilies = json['allowedFamilies'];
     return TokenBinding(
       path: json['path'] as String? ?? '',
-      allowedFamilies: rawFamilies is List
-          ? rawFamilies.whereType<String>().toList()
-          : null,
+      allowedFamilies:
+          rawFamilies is List ? rawFamilies.whereType<String>().toList() : null,
     );
   }
 
@@ -339,12 +340,11 @@ class FieldSpec {
       isAdvanced: json['isAdvanced'] as bool? ?? false,
       visibleIf: rawVisibleIf is List
           ? rawVisibleIf
-                .whereType<Map>()
-                .map(
-                  (entry) =>
-                      VisibleIf.fromJson(Map<String, dynamic>.from(entry)),
-                )
-                .toList()
+              .whereType<Map>()
+              .map(
+                (entry) => VisibleIf.fromJson(Map<String, dynamic>.from(entry)),
+              )
+              .toList()
           : const <VisibleIf>[],
       tokenBinding: json['tokenBinding'] is Map
           ? TokenBinding.fromJson(
@@ -419,12 +419,11 @@ class SchemaGroup {
       description: json['description'] as String?,
       fields: rawFields is List
           ? rawFields
-                .whereType<Map>()
-                .map(
-                  (entry) =>
-                      FieldSpec.fromJson(Map<String, dynamic>.from(entry)),
-                )
-                .toList()
+              .whereType<Map>()
+              .map(
+                (entry) => FieldSpec.fromJson(Map<String, dynamic>.from(entry)),
+              )
+              .toList()
           : const <FieldSpec>[],
     );
   }
@@ -476,12 +475,12 @@ class ComponentSchema {
           : const <String, String>{},
       groups: rawGroups is List
           ? rawGroups
-                .whereType<Map>()
-                .map(
-                  (entry) =>
-                      SchemaGroup.fromJson(Map<String, dynamic>.from(entry)),
-                )
-                .toList()
+              .whereType<Map>()
+              .map(
+                (entry) =>
+                    SchemaGroup.fromJson(Map<String, dynamic>.from(entry)),
+              )
+              .toList()
           : const <SchemaGroup>[],
     );
   }

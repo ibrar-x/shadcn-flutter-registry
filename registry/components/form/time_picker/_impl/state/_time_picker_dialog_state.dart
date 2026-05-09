@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../time_picker.dart';
 
 /// _TimePickerDialogState stores and manages mutable widget state.
@@ -133,8 +135,7 @@ class _TimePickerDialogState extends State<TimePickerDialog> {
       child: IntrinsicHeight(
         child: Padding(
           padding: EdgeInsets.only(
-            bottom:
-                ((theme.density.baseContentPadding) +
+            bottom: ((theme.density.baseContentPadding) +
                     (theme.density.baseGap * 1.5)) *
                 scaling,
           ),

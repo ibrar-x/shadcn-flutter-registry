@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../tabs.dart';
 
 /// TabChildWidget defines a reusable type for this registry module.
@@ -6,6 +8,7 @@ class TabChildWidget extends StatelessWidget with TabChild {
   final Widget child;
 
   @override
+
   /// Whether this tab uses indexed positioning.
   ///
   /// Defaults to `false` unless specified in the constructor.
@@ -19,7 +22,8 @@ class TabChildWidget extends StatelessWidget with TabChild {
   const TabChildWidget({super.key, required this.child, this.indexed = false});
 
   @override
-/// Executes `build` behavior for this component/composite.
+
+  /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     return child;
   }

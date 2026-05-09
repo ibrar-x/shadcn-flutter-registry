@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../basic.dart';
 
 /// BasicTheme defines a reusable type for this registry module.
@@ -58,24 +60,20 @@ class BasicTheme extends ComponentThemeData {
     ValueGetter<EdgeInsetsGeometry?>? padding,
   }) {
     return BasicTheme(
-      leadingAlignment: leadingAlignment == null
-          ? this.leadingAlignment
-          : leadingAlignment(),
+      leadingAlignment:
+          leadingAlignment == null ? this.leadingAlignment : leadingAlignment(),
       trailingAlignment: trailingAlignment == null
           ? this.trailingAlignment
           : trailingAlignment(),
-      titleAlignment: titleAlignment == null
-          ? this.titleAlignment
-          : titleAlignment(),
+      titleAlignment:
+          titleAlignment == null ? this.titleAlignment : titleAlignment(),
       subtitleAlignment: subtitleAlignment == null
           ? this.subtitleAlignment
           : subtitleAlignment(),
-      contentAlignment: contentAlignment == null
-          ? this.contentAlignment
-          : contentAlignment(),
-      contentSpacing: contentSpacing == null
-          ? this.contentSpacing
-          : contentSpacing(),
+      contentAlignment:
+          contentAlignment == null ? this.contentAlignment : contentAlignment(),
+      contentSpacing:
+          contentSpacing == null ? this.contentSpacing : contentSpacing(),
       titleSpacing: titleSpacing == null ? this.titleSpacing : titleSpacing(),
       mainAxisAlignment: mainAxisAlignment == null
           ? this.mainAxisAlignment
@@ -85,7 +83,8 @@ class BasicTheme extends ComponentThemeData {
   }
 
   @override
-/// Executes `operator ==` behavior for this component/composite.
+
+  /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     return other is BasicTheme &&
         other.leadingAlignment == leadingAlignment &&
@@ -101,16 +100,16 @@ class BasicTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    leadingAlignment,
-    trailingAlignment,
-    titleAlignment,
-    subtitleAlignment,
-    contentAlignment,
-    contentSpacing,
-    titleSpacing,
-    mainAxisAlignment,
-    padding,
-  );
+        leadingAlignment,
+        trailingAlignment,
+        titleAlignment,
+        subtitleAlignment,
+        contentAlignment,
+        contentSpacing,
+        titleSpacing,
+        mainAxisAlignment,
+        padding,
+      );
 }
 
 /// A versatile layout widget for arranging leading, title, subtitle, content, and trailing elements.

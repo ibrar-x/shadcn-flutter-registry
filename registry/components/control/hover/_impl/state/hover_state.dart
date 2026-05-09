@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../../../shared/theme/theme.dart';
@@ -26,6 +28,7 @@ class HoverState extends State<Hover> with SingleTickerProviderStateMixin {
   late HitTestBehavior _behavior;
 
   @override
+
   /// Executes `initState` behavior for this component/composite.
   void initState() {
     super.initState();
@@ -69,6 +72,7 @@ class HoverState extends State<Hover> with SingleTickerProviderStateMixin {
   }
 
   @override
+
   /// Executes `dispose` behavior for this component/composite.
   void dispose() {
     _controller.dispose();
@@ -76,6 +80,7 @@ class HoverState extends State<Hover> with SingleTickerProviderStateMixin {
   }
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final platform = Theme.of(context).platform;
@@ -101,8 +106,7 @@ class HoverState extends State<Hover> with SingleTickerProviderStateMixin {
       defaultValue: HitTestBehavior.deferToChild,
     );
     _controller.duration = _waitDur;
-    bool enableLongPress =
-        platform == TargetPlatform.iOS ||
+    bool enableLongPress = platform == TargetPlatform.iOS ||
         platform == TargetPlatform.android ||
         platform == TargetPlatform.fuchsia;
     return TapRegion(

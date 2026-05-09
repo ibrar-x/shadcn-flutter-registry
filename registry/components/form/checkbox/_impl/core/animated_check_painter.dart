@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../checkbox.dart';
 
 /// Custom painter for drawing animated checkmarks in checkboxes.
@@ -80,13 +82,13 @@ class AnimatedCheckPainter extends CustomPainter {
 
     double firstStrokeProgress =
         progress.clamp(0.0, normalizedFirstStrokeLength) /
-        normalizedFirstStrokeLength;
+            normalizedFirstStrokeLength;
     double secondStrokeProgress =
         (progress - normalizedFirstStrokeLength).clamp(
-          0.0,
-          normalizedSecondStrokeLength,
-        ) /
-        normalizedSecondStrokeLength;
+              0.0,
+              normalizedSecondStrokeLength,
+            ) /
+            normalizedSecondStrokeLength;
     if (firstStrokeProgress <= 0) {
       return;
     }

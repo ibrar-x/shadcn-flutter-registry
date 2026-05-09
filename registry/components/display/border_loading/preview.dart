@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/material.dart' as m;
 
 import 'border_loading.dart';
@@ -36,13 +38,9 @@ class _BorderLoadingPreviewState extends m.State<BorderLoadingPreview> {
                     type: BorderGradientType.sweep,
                     colors: [
                       m.Color(0x00000000),
-
                       m.Color(0xFF3B82F6),
-
                       m.Color(0xFF22C55E),
-
                       m.Color(0xFFF59E0B),
-
                       m.Color(0x00000000),
                     ],
                     gap: 0.24,
@@ -67,9 +65,7 @@ class _BorderLoadingPreviewState extends m.State<BorderLoadingPreview> {
                     type: BorderGradientType.sweep,
                     colors: [
                       m.Color(0x00000000),
-
                       m.Color(0xFF3B82F6),
-
                       m.Color(0x00000000),
                     ],
                     gap: 0.30,
@@ -120,9 +116,7 @@ class _BorderLoadingPreviewState extends m.State<BorderLoadingPreview> {
                         child: m.Text('${(_uploadProgress * 100).round()}%'),
                       ),
                     ),
-
                     const m.SizedBox(height: 12),
-
                     m.SizedBox(
                       width: 170,
                       child: m.Slider(
@@ -161,9 +155,7 @@ m.Widget _demoTile({required String title, required m.Widget child}) {
           title,
           style: const m.TextStyle(fontSize: 13, fontWeight: m.FontWeight.w600),
         ),
-
         const m.SizedBox(height: 12),
-
         m.Center(child: child),
       ],
     ),

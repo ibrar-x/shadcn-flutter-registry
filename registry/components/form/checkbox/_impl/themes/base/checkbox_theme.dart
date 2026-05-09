@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../checkbox.dart';
 
 /// Theme configuration for [Checkbox] widget styling and visual appearance.
@@ -85,9 +87,8 @@ class CheckboxTheme extends ComponentThemeData {
     ValueGetter<BorderRadiusGeometry?>? borderRadius,
   }) {
     return CheckboxTheme(
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       activeColor: activeColor == null ? this.activeColor : activeColor(),
       borderColor: borderColor == null ? this.borderColor : borderColor(),
       size: size == null ? this.size : size(),
@@ -111,11 +112,11 @@ class CheckboxTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    backgroundColor,
-    activeColor,
-    borderColor,
-    size,
-    gap,
-    borderRadius,
-  );
+        backgroundColor,
+        activeColor,
+        borderColor,
+        size,
+        gap,
+        borderRadius,
+      );
 }

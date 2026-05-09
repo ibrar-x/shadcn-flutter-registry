@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../chat.dart';
 
 /// A widget that groups multiple [ChatBubble]s together.
@@ -99,17 +101,15 @@ class ChatGroup extends StatelessWidget {
       defaultValue: ChatBubbleType.tail,
     );
     final groupTheme = ComponentTheme.maybeOf<ChatGroupTheme>(context);
-    final avatarAlignment =
-        styleValue(
-              widgetValue: this.avatarAlignment,
-              themeValue: groupTheme?.avatarAlignment,
-              defaultValue: AxisAlignmentDirectional.end,
-            )
-            .resolve(Directionality.maybeOf(context) ?? TextDirection.ltr)
-            .asVerticalAlignment(AxisAlignment.center);
+    final avatarAlignment = styleValue(
+      widgetValue: this.avatarAlignment,
+      themeValue: groupTheme?.avatarAlignment,
+      defaultValue: AxisAlignmentDirectional.end,
+    )
+        .resolve(Directionality.maybeOf(context) ?? TextDirection.ltr)
+        .asVerticalAlignment(AxisAlignment.center);
     return ComponentTheme<ChatTheme>(
-      data:
-          compTheme?.copyWith(
+      data: compTheme?.copyWith(
             alignment: alignment == null ? null : () => alignment,
             border: border == null ? null : () => border,
             borderRadius: borderRadius == null ? null : () => borderRadius,
@@ -136,7 +136,6 @@ class ChatGroup extends StatelessWidget {
           children: [
             if (avatarPrefix != null)
               Align(alignment: avatarAlignment, child: avatarPrefix!),
-
             Flexible(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,

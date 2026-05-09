@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of 'preview.dart';
 
 /// _ProgressPreviewState holds mutable state for the progress implementation.
@@ -21,9 +23,7 @@ class _ProgressPreviewState extends State<ProgressPreview> {
                 max: 100,
               ),
             ),
-
             const SizedBox(height: 24),
-
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -36,9 +36,7 @@ class _ProgressPreviewState extends State<ProgressPreview> {
                   },
                   child: const Text('-10%'),
                 ),
-
                 const SizedBox(width: 8),
-
                 OutlineButton(
                   onPressed: () {
                     /// Implements `setState` behavior for progress.

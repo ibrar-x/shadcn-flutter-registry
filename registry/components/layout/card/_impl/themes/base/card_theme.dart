@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../card.dart';
 
 /// Theme data for customizing [Card] and [SurfaceCard] widget appearance.
@@ -76,15 +78,15 @@ class CardTheme extends ComponentThemeData {
       borderWidth: borderWidth == null ? this.borderWidth : borderWidth(),
       clipBehavior: clipBehavior == null ? this.clipBehavior : clipBehavior(),
       boxShadow: boxShadow == null ? this.boxShadow : boxShadow(),
-      surfaceOpacity: surfaceOpacity == null
-          ? this.surfaceOpacity
-          : surfaceOpacity(),
+      surfaceOpacity:
+          surfaceOpacity == null ? this.surfaceOpacity : surfaceOpacity(),
       surfaceBlur: surfaceBlur == null ? this.surfaceBlur : surfaceBlur(),
       duration: duration == null ? this.duration : duration(),
     );
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -104,16 +106,16 @@ class CardTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    padding,
-    filled,
-    fillColor,
-    borderRadius,
-    borderColor,
-    borderWidth,
-    clipBehavior,
-    boxShadow,
-    surfaceOpacity,
-    surfaceBlur,
-    duration,
-  );
+        padding,
+        filled,
+        fillColor,
+        borderRadius,
+        borderColor,
+        borderWidth,
+        clipBehavior,
+        boxShadow,
+        surfaceOpacity,
+        surfaceBlur,
+        duration,
+      );
 }

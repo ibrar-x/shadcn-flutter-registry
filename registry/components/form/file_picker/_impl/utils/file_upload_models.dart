@@ -1,11 +1,13 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'file_like.dart';
 
 /// Type alias used for `UploadFn` callbacks or API signatures.
 typedef UploadFn = Stream<double> Function(FileLike file);
 
 /// Type alias used for `FileUploadPickFiles` callbacks or API signatures.
-typedef FileUploadPickFiles =
-    Future<List<FileLike>> Function(FileUploadPickRequest request);
+typedef FileUploadPickFiles = Future<List<FileLike>> Function(
+    FileUploadPickRequest request);
 
 /// FileUploadPickRequest represents a form-related type in the registry.
 class FileUploadPickRequest {

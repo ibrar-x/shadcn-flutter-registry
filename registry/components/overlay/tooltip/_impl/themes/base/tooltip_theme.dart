@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../tooltip.dart';
 
 /// Theme data for customizing tooltip container appearance.
@@ -38,19 +40,18 @@ class TooltipTheme extends ComponentThemeData {
     ValueGetter<BorderRadiusGeometry?>? borderRadius,
   }) {
     return TooltipTheme(
-      surfaceOpacity: surfaceOpacity == null
-          ? this.surfaceOpacity
-          : surfaceOpacity(),
+      surfaceOpacity:
+          surfaceOpacity == null ? this.surfaceOpacity : surfaceOpacity(),
       surfaceBlur: surfaceBlur == null ? this.surfaceBlur : surfaceBlur(),
       padding: padding == null ? this.padding : padding(),
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
     );
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -64,10 +65,10 @@ class TooltipTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    surfaceOpacity,
-    surfaceBlur,
-    padding,
-    backgroundColor,
-    borderRadius,
-  );
+        surfaceOpacity,
+        surfaceBlur,
+        padding,
+        backgroundColor,
+        borderRadius,
+      );
 }

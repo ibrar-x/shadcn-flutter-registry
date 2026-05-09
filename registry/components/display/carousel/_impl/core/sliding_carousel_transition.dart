@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../carousel.dart';
 
 /// A sliding carousel transition.
@@ -83,8 +85,7 @@ class SlidingCarouselTransition extends CarouselTransition {
       return [
         for (var item in items)
           Positioned(
-            left:
-                snapOffsetAlignment +
+            left: snapOffsetAlignment +
                 (item.position - currentIndex) * size +
                 (gap * item.relativeIndex),
             width: size,
@@ -96,8 +97,7 @@ class SlidingCarouselTransition extends CarouselTransition {
       return [
         for (var item in items)
           Positioned(
-            top:
-                snapOffsetAlignment +
+            top: snapOffsetAlignment +
                 (item.position - currentIndex) * size +
                 (gap * item.relativeIndex),
             width: constraints.maxWidth,

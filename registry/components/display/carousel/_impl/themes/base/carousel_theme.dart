@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../carousel.dart';
 
 /// Theme data for [Carousel].
@@ -57,9 +59,8 @@ class CarouselTheme extends ComponentThemeData {
       direction: direction == null ? this.direction : direction(),
       wrap: wrap == null ? this.wrap : wrap(),
       pauseOnHover: pauseOnHover == null ? this.pauseOnHover : pauseOnHover(),
-      autoplaySpeed: autoplaySpeed == null
-          ? this.autoplaySpeed
-          : autoplaySpeed(),
+      autoplaySpeed:
+          autoplaySpeed == null ? this.autoplaySpeed : autoplaySpeed(),
       draggable: draggable == null ? this.draggable : draggable(),
       speed: speed == null ? this.speed : speed(),
       curve: curve == null ? this.curve : curve(),
@@ -82,13 +83,13 @@ class CarouselTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    alignment,
-    direction,
-    wrap,
-    pauseOnHover,
-    autoplaySpeed,
-    draggable,
-    speed,
-    curve,
-  );
+        alignment,
+        direction,
+        wrap,
+        pauseOnHover,
+        autoplaySpeed,
+        draggable,
+        speed,
+        curve,
+      );
 }

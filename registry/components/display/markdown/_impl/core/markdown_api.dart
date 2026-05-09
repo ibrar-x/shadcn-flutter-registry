@@ -1,25 +1,26 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../markdown.dart';
 
 /// Link callback for markdown links: [label](url)
 typedef MarkdownTapLinkCallback = void Function(String text, String url);
-typedef MarkdownTapLinkDetailsCallback =
-    void Function(MarkdownLinkTapDetails details);
-typedef MarkdownTapImageCallback =
-    void Function(MarkdownImageTapDetails details);
-typedef MarkdownImagePreviewBuilder =
-    Widget Function(
-      BuildContext context,
-      MarkdownImagePreviewDetails details,
-      VoidCallback close,
-    );
-typedef MarkdownTapHeadingCallback =
-    void Function(MarkdownHeadingTapDetails details);
-typedef MarkdownTapElementCallback =
-    void Function(MarkdownTapElementDetails details);
-typedef MarkdownBlockBuilder =
-    Widget? Function(BuildContext context, MarkdownBlockBuildDetails details);
-typedef MarkdownDocumentReadyCallback =
-    void Function(MarkdownDocumentMetrics metrics);
+typedef MarkdownTapLinkDetailsCallback = void Function(
+    MarkdownLinkTapDetails details);
+typedef MarkdownTapImageCallback = void Function(
+    MarkdownImageTapDetails details);
+typedef MarkdownImagePreviewBuilder = Widget Function(
+  BuildContext context,
+  MarkdownImagePreviewDetails details,
+  VoidCallback close,
+);
+typedef MarkdownTapHeadingCallback = void Function(
+    MarkdownHeadingTapDetails details);
+typedef MarkdownTapElementCallback = void Function(
+    MarkdownTapElementDetails details);
+typedef MarkdownBlockBuilder = Widget? Function(
+    BuildContext context, MarkdownBlockBuildDetails details);
+typedef MarkdownDocumentReadyCallback = void Function(
+    MarkdownDocumentMetrics metrics);
 
 enum MarkdownLinkKind { anchor, email, external, relative }
 
@@ -267,8 +268,8 @@ class Markdown extends StatefulWidget {
     this.imageBuilder,
     this.loading,
     this.errorBuilder,
-  }) : sourceType = MarkdownSourceType.text,
-       sourcePath = null;
+  })  : sourceType = MarkdownSourceType.text,
+        sourcePath = null;
 
   const Markdown.asset({
     super.key,
@@ -292,9 +293,9 @@ class Markdown extends StatefulWidget {
     this.imageBuilder,
     this.loading,
     this.errorBuilder,
-  }) : data = '',
-       sourceType = MarkdownSourceType.asset,
-       sourcePath = asset;
+  })  : data = '',
+        sourceType = MarkdownSourceType.asset,
+        sourcePath = asset;
 
   const Markdown.file({
     super.key,
@@ -318,9 +319,9 @@ class Markdown extends StatefulWidget {
     this.imageBuilder,
     this.loading,
     this.errorBuilder,
-  }) : data = '',
-       sourceType = MarkdownSourceType.file,
-       sourcePath = path;
+  })  : data = '',
+        sourceType = MarkdownSourceType.file,
+        sourcePath = path;
 
   final String data;
   final bool selectable;
@@ -341,7 +342,7 @@ class Markdown extends StatefulWidget {
   final MarkdownSourceType sourceType;
   final String? sourcePath;
   final Widget Function(BuildContext context, String url, String alt)?
-  imageBuilder;
+      imageBuilder;
   final Widget? loading;
   final Widget Function(BuildContext context, Object error)? errorBuilder;
 
@@ -368,74 +369,77 @@ class Markdown extends StatefulWidget {
   }) {
     return switch (sourceType) {
       MarkdownSourceType.text => Markdown(
-        key: key,
-        data: data ?? this.data,
-        selectable: selectable ?? this.selectable,
-        style: style ?? this.style,
-        onTapLink: onTapLink ?? this.onTapLink,
-        onTapLinkDetails: onTapLinkDetails ?? this.onTapLinkDetails,
-        onTapImage: onTapImage ?? this.onTapImage,
-        onTapHeading: onTapHeading ?? this.onTapHeading,
-        onTapElement: onTapElement ?? this.onTapElement,
-        blockBuilder: blockBuilder ?? this.blockBuilder,
-        onDocumentReady: onDocumentReady ?? this.onDocumentReady,
-        viewportStorageId: viewportStorageId ?? this.viewportStorageId,
-        shrinkWrap: shrinkWrap ?? this.shrinkWrap,
-        followLinks: followLinks ?? this.followLinks,
-        htmlSanitizationStrategy:
-            htmlSanitizationStrategy ?? this.htmlSanitizationStrategy,
-        imagePreviewBehavior: imagePreviewBehavior ?? this.imagePreviewBehavior,
-        imagePreviewBuilder: imagePreviewBuilder ?? this.imagePreviewBuilder,
-        imageBuilder: imageBuilder ?? this.imageBuilder,
-        loading: loading ?? this.loading,
-        errorBuilder: errorBuilder ?? this.errorBuilder,
-      ),
+          key: key,
+          data: data ?? this.data,
+          selectable: selectable ?? this.selectable,
+          style: style ?? this.style,
+          onTapLink: onTapLink ?? this.onTapLink,
+          onTapLinkDetails: onTapLinkDetails ?? this.onTapLinkDetails,
+          onTapImage: onTapImage ?? this.onTapImage,
+          onTapHeading: onTapHeading ?? this.onTapHeading,
+          onTapElement: onTapElement ?? this.onTapElement,
+          blockBuilder: blockBuilder ?? this.blockBuilder,
+          onDocumentReady: onDocumentReady ?? this.onDocumentReady,
+          viewportStorageId: viewportStorageId ?? this.viewportStorageId,
+          shrinkWrap: shrinkWrap ?? this.shrinkWrap,
+          followLinks: followLinks ?? this.followLinks,
+          htmlSanitizationStrategy:
+              htmlSanitizationStrategy ?? this.htmlSanitizationStrategy,
+          imagePreviewBehavior:
+              imagePreviewBehavior ?? this.imagePreviewBehavior,
+          imagePreviewBuilder: imagePreviewBuilder ?? this.imagePreviewBuilder,
+          imageBuilder: imageBuilder ?? this.imageBuilder,
+          loading: loading ?? this.loading,
+          errorBuilder: errorBuilder ?? this.errorBuilder,
+        ),
       MarkdownSourceType.asset => Markdown.asset(
-        key: key,
-        asset: sourcePath ?? '',
-        selectable: selectable ?? this.selectable,
-        style: style ?? this.style,
-        onTapLink: onTapLink ?? this.onTapLink,
-        onTapLinkDetails: onTapLinkDetails ?? this.onTapLinkDetails,
-        onTapImage: onTapImage ?? this.onTapImage,
-        onTapHeading: onTapHeading ?? this.onTapHeading,
-        onTapElement: onTapElement ?? this.onTapElement,
-        blockBuilder: blockBuilder ?? this.blockBuilder,
-        onDocumentReady: onDocumentReady ?? this.onDocumentReady,
-        viewportStorageId: viewportStorageId ?? this.viewportStorageId,
-        shrinkWrap: shrinkWrap ?? this.shrinkWrap,
-        followLinks: followLinks ?? this.followLinks,
-        htmlSanitizationStrategy:
-            htmlSanitizationStrategy ?? this.htmlSanitizationStrategy,
-        imagePreviewBehavior: imagePreviewBehavior ?? this.imagePreviewBehavior,
-        imagePreviewBuilder: imagePreviewBuilder ?? this.imagePreviewBuilder,
-        imageBuilder: imageBuilder ?? this.imageBuilder,
-        loading: loading ?? this.loading,
-        errorBuilder: errorBuilder ?? this.errorBuilder,
-      )._copyToTextIfRequested(data),
+          key: key,
+          asset: sourcePath ?? '',
+          selectable: selectable ?? this.selectable,
+          style: style ?? this.style,
+          onTapLink: onTapLink ?? this.onTapLink,
+          onTapLinkDetails: onTapLinkDetails ?? this.onTapLinkDetails,
+          onTapImage: onTapImage ?? this.onTapImage,
+          onTapHeading: onTapHeading ?? this.onTapHeading,
+          onTapElement: onTapElement ?? this.onTapElement,
+          blockBuilder: blockBuilder ?? this.blockBuilder,
+          onDocumentReady: onDocumentReady ?? this.onDocumentReady,
+          viewportStorageId: viewportStorageId ?? this.viewportStorageId,
+          shrinkWrap: shrinkWrap ?? this.shrinkWrap,
+          followLinks: followLinks ?? this.followLinks,
+          htmlSanitizationStrategy:
+              htmlSanitizationStrategy ?? this.htmlSanitizationStrategy,
+          imagePreviewBehavior:
+              imagePreviewBehavior ?? this.imagePreviewBehavior,
+          imagePreviewBuilder: imagePreviewBuilder ?? this.imagePreviewBuilder,
+          imageBuilder: imageBuilder ?? this.imageBuilder,
+          loading: loading ?? this.loading,
+          errorBuilder: errorBuilder ?? this.errorBuilder,
+        )._copyToTextIfRequested(data),
       MarkdownSourceType.file => Markdown.file(
-        key: key,
-        path: sourcePath ?? '',
-        selectable: selectable ?? this.selectable,
-        style: style ?? this.style,
-        onTapLink: onTapLink ?? this.onTapLink,
-        onTapLinkDetails: onTapLinkDetails ?? this.onTapLinkDetails,
-        onTapImage: onTapImage ?? this.onTapImage,
-        onTapHeading: onTapHeading ?? this.onTapHeading,
-        onTapElement: onTapElement ?? this.onTapElement,
-        blockBuilder: blockBuilder ?? this.blockBuilder,
-        onDocumentReady: onDocumentReady ?? this.onDocumentReady,
-        viewportStorageId: viewportStorageId ?? this.viewportStorageId,
-        shrinkWrap: shrinkWrap ?? this.shrinkWrap,
-        followLinks: followLinks ?? this.followLinks,
-        htmlSanitizationStrategy:
-            htmlSanitizationStrategy ?? this.htmlSanitizationStrategy,
-        imagePreviewBehavior: imagePreviewBehavior ?? this.imagePreviewBehavior,
-        imagePreviewBuilder: imagePreviewBuilder ?? this.imagePreviewBuilder,
-        imageBuilder: imageBuilder ?? this.imageBuilder,
-        loading: loading ?? this.loading,
-        errorBuilder: errorBuilder ?? this.errorBuilder,
-      )._copyToTextIfRequested(data),
+          key: key,
+          path: sourcePath ?? '',
+          selectable: selectable ?? this.selectable,
+          style: style ?? this.style,
+          onTapLink: onTapLink ?? this.onTapLink,
+          onTapLinkDetails: onTapLinkDetails ?? this.onTapLinkDetails,
+          onTapImage: onTapImage ?? this.onTapImage,
+          onTapHeading: onTapHeading ?? this.onTapHeading,
+          onTapElement: onTapElement ?? this.onTapElement,
+          blockBuilder: blockBuilder ?? this.blockBuilder,
+          onDocumentReady: onDocumentReady ?? this.onDocumentReady,
+          viewportStorageId: viewportStorageId ?? this.viewportStorageId,
+          shrinkWrap: shrinkWrap ?? this.shrinkWrap,
+          followLinks: followLinks ?? this.followLinks,
+          htmlSanitizationStrategy:
+              htmlSanitizationStrategy ?? this.htmlSanitizationStrategy,
+          imagePreviewBehavior:
+              imagePreviewBehavior ?? this.imagePreviewBehavior,
+          imagePreviewBuilder: imagePreviewBuilder ?? this.imagePreviewBuilder,
+          imageBuilder: imageBuilder ?? this.imageBuilder,
+          loading: loading ?? this.loading,
+          errorBuilder: errorBuilder ?? this.errorBuilder,
+        )._copyToTextIfRequested(data),
     };
   }
 

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../markdown.dart';
 
 class MarkdownTheme extends ComponentThemeData {
@@ -190,15 +192,12 @@ class MarkdownTheme extends ComponentThemeData {
         ? const Color(0xFFF8FAFC)
         : (baseStyle.color ?? const Color(0xFF0F172A));
     final mutedText = textColor.withValues(alpha: isOutgoing ? 0.82 : 0.7);
-    final borderColor = isOutgoing
-        ? const Color(0x33FFFFFF)
-        : const Color(0x1F0F172A);
-    final subtleFill = isOutgoing
-        ? const Color(0x14FFFFFF)
-        : const Color(0x080F172A);
-    final headerFill = isOutgoing
-        ? const Color(0x1FFFFFFF)
-        : const Color(0x100F172A);
+    final borderColor =
+        isOutgoing ? const Color(0x33FFFFFF) : const Color(0x1F0F172A);
+    final subtleFill =
+        isOutgoing ? const Color(0x14FFFFFF) : const Color(0x080F172A);
+    final headerFill =
+        isOutgoing ? const Color(0x1FFFFFFF) : const Color(0x100F172A);
 
     return fallback.copyWith(
       style: () => baseStyle.copyWith(color: textColor, height: 1.5),
@@ -350,12 +349,10 @@ class MarkdownTheme extends ComponentThemeData {
           : codeLanguageStyle(),
       mathStyle: mathStyle == null ? this.mathStyle : mathStyle(),
       quoteStyle: quoteStyle == null ? this.quoteStyle : quoteStyle(),
-      tableHeaderStyle: tableHeaderStyle == null
-          ? this.tableHeaderStyle
-          : tableHeaderStyle(),
-      tableCellStyle: tableCellStyle == null
-          ? this.tableCellStyle
-          : tableCellStyle(),
+      tableHeaderStyle:
+          tableHeaderStyle == null ? this.tableHeaderStyle : tableHeaderStyle(),
+      tableCellStyle:
+          tableCellStyle == null ? this.tableCellStyle : tableCellStyle(),
       footnoteLabelStyle: footnoteLabelStyle == null
           ? this.footnoteLabelStyle
           : footnoteLabelStyle(),
@@ -365,39 +362,31 @@ class MarkdownTheme extends ComponentThemeData {
       detailsSummaryStyle: detailsSummaryStyle == null
           ? this.detailsSummaryStyle
           : detailsSummaryStyle(),
-      heading1Style: heading1Style == null
-          ? this.heading1Style
-          : heading1Style(),
-      heading2Style: heading2Style == null
-          ? this.heading2Style
-          : heading2Style(),
-      heading3Style: heading3Style == null
-          ? this.heading3Style
-          : heading3Style(),
-      heading4Style: heading4Style == null
-          ? this.heading4Style
-          : heading4Style(),
-      heading5Style: heading5Style == null
-          ? this.heading5Style
-          : heading5Style(),
-      heading6Style: heading6Style == null
-          ? this.heading6Style
-          : heading6Style(),
+      heading1Style:
+          heading1Style == null ? this.heading1Style : heading1Style(),
+      heading2Style:
+          heading2Style == null ? this.heading2Style : heading2Style(),
+      heading3Style:
+          heading3Style == null ? this.heading3Style : heading3Style(),
+      heading4Style:
+          heading4Style == null ? this.heading4Style : heading4Style(),
+      heading5Style:
+          heading5Style == null ? this.heading5Style : heading5Style(),
+      heading6Style:
+          heading6Style == null ? this.heading6Style : heading6Style(),
       horizontalRuleColor: horizontalRuleColor == null
           ? this.horizontalRuleColor
           : horizontalRuleColor(),
       codeBackgroundColor: codeBackgroundColor == null
           ? this.codeBackgroundColor
           : codeBackgroundColor(),
-      quoteBorderColor: quoteBorderColor == null
-          ? this.quoteBorderColor
-          : quoteBorderColor(),
+      quoteBorderColor:
+          quoteBorderColor == null ? this.quoteBorderColor : quoteBorderColor(),
       quoteBackgroundColor: quoteBackgroundColor == null
           ? this.quoteBackgroundColor
           : quoteBackgroundColor(),
-      tableBorderColor: tableBorderColor == null
-          ? this.tableBorderColor
-          : tableBorderColor(),
+      tableBorderColor:
+          tableBorderColor == null ? this.tableBorderColor : tableBorderColor(),
       tableHeaderBackgroundColor: tableHeaderBackgroundColor == null
           ? this.tableHeaderBackgroundColor
           : tableHeaderBackgroundColor(),
@@ -409,20 +398,17 @@ class MarkdownTheme extends ComponentThemeData {
           : detailsBackgroundColor(),
       blockSpacing: blockSpacing == null ? this.blockSpacing : blockSpacing(),
       listIndent: listIndent == null ? this.listIndent : listIndent(),
-      quoteBorderWidth: quoteBorderWidth == null
-          ? this.quoteBorderWidth
-          : quoteBorderWidth(),
-      imageMaxHeight: imageMaxHeight == null
-          ? this.imageMaxHeight
-          : imageMaxHeight(),
+      quoteBorderWidth:
+          quoteBorderWidth == null ? this.quoteBorderWidth : quoteBorderWidth(),
+      imageMaxHeight:
+          imageMaxHeight == null ? this.imageMaxHeight : imageMaxHeight(),
       tableCellMinWidth: tableCellMinWidth == null
           ? this.tableCellMinWidth
           : tableCellMinWidth(),
       codePadding: codePadding == null ? this.codePadding : codePadding(),
       quotePadding: quotePadding == null ? this.quotePadding : quotePadding(),
-      tableCellPadding: tableCellPadding == null
-          ? this.tableCellPadding
-          : tableCellPadding(),
+      tableCellPadding:
+          tableCellPadding == null ? this.tableCellPadding : tableCellPadding(),
       detailsHeaderPadding: detailsHeaderPadding == null
           ? this.detailsHeaderPadding
           : detailsHeaderPadding(),
@@ -431,9 +417,8 @@ class MarkdownTheme extends ComponentThemeData {
           : detailsBodyPadding(),
       codeRadius: codeRadius == null ? this.codeRadius : codeRadius(),
       tableRadius: tableRadius == null ? this.tableRadius : tableRadius(),
-      detailsRadius: detailsRadius == null
-          ? this.detailsRadius
-          : detailsRadius(),
+      detailsRadius:
+          detailsRadius == null ? this.detailsRadius : detailsRadius(),
     );
   }
 }

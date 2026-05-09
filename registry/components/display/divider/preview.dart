@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/material.dart' hide Divider;
 import '../divider/divider.dart';
 
@@ -16,13 +18,9 @@ class DividerPreview extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const Text('Item 1'),
-
               const Divider(),
-
               const Text('Item 2'),
-
               const Divider(),
-
               const Text('Item 3'),
             ],
           ),

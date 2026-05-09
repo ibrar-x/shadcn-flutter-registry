@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form.dart';
 
 /// Validation result indicating a validation is in progress.
@@ -10,7 +12,7 @@ class WaitingResult extends ValidationResult {
 
   /// Creates a waiting result attached to a form key.
   const WaitingResult.attached({required FormKey key, required super.state})
-    : _key = key;
+      : _key = key;
 
   @override
   FormKey get key {

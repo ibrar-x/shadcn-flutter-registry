@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/material.dart' as m;
 
 import 'feature_carousel.dart';
@@ -18,7 +20,6 @@ class FeatureCarouselPreview extends m.StatelessWidget {
         icon: m.Icons.auto_awesome_rounded,
         accentColor: m.Color(0xFF7EA3FF),
       ),
-
       const FeatureCarouselItem(
         title: 'Add a Style Preset Picker',
         description:
@@ -26,7 +27,6 @@ class FeatureCarouselPreview extends m.StatelessWidget {
         icon: m.Icons.palette_rounded,
         accentColor: m.Color(0xFF9B87FF),
       ),
-
       const FeatureCarouselItem(
         title: 'Add a Detail Slider',
         description:

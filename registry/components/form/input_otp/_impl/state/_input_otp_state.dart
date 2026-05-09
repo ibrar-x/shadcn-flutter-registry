@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../input_otp.dart';
 
 /// _InputOTPState stores and manages mutable widget state.
@@ -132,9 +134,8 @@ class _InputOTPState extends State<InputOTP>
               groupIndex: _children[i].groupIndex,
               relativeIndex: _children[i].relativeIndex,
               previousFocusNode: i == 0 ? null : _children[i - 1].focusNode,
-              nextFocusNode: i == _children.length - 1
-                  ? null
-                  : _children[i + 1].focusNode,
+              nextFocusNode:
+                  i == _children.length - 1 ? null : _children[i + 1].focusNode,
               value: _children[i].value,
               groupLength: _children[i].groupLength,
             ),

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../swiper.dart';
 
 /// SwiperTheme defines a reusable type for this registry module.
@@ -97,23 +99,19 @@ class SwiperTheme extends ComponentThemeData {
       barrierDismissible: barrierDismissible == null
           ? this.barrierDismissible
           : barrierDismissible(),
-      backdropBuilder: backdropBuilder == null
-          ? this.backdropBuilder
-          : backdropBuilder(),
+      backdropBuilder:
+          backdropBuilder == null ? this.backdropBuilder : backdropBuilder(),
       useSafeArea: useSafeArea == null ? this.useSafeArea : useSafeArea(),
-      showDragHandle: showDragHandle == null
-          ? this.showDragHandle
-          : showDragHandle(),
+      showDragHandle:
+          showDragHandle == null ? this.showDragHandle : showDragHandle(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
-      dragHandleSize: dragHandleSize == null
-          ? this.dragHandleSize
-          : dragHandleSize(),
+      dragHandleSize:
+          dragHandleSize == null ? this.dragHandleSize : dragHandleSize(),
       transformBackdrop: transformBackdrop == null
           ? this.transformBackdrop
           : transformBackdrop(),
-      surfaceOpacity: surfaceOpacity == null
-          ? this.surfaceOpacity
-          : surfaceOpacity(),
+      surfaceOpacity:
+          surfaceOpacity == null ? this.surfaceOpacity : surfaceOpacity(),
       surfaceBlur: surfaceBlur == null ? this.surfaceBlur : surfaceBlur(),
       barrierColor: barrierColor == null ? this.barrierColor : barrierColor(),
       behavior: behavior == null ? this.behavior : behavior(),
@@ -122,22 +120,23 @@ class SwiperTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    expands,
-    draggable,
-    barrierDismissible,
-    backdropBuilder,
-    useSafeArea,
-    showDragHandle,
-    borderRadius,
-    dragHandleSize,
-    transformBackdrop,
-    surfaceOpacity,
-    surfaceBlur,
-    barrierColor,
-    behavior,
-  );
+        expands,
+        draggable,
+        barrierDismissible,
+        backdropBuilder,
+        useSafeArea,
+        showDragHandle,
+        borderRadius,
+        dragHandleSize,
+        transformBackdrop,
+        surfaceOpacity,
+        surfaceBlur,
+        barrierColor,
+        behavior,
+      );
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -158,6 +157,7 @@ class SwiperTheme extends ComponentThemeData {
   }
 
   @override
+
   /// Executes `toString` behavior for this component/composite.
   String toString() {
     return 'SwiperTheme(expands: $expands, draggable: $draggable, barrierDismissible: $barrierDismissible, backdropBuilder: $backdropBuilder, useSafeArea: $useSafeArea, showDragHandle: $showDragHandle, borderRadius: $borderRadius, dragHandleSize: $dragHandleSize, transformBackdrop: $transformBackdrop, surfaceOpacity: $surfaceOpacity, surfaceBlur: $surfaceBlur, barrierColor: $barrierColor, behavior: $behavior)';

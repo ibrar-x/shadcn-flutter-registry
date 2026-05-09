@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../file_picker.dart';
 
 /// FileUploadItemsLayout enumerates fixed values used by this implementation.
@@ -65,8 +67,8 @@ class FileUploadItemsView extends StatelessWidget {
     Widget content = layout == FileUploadItemsLayout.grid
         ? _buildGrid(context, spacing)
         : groupByStatus
-        ? _buildGroupedList(context, spacing, theme)
-        : _buildList(context, spacing);
+            ? _buildGroupedList(context, spacing, theme)
+            : _buildList(context, spacing);
 
     if (maxHeight != null) {
       content = SizedBox(
@@ -82,8 +84,7 @@ class FileUploadItemsView extends StatelessWidget {
     return OutlinedContainer(
       borderWidth: 1,
       child: Padding(
-        padding:
-            padding ??
+        padding: padding ??
             EdgeInsets.all(theme.density.baseContentPadding * scaling),
         child: content,
       ),

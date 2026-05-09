@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../scaffold.dart';
 
 /// AppBar defines a reusable type for this registry module.
@@ -152,11 +154,12 @@ class AppBar extends StatefulWidget {
     this.surfaceOpacity,
     this.useSafeArea = true,
   }) : assert(
-         child == null || title == null,
-         'Cannot provide both child and title',
-       );
+          child == null || title == null,
+          'Cannot provide both child and title',
+        );
 
   @override
-/// Executes `createState` behavior for this component/composite.
+
+  /// Executes `createState` behavior for this component/composite.
   State<AppBar> createState() => _AppBarState();
 }

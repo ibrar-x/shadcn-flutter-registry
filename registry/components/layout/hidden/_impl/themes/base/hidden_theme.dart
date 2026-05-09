@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../hidden.dart';
 
 /// Theme data for [Hidden].
@@ -50,13 +52,13 @@ class HiddenTheme extends ComponentThemeData {
       keepCrossAxisSize: keepCrossAxisSize == null
           ? this.keepCrossAxisSize
           : keepCrossAxisSize(),
-      keepMainAxisSize: keepMainAxisSize == null
-          ? this.keepMainAxisSize
-          : keepMainAxisSize(),
+      keepMainAxisSize:
+          keepMainAxisSize == null ? this.keepMainAxisSize : keepMainAxisSize(),
     );
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     return other is HiddenTheme &&
@@ -70,11 +72,11 @@ class HiddenTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    direction,
-    duration,
-    curve,
-    reverse,
-    keepCrossAxisSize,
-    keepMainAxisSize,
-  );
+        direction,
+        duration,
+        curve,
+        reverse,
+        keepCrossAxisSize,
+        keepMainAxisSize,
+      );
 }

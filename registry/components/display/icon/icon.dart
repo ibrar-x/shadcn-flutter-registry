@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../shared/theme/theme.dart';
@@ -131,8 +133,8 @@ extension IconExtension on Widget {
 }
 
 /// Function/type signature used by icon APIs.
-typedef WrappedIconDataBuilder<T> =
-    T Function(BuildContext context, ThemeData theme);
+typedef WrappedIconDataBuilder<T> = T Function(
+    BuildContext context, ThemeData theme);
 
 /// Core class used by the icon component.
 class WrappedIcon extends StatelessWidget {

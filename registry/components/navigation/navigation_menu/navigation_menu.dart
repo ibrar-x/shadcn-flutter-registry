@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:data_widget/data_widget.dart';
 import 'package:flutter/widgets.dart';
 
@@ -80,9 +82,8 @@ class NavigationMenuTheme extends ComponentThemeData {
     ValueGetter<Offset?>? offset,
   }) {
     return NavigationMenuTheme(
-      surfaceOpacity: surfaceOpacity == null
-          ? this.surfaceOpacity
-          : surfaceOpacity(),
+      surfaceOpacity:
+          surfaceOpacity == null ? this.surfaceOpacity : surfaceOpacity(),
       surfaceBlur: surfaceBlur == null ? this.surfaceBlur : surfaceBlur(),
       margin: margin == null ? this.margin : margin(),
       offset: offset == null ? this.offset : offset(),
@@ -90,7 +91,8 @@ class NavigationMenuTheme extends ComponentThemeData {
   }
 
   @override
-/// Executes `operator ==` behavior for this component/composite.
+
+  /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     return other is NavigationMenuTheme &&

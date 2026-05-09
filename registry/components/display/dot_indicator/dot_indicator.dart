@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../shared/primitives/clickable.dart';
@@ -12,8 +14,8 @@ part '_impl/themes/base/dot_indicator_theme.dart';
 part '_impl/core/dot_items.dart';
 
 /// Builder function that creates dot widgets.
-typedef DotBuilder =
-    Widget Function(BuildContext context, int index, bool active);
+typedef DotBuilder = Widget Function(
+    BuildContext context, int index, bool active);
 
 /// Navigation indicator with a row/column of animated dots.
 class DotIndicator extends StatelessWidget {
@@ -71,8 +73,7 @@ class DotIndicator extends StatelessWidget {
       themeValue: compTheme?.spacing,
       defaultValue: 8 * scaling,
     );
-    final resolvedPadding =
-        styleValue(
+    final resolvedPadding = styleValue(
           widgetValue: padding,
           themeValue: compTheme?.padding,
           defaultValue: EdgeInsets.all(theme.density.baseGap),

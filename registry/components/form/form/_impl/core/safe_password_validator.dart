@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form.dart';
 
 /// A validator for ensuring password strength and security requirements.
@@ -19,7 +21,7 @@ part of '../../form.dart';
 class SafePasswordValidator extends Validator<String> {
   /// Custom error message, or null to use default localized messages.
   final String?
-  message; // if null, use default message from ShadcnLocalizations
+      message; // if null, use default message from ShadcnLocalizations
 
   /// Whether password must contain at least one digit.
   final bool requireDigit;
@@ -101,10 +103,10 @@ class SafePasswordValidator extends Validator<String> {
 
   @override
   int get hashCode => Object.hash(
-    requireDigit,
-    requireLowercase,
-    requireUppercase,
-    requireSpecialChar,
-    message,
-  );
+        requireDigit,
+        requireLowercase,
+        requireUppercase,
+        requireSpecialChar,
+        message,
+      );
 }

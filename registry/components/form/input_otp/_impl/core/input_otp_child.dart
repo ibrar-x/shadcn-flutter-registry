@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../input_otp.dart';
 
 /// Abstract base class for OTP input child elements.
@@ -51,13 +53,14 @@ abstract class InputOTPChild {
     bool obscured = false,
     bool readOnly = false,
     TextInputType? keyboardType,
-  }) => CharacterInputOTPChild(
-    predicate: predicate,
-    transform: transform,
-    obscured: obscured,
-    readOnly: readOnly,
-    keyboardType: keyboardType,
-  );
+  }) =>
+      CharacterInputOTPChild(
+        predicate: predicate,
+        transform: transform,
+        obscured: obscured,
+        readOnly: readOnly,
+        keyboardType: keyboardType,
+      );
 
   /// Creates a character input with alphabet and digit filtering.
   ///
@@ -94,8 +97,7 @@ abstract class InputOTPChild {
       !(onlyUppercaseAlphabet && onlyLowercaseAlphabet),
       'onlyUppercaseAlphabet and onlyLowercaseAlphabet cannot be true at the same time',
     );
-    keyboardType ??=
-        allowDigit &&
+    keyboardType ??= allowDigit &&
             !allowLowercaseAlphabet &&
             !allowUppercaseAlphabet &&
             !onlyUppercaseAlphabet &&

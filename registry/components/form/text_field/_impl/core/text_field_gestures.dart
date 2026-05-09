@@ -1,11 +1,13 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../text_field.dart';
 
 /// _TextFieldSelectionGestureDetectorBuilder represents a form-related type in the registry.
 class _TextFieldSelectionGestureDetectorBuilder
     extends TextSelectionGestureDetectorBuilder {
   _TextFieldSelectionGestureDetectorBuilder({required TextFieldState state})
-    : _state = state,
-      super(delegate: state);
+      : _state = state,
+        super(delegate: state);
 
   final TextFieldState _state;
 
@@ -17,9 +19,8 @@ class _TextFieldSelectionGestureDetectorBuilder
     // this handler. If the clear button widget recognizes the up event,
     // then do not handle it.
     if (_state._clearGlobalKey.currentContext != null) {
-      final RenderBox renderBox =
-          _state._clearGlobalKey.currentContext!.findRenderObject()!
-              as RenderBox;
+      final RenderBox renderBox = _state._clearGlobalKey.currentContext!
+          .findRenderObject()! as RenderBox;
       final Offset localOffset = renderBox.globalToLocal(
         details.globalPosition,
       );

@@ -1,12 +1,13 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../markdown.dart';
 
-typedef MarkdownEditingBarActionHandler =
-    void Function(BuildContext context, MarkdownEditingController controller);
-typedef MarkdownEditingBarItemBuilder =
-    Widget Function(
-      BuildContext context,
-      MarkdownEditingBarItemDetails details,
-    );
+typedef MarkdownEditingBarActionHandler = void Function(
+    BuildContext context, MarkdownEditingController controller);
+typedef MarkdownEditingBarItemBuilder = Widget Function(
+  BuildContext context,
+  MarkdownEditingBarItemDetails details,
+);
 
 @immutable
 class MarkdownEditingBarAction {
@@ -106,10 +107,10 @@ class MarkdownEditingBarAction {
       onPressed: (context, controller) => controller.applyTransformer(
         ({required text, required selection}) =>
             MarkdownEditingHelpers.toggleHeading(
-              text: text,
-              selection: selection,
-              level: level,
-            ),
+          text: text,
+          selection: selection,
+          level: level,
+        ),
       ),
     );
   }
@@ -193,10 +194,10 @@ class MarkdownEditingBarAction {
       onPressed: (context, controller) => controller.applyTransformer(
         ({required text, required selection}) =>
             MarkdownEditingHelpers.wrapCodeFence(
-              text: text,
-              selection: selection,
-              language: language,
-            ),
+          text: text,
+          selection: selection,
+          language: language,
+        ),
       ),
     );
   }
@@ -329,16 +330,13 @@ class _MarkdownEditingBarState extends State<MarkdownEditingBar> {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
     final isDark = theme.brightness == Brightness.dark;
-    final backgroundColor =
-        widget.backgroundColor ??
+    final backgroundColor = widget.backgroundColor ??
         (isDark ? scheme.surfaceContainerHigh : scheme.surface);
-    final borderColor =
-        widget.borderColor ??
+    final borderColor = widget.borderColor ??
         (isDark
             ? scheme.outline.withValues(alpha: 0.4)
             : scheme.outlineVariant.withValues(alpha: 0.8));
-    final iconBackground =
-        widget.iconBackgroundColor ??
+    final iconBackground = widget.iconBackgroundColor ??
         (isDark
             ? scheme.surfaceContainerHighest.withValues(alpha: 0.55)
             : scheme.surfaceContainerHighest.withValues(alpha: 0.75));

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../tree.dart';
 
 /// _TreeItemViewState holds mutable state for the tree implementation.
@@ -224,8 +226,7 @@ class _TreeItemViewState extends State<TreeItemView> {
                 return const BoxDecoration();
               }),
               behavior: HitTestBehavior.translucent,
-              mouseCursor:
-                  widget.onDoublePressed != null ||
+              mouseCursor: widget.onDoublePressed != null ||
                       widget.onPressed != null ||
                       (widget.onExpand != null &&
                           (widget.expandable ?? data.node.children.isNotEmpty))
@@ -248,8 +249,7 @@ class _TreeItemViewState extends State<TreeItemView> {
                 _focusNode.requestFocus();
                 _data!.onFocusChanged?.call(FocusChangeReason.userInteraction);
               },
-              enabled:
-                  widget.onPressed != null ||
+              enabled: widget.onPressed != null ||
                   widget.onDoublePressed != null ||
                   (widget.onExpand != null &&
                       (widget.expandable ?? data.node.children.isNotEmpty)),

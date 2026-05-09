@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../chip.dart';
 
 /// Specialized button for inside chips.
@@ -19,8 +21,7 @@ class ChipButton extends StatelessWidget {
       themeValue: componentTheme?.padding,
       defaultValue: EdgeInsets.zero,
     );
-    final style =
-        componentTheme?.style ??
+    final style = componentTheme?.style ??
         ButtonVariance(
           decoration: (context, states) => const BoxDecoration(),
           mouseCursor: (context, states) {

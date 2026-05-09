@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/material.dart';
 import '../triple_dots/triple_dots.dart';
 
@@ -14,9 +16,7 @@ class TripleDotsPreview extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: const [
             MoreDots(count: 3, spacing: 4),
-
             SizedBox(height: 12),
-
             MoreDots(direction: Axis.vertical, count: 5, spacing: 6),
           ],
         ),

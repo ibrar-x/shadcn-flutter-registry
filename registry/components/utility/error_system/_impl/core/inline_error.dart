@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 // InlineError: compact error row for forms and inline validation.
 // Shows an icon + message using shadcn theme typography and destructive/accent colors.
 
@@ -19,6 +21,7 @@ class InlineError extends StatelessWidget {
   final Widget? icon;
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -26,16 +29,15 @@ class InlineError extends StatelessWidget {
     /// Stores `scaling` state/configuration for this implementation.
     final scaling = theme.scaling;
     final compTheme = ComponentTheme.maybeOf<ErrorSystemTheme>(context);
-    final resolvedIcon =
-        icon ??
+    final resolvedIcon = icon ??
+
         /// Creates a `Icon` instance.
         Icon(
           RadixIcons.infoCircled,
           size: compTheme?.iconSize ?? 16 * scaling,
           color: compTheme?.iconColor ?? theme.colorScheme.destructive,
         );
-    final messageStyle =
-        compTheme?.messageStyle ??
+    final messageStyle = compTheme?.messageStyle ??
         theme.typography.xSmall.copyWith(color: theme.colorScheme.destructive);
 
     return Row(

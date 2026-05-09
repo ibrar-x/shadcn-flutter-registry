@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../../../shared/theme/theme.dart';
@@ -67,31 +69,26 @@ class EmptyState extends StatelessWidget {
     final resolvedTitle = title ?? Text(defaultEmptyStateTitle(variant));
     final resolvedDescription =
         description ?? Text(defaultEmptyStateDescription(variant));
-    final resolvedIcon =
-        icon ??
+    final resolvedIcon = icon ??
         Icon(
           defaultEmptyStateIcon(variant),
-          size:
-              compTheme?.iconSize ??
+          size: compTheme?.iconSize ??
               (size == EmptyStateSize.compact ? 28 * scaling : 36 * scaling),
           color: compTheme?.iconColor ?? theme.colorScheme.mutedForeground,
         );
 
-    final titleStyle =
-        compTheme?.titleStyle ??
+    final titleStyle = compTheme?.titleStyle ??
         (size == EmptyStateSize.compact
                 ? theme.typography.large
                 : theme.typography.x2Large)
             .merge(theme.typography.semiBold);
-    final descriptionStyle =
-        compTheme?.descriptionStyle ??
+    final descriptionStyle = compTheme?.descriptionStyle ??
         (size == EmptyStateSize.compact
                 ? theme.typography.small
                 : theme.typography.base)
             .copyWith(height: 1.35, color: theme.colorScheme.mutedForeground);
-    final actionSize = size == EmptyStateSize.compact
-        ? ButtonSize.small
-        : ButtonSize.normal;
+    final actionSize =
+        size == EmptyStateSize.compact ? ButtonSize.small : ButtonSize.normal;
 
     final hasMainActions = primaryAction != null || secondaryAction != null;
 
@@ -104,34 +101,27 @@ class EmptyState extends StatelessWidget {
                 decoration: BoxDecoration(
                   color:
                       compTheme?.iconContainerColor ?? theme.colorScheme.muted,
-                  borderRadius:
-                      compTheme?.iconContainerBorderRadius ??
+                  borderRadius: compTheme?.iconContainerBorderRadius ??
                       BorderRadius.circular(14 * scaling),
                   border: Border.all(
-                    color:
-                        compTheme?.iconContainerBorderColor ??
+                    color: compTheme?.iconContainerBorderColor ??
                         theme.colorScheme.border,
                   ),
                 ),
                 child: Padding(
-                  padding:
-                      compTheme?.iconContainerPadding ??
+                  padding: compTheme?.iconContainerPadding ??
                       EdgeInsets.all(12 * scaling),
                   child: resolvedIcon,
                 ),
               )
             : resolvedIcon,
-
         DensityGap(size == EmptyStateSize.compact ? gapLg : gap2xl),
-
         DefaultTextStyle.merge(
           style: titleStyle,
           textAlign: TextAlign.center,
           child: resolvedTitle,
         ),
-
         DensityGap(size == EmptyStateSize.compact ? 0.9 : gapMd),
-
         DefaultTextStyle.merge(
           style: descriptionStyle,
           textAlign: TextAlign.center,
@@ -143,8 +133,7 @@ class EmptyState extends StatelessWidget {
         if (hasMainActions)
           Padding(
             padding: EdgeInsets.only(
-              top:
-                  theme.density.baseGap *
+              top: theme.density.baseGap *
                   scaling *
                   (size == EmptyStateSize.compact ? gapLg : gap2xl),
             ),
@@ -163,8 +152,7 @@ class EmptyState extends StatelessWidget {
         if (hasFooterAction)
           Padding(
             padding: EdgeInsets.only(
-              top:
-                  theme.density.baseGap *
+              top: theme.density.baseGap *
                   scaling *
                   (size == EmptyStateSize.compact ? gapLg : gap2xl),
             ),
@@ -178,8 +166,7 @@ class EmptyState extends StatelessWidget {
         maxWidth: compTheme?.maxWidth ?? maxWidth ?? 520 * scaling,
       ),
       child: Padding(
-        padding:
-            compTheme?.padding ??
+        padding: compTheme?.padding ??
             EdgeInsets.all(
               size == EmptyStateSize.compact
                   ? theme.density.baseContainerPadding * scaling * 1.25

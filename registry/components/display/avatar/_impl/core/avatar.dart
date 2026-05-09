@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../avatar.dart';
 
 /// Core class used by the avatar component.
@@ -29,11 +31,10 @@ class Avatar extends StatefulWidget implements AvatarWidget {
     int? cacheHeight,
     required String photoUrl,
   }) : provider = ResizeImage.resizeIfNeeded(
-         cacheWidth,
-         cacheHeight,
-
-         NetworkImage(photoUrl),
-       );
+          cacheWidth,
+          cacheHeight,
+          NetworkImage(photoUrl),
+        );
 
   /// Implements `getInitials` behavior for avatar.
   static String getInitials(String name) {

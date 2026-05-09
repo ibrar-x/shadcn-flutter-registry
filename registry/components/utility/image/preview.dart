@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/material.dart';
 
 /// ImagePreview defines a reusable type for this registry module.
@@ -5,7 +7,8 @@ class ImagePreview extends StatelessWidget {
   const ImagePreview({super.key});
 
   @override
-/// Executes `build` behavior for this component/composite.
+
+  /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
@@ -13,7 +16,7 @@ class ImagePreview extends StatelessWidget {
           spacing: 16,
           runSpacing: 16,
           children: [
-/// Creates a `SizedBox` instance.
+            /// Creates a `SizedBox` instance.
             SizedBox(
               width: 200,
               height: 200,
@@ -26,7 +29,7 @@ class ImagePreview extends StatelessWidget {
                     child: CircularProgressIndicator(
                       value: loadingProgress.expectedTotalBytes != null
                           ? loadingProgress.cumulativeBytesLoaded /
-                                loadingProgress.expectedTotalBytes!
+                              loadingProgress.expectedTotalBytes!
                           : null,
                     ),
                   );
@@ -36,7 +39,8 @@ class ImagePreview extends StatelessWidget {
                 },
               ),
             ),
-/// Creates a `Container` instance.
+
+            /// Creates a `Container` instance.
             Container(
               width: 100,
               height: 100,
@@ -46,7 +50,8 @@ class ImagePreview extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-/// Creates a `Container` instance.
+
+            /// Creates a `Container` instance.
             Container(
               width: 150,
               height: 150,

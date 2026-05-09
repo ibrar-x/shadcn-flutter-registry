@@ -1,10 +1,11 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../markdown.dart';
 
-typedef MarkdownLivePreviewStatusBuilder =
-    Widget? Function(
-      BuildContext context,
-      MarkdownLivePreviewStateDetails details,
-    );
+typedef MarkdownLivePreviewStatusBuilder = Widget? Function(
+  BuildContext context,
+  MarkdownLivePreviewStateDetails details,
+);
 
 @immutable
 class MarkdownLivePreviewStateDetails {
@@ -68,7 +69,7 @@ class MarkdownLivePreview extends StatefulWidget {
   final MarkdownImagePreviewBehavior imagePreviewBehavior;
   final MarkdownImagePreviewBuilder? imagePreviewBuilder;
   final Widget Function(BuildContext context, String url, String alt)?
-  imageBuilder;
+      imageBuilder;
   final Widget? loading;
   final Widget Function(BuildContext context, Object error)? errorBuilder;
   final MarkdownLivePreviewStatusBuilder? statusBuilder;

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart' hide SliderTheme, Theme;
@@ -202,8 +204,7 @@ class ShadWaveformRenderer extends ShadTrackRenderer {
     final activeX = w * (view.t ?? 0);
     final active =
         compTheme?.waveformTicksActiveColor ?? cs.background.withOpacity(0.52);
-    final inactive =
-        compTheme?.waveformTicksInactiveColor ??
+    final inactive = compTheme?.waveformTicksInactiveColor ??
         cs.foreground.withOpacity(0.40);
 
     return Stack(
@@ -238,9 +239,8 @@ class ShadWaveformRenderer extends ShadTrackRenderer {
                             height: bh,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(999),
-                              color: ((i * barW) <= activeX)
-                                  ? active
-                                  : inactive,
+                              color:
+                                  ((i * barW) <= activeX) ? active : inactive,
                             ),
                           );
                         },

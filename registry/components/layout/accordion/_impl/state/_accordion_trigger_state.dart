@@ -1,18 +1,24 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../accordion.dart';
 
 /// _AccordionTriggerState defines a reusable type for this registry module.
 class _AccordionTriggerState extends State<AccordionTrigger> {
-/// Stores `_expanded` state/configuration for this implementation.
+  /// Stores `_expanded` state/configuration for this implementation.
   bool _expanded = false;
-/// Stores `_hovering` state/configuration for this implementation.
+
+  /// Stores `_hovering` state/configuration for this implementation.
   bool _hovering = false;
-/// Stores `_focusing` state/configuration for this implementation.
+
+  /// Stores `_focusing` state/configuration for this implementation.
   bool _focusing = false;
-/// Stores `_item` state/configuration for this implementation.
+
+  /// Stores `_item` state/configuration for this implementation.
   _AccordionItemState? _item;
 
   @override
-/// Executes `didChangeDependencies` behavior for this component/composite.
+
+  /// Executes `didChangeDependencies` behavior for this component/composite.
   void didChangeDependencies() {
     super.didChangeDependencies();
     final newItem = Data.of<_AccordionItemState>(context);
@@ -23,10 +29,10 @@ class _AccordionTriggerState extends State<AccordionTrigger> {
     }
   }
 
-/// Executes `_onExpandedChanged` behavior for this component/composite.
+  /// Executes `_onExpandedChanged` behavior for this component/composite.
   void _onExpandedChanged() {
     if (_expanded != (_item?._expanded.value ?? false)) {
-/// Creates a `setState` instance.
+      /// Creates a `setState` instance.
       setState(() {
         _expanded = _item?._expanded.value ?? false;
       });
@@ -34,24 +40,26 @@ class _AccordionTriggerState extends State<AccordionTrigger> {
   }
 
   @override
-/// Executes `dispose` behavior for this component/composite.
+
+  /// Executes `dispose` behavior for this component/composite.
   void dispose() {
     _item?._expanded.removeListener(_onExpandedChanged);
     super.dispose();
   }
 
   @override
-/// Executes `build` behavior for this component/composite.
+
+  /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final accTheme = ComponentTheme.maybeOf<AccordionTheme>(context);
-/// Stores `scaling` state/configuration for this implementation.
+
+    /// Stores `scaling` state/configuration for this implementation.
     final scaling = theme.scaling;
 
     final arrowColor =
         accTheme?.arrowIconColor ?? theme.colorScheme.mutedForeground;
-    final baseIconSize =
-        theme.iconTheme.medium.size ??
+    final baseIconSize = theme.iconTheme.medium.size ??
         theme.iconTheme.small.size ??
         theme.iconTheme.xSmall.size ??
         (20 * scaling);
@@ -65,21 +73,22 @@ class _AccordionTriggerState extends State<AccordionTrigger> {
       child: FocusableActionDetector(
         mouseCursor: SystemMouseCursors.click,
         onShowFocusHighlight: (value) {
-/// Creates a `setState` instance.
+          /// Creates a `setState` instance.
           setState(() {
             _focusing = value;
           });
         },
         onShowHoverHighlight: (value) {
-/// Creates a `setState` instance.
+          /// Creates a `setState` instance.
           setState(() {
             _hovering = value;
           });
         },
         shortcuts: const {
-/// Creates a `SingleActivator` instance.
+          /// Creates a `SingleActivator` instance.
           SingleActivator(LogicalKeyboardKey.enter): ActivateIntent(),
-/// Creates a `SingleActivator` instance.
+
+          /// Creates a `SingleActivator` instance.
           SingleActivator(LogicalKeyboardKey.space): ActivateIntent(),
         },
         actions: {
@@ -102,13 +111,12 @@ class _AccordionTriggerState extends State<AccordionTrigger> {
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(
-              vertical:
-                  accTheme?.padding ??
+              vertical: accTheme?.padding ??
                   theme.density.baseContentPadding * scaling,
             ),
             child: Row(
               children: [
-/// Creates a `Expanded` instance.
+                /// Creates a `Expanded` instance.
                 Expanded(
                   child: Align(
                     alignment: AlignmentDirectional.centerStart,
@@ -122,10 +130,10 @@ class _AccordionTriggerState extends State<AccordionTrigger> {
                     ),
                   ),
                 ),
-/// Creates a `SizedBox` instance.
+
+                /// Creates a `SizedBox` instance.
                 SizedBox(
-                  width:
-                      accTheme?.iconGap ??
+                  width: accTheme?.iconGap ??
                       theme.density.baseContentPadding * scaling * 1.125,
                 ),
                 TweenAnimationBuilder<double>(

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../radio_group.dart';
 
 /// _RadioCardState stores and manages mutable widget state.
@@ -149,8 +151,7 @@ class _RadioCardState<T> extends State<RadioCard<T>> {
                       // to compensate for the border width
                       : styleValue(
                           defaultValue: EdgeInsets.all(1 * theme.scaling),
-                          themeValue:
-                              componentTheme?.borderWidth != null &&
+                          themeValue: componentTheme?.borderWidth != null &&
                                   componentTheme?.selectedBorderWidth != null
                               ? EdgeInsets.all(
                                   componentTheme!.borderWidth! -

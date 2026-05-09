@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 
@@ -86,11 +88,9 @@ class FileDropzone extends StatelessWidget {
     final scaling = theme.scaling;
     final isEmphasized = hotDropping || state == DropzoneState.dragging;
     final borderColor = _resolveBorderColor(theme);
-    final effectivePadding =
-        padding ??
+    final effectivePadding = padding ??
         EdgeInsets.all(theme.density.baseContainerPadding * scaling * 1.5);
-    final dropzoneIcon =
-        icon ??
+    final dropzoneIcon = icon ??
         Icon(
           RadixIcons.upload,
           size: 28 * scaling,
@@ -112,9 +112,8 @@ class FileDropzone extends StatelessWidget {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        final height = constraints.hasBoundedHeight
-            ? constraints.maxHeight
-            : null;
+        final height =
+            constraints.hasBoundedHeight ? constraints.maxHeight : null;
         return SizedBox(
           width: double.infinity,
           height: height,
@@ -148,7 +147,7 @@ class FileDropzone extends StatelessWidget {
                               color: enabled
                                   ? theme.colorScheme.mutedForeground
                                   : theme.colorScheme.mutedForeground
-                                        .withOpacity(0.6),
+                                      .withOpacity(0.6),
                             ),
                             textAlign: TextAlign.center,
                             child: Text(statusLabel),

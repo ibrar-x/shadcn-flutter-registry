@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../refresh_trigger.dart';
 
 /// RefreshTriggerTheme defines a reusable type for this registry module.
@@ -40,17 +42,16 @@ class RefreshTriggerTheme extends ComponentThemeData {
     return RefreshTriggerTheme(
       minExtent: minExtent == null ? this.minExtent : minExtent(),
       maxExtent: maxExtent == null ? this.maxExtent : maxExtent(),
-      indicatorBuilder: indicatorBuilder == null
-          ? this.indicatorBuilder
-          : indicatorBuilder(),
+      indicatorBuilder:
+          indicatorBuilder == null ? this.indicatorBuilder : indicatorBuilder(),
       curve: curve == null ? this.curve : curve(),
-      completeDuration: completeDuration == null
-          ? this.completeDuration
-          : completeDuration(),
+      completeDuration:
+          completeDuration == null ? this.completeDuration : completeDuration(),
     );
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -64,14 +65,15 @@ class RefreshTriggerTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    minExtent,
-    maxExtent,
-    indicatorBuilder,
-    curve,
-    completeDuration,
-  );
+        minExtent,
+        maxExtent,
+        indicatorBuilder,
+        curve,
+        completeDuration,
+      );
 
   @override
+
   /// Executes `toString` behavior for this component/composite.
   String toString() {
     return 'RefreshTriggerTheme('

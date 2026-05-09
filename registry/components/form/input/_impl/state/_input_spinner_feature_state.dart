@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../input.dart';
 
 /// _InputSpinnerFeatureState stores and manages mutable widget state.
@@ -113,9 +115,8 @@ class _InputSpinnerFeatureState extends InputFeatureState<InputSpinnerFeature> {
           valueListenable: controller,
           builder: (context, value, child) {
             final currentValue = _effectiveValue();
-            final clampedValue = currentValue == null
-                ? null
-                : _clampValue(currentValue);
+            final clampedValue =
+                currentValue == null ? null : _clampValue(currentValue);
             final canIncrease = _canIncrease(clampedValue);
             final canDecrease = _canDecrease(clampedValue);
             return Column(

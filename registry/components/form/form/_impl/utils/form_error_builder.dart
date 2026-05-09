@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form.dart';
 
 /// Widget builder for displaying form-wide validation errors.
@@ -12,8 +14,7 @@ class FormErrorBuilder extends StatelessWidget {
     BuildContext context,
     Map<FormKey, ValidationResult> errors,
     Widget? child,
-  )
-  builder;
+  ) builder;
 
   /// Creates a form error builder.
   const FormErrorBuilder({super.key, required this.builder, this.child});

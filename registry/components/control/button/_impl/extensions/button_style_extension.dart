@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../../../shared/primitives/clickable.dart';
@@ -84,10 +86,10 @@ extension ButtonStyleExtension on AbstractButtonStyle {
             color: states.disabled
                 ? disabledColor ?? decoration.color
                 : states.hovered
-                ? hoverColor ?? decoration.color
-                : states.focused
-                ? focusColor ?? decoration.color
-                : color,
+                    ? hoverColor ?? decoration.color
+                    : states.focused
+                        ? focusColor ?? decoration.color
+                        : color,
           );
         }
         return decoration;
@@ -125,10 +127,10 @@ extension ButtonStyleExtension on AbstractButtonStyle {
           color: states.disabled
               ? disabledColor ?? textStyle.color
               : states.hovered
-              ? hoverColor ?? textStyle.color
-              : states.focused
-              ? focusColor ?? textStyle.color
-              : color,
+                  ? hoverColor ?? textStyle.color
+                  : states.focused
+                      ? focusColor ?? textStyle.color
+                      : color,
         );
       },
       iconTheme: (context, states, iconTheme) {
@@ -136,10 +138,10 @@ extension ButtonStyleExtension on AbstractButtonStyle {
           color: states.disabled
               ? disabledColor ?? iconTheme.color
               : states.hovered
-              ? hoverColor ?? iconTheme.color
-              : states.focused
-              ? focusColor ?? iconTheme.color
-              : color,
+                  ? hoverColor ?? iconTheme.color
+                  : states.focused
+                      ? focusColor ?? iconTheme.color
+                      : color,
         );
       },
     );
@@ -176,10 +178,10 @@ extension ButtonStyleExtension on AbstractButtonStyle {
             border: states.disabled
                 ? disabledBorder ?? decoration.border
                 : states.hovered
-                ? hoverBorder ?? decoration.border
-                : states.focused
-                ? focusBorder ?? decoration.border
-                : border,
+                    ? hoverBorder ?? decoration.border
+                    : states.focused
+                        ? focusBorder ?? decoration.border
+                        : border,
           );
         }
         return decoration;
@@ -218,10 +220,10 @@ extension ButtonStyleExtension on AbstractButtonStyle {
             borderRadius: states.disabled
                 ? disabledBorderRadius ?? decoration.borderRadius
                 : states.hovered
-                ? hoverBorderRadius ?? decoration.borderRadius
-                : states.focused
-                ? focusBorderRadius ?? decoration.borderRadius
-                : borderRadius,
+                    ? hoverBorderRadius ?? decoration.borderRadius
+                    : states.focused
+                        ? focusBorderRadius ?? decoration.borderRadius
+                        : borderRadius,
           );
         }
         return decoration;
@@ -253,10 +255,10 @@ extension ButtonStyleExtension on AbstractButtonStyle {
         return states.disabled
             ? disabledPadding ?? padding
             : states.hovered
-            ? hoverPadding ?? padding
-            : states.focused
-            ? focusPadding ?? padding
-            : padding;
+                ? hoverPadding ?? padding
+                : states.focused
+                    ? focusPadding ?? padding
+                    : padding;
       },
     );
   }

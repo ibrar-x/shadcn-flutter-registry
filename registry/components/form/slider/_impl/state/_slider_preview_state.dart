@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../preview.dart';
 
 /// _SliderPreviewState stores and manages mutable widget state.
@@ -34,10 +36,10 @@ class _SliderPreviewState extends State<SliderPreview> {
     final columns = width >= 1500
         ? 4
         : width >= 1100
-        ? 3
-        : width >= 760
-        ? 2
-        : 1;
+            ? 3
+            : width >= 760
+                ? 2
+                : 1;
     final spacing = 24 * scaling;
     final horizontalPadding = 24 * scaling;
     final cardWidth =

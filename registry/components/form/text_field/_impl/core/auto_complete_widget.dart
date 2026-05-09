@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../text_field.dart';
 
 /// Function signature for customizing how autocomplete suggestions are applied.
@@ -81,9 +83,8 @@ class AutoCompleteTheme extends ComponentThemeData {
       popoverAnchorAlignment: popoverAnchorAlignment == null
           ? this.popoverAnchorAlignment
           : popoverAnchorAlignment(),
-      popoverAlignment: popoverAlignment == null
-          ? this.popoverAlignment
-          : popoverAlignment(),
+      popoverAlignment:
+          popoverAlignment == null ? this.popoverAlignment : popoverAlignment(),
       mode: mode == null ? this.mode : mode(),
     );
   }
@@ -102,10 +103,10 @@ class AutoCompleteTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    popoverConstraints,
-    popoverWidthConstraint,
-    popoverAnchorAlignment,
-    popoverAlignment,
-    mode,
-  );
+        popoverConstraints,
+        popoverWidthConstraint,
+        popoverAnchorAlignment,
+        popoverAlignment,
+        mode,
+      );
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../feature_carousel.dart';
 
 /// Internal helper class used by the feature carousel component implementation.
@@ -72,9 +74,8 @@ class _NavArrow extends StatelessWidget {
               width: size,
               height: size,
               decoration: BoxDecoration(
-                color: hovered
-                    ? background.withValues(alpha: 0.16)
-                    : background,
+                color:
+                    hovered ? background.withValues(alpha: 0.16) : background,
                 borderRadius: BorderRadius.circular(radius),
               ),
               child: Icon(

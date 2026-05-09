@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../form_control.dart';
 
 /// _ControlledComponentAdapterState defines a reusable type for this registry module.
@@ -7,6 +9,7 @@ class _ControlledComponentAdapterState<T>
   late T _value;
 
   @override
+
   /// Executes `initState` behavior for this component/composite.
   void initState() {
     super.initState();
@@ -30,6 +33,7 @@ class _ControlledComponentAdapterState<T>
   }
 
   @override
+
   /// Executes `didUpdateWidget` behavior for this component/composite.
   void didUpdateWidget(covariant ControlledComponentAdapter<T> oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -56,6 +60,7 @@ class _ControlledComponentAdapterState<T>
   }
 
   @override
+
   /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
     return widget.builder(

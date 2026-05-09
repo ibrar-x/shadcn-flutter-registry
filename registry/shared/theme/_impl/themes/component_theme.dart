@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../theme.dart';
 
 /// ComponentTheme defines a reusable type for this registry module.
@@ -13,10 +15,11 @@ class ComponentTheme<T extends ComponentThemeData> extends InheritedTheme {
   const ComponentTheme({super.key, required this.data, required super.child});
 
   @override
+
   /// Executes `wrap` behavior for this component/composite.
   Widget wrap(BuildContext context, Widget child) {
-    ComponentTheme<T>? ancestorTheme = context
-        .findAncestorWidgetOfExactType<ComponentTheme<T>>();
+    ComponentTheme<T>? ancestorTheme =
+        context.findAncestorWidgetOfExactType<ComponentTheme<T>>();
     // if it's the same type, we don't need to wrap it
     if (identical(this, ancestorTheme)) {
       return child;
@@ -41,8 +44,8 @@ class ComponentTheme<T extends ComponentThemeData> extends InheritedTheme {
   ///
   /// Returns: `T?` — the component theme data, or null.
   static T? maybeOf<T extends ComponentThemeData>(BuildContext context) {
-    final widget = context
-        .dependOnInheritedWidgetOfExactType<ComponentTheme<T>>();
+    final widget =
+        context.dependOnInheritedWidgetOfExactType<ComponentTheme<T>>();
     if (widget == null) {
       return ComponentThemeGlobalRegistry.maybeOf<T>();
     }
@@ -50,6 +53,7 @@ class ComponentTheme<T extends ComponentThemeData> extends InheritedTheme {
   }
 
   @override
+
   /// Executes `updateShouldNotify` behavior for this component/composite.
   bool updateShouldNotify(covariant ComponentTheme<T> oldWidget) {
     return oldWidget.data != data ||

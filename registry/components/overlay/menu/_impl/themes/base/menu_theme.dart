@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../menu.dart';
 
 /// MenuTheme defines a reusable type for this registry module.
@@ -24,9 +26,8 @@ class MenuTheme extends ComponentThemeData {
   }) {
     return MenuTheme(
       itemPadding: itemPadding == null ? this.itemPadding : itemPadding(),
-      subMenuOffset: subMenuOffset == null
-          ? this.subMenuOffset
-          : subMenuOffset(),
+      subMenuOffset:
+          subMenuOffset == null ? this.subMenuOffset : subMenuOffset(),
     );
   }
 
@@ -34,6 +35,7 @@ class MenuTheme extends ComponentThemeData {
   int get hashCode => Object.hash(itemPadding, subMenuOffset);
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
@@ -43,6 +45,7 @@ class MenuTheme extends ComponentThemeData {
   }
 
   @override
+
   /// Executes `toString` behavior for this component/composite.
   String toString() {
     return 'MenuTheme(itemPadding: $itemPadding, subMenuOffset: $subMenuOffset)';

@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:async';
 import 'dart:math' as math;
 import 'dart:ui' show PathMetric;
@@ -347,38 +349,38 @@ class _BorderLoadingState extends State<BorderLoading>
       // Select the correct painter variant for the active mode.
       final painter = switch (widget.mode) {
         BorderLoadingMode.tracer => _BorderTracerPainter(
-          progress: progress,
-          strokeWidth: widget.strokeWidth,
-          borderRadius: widget.borderRadius,
-          shapeBorder: widget.shapeBorder,
-          opacity: widget.opacity,
-          spec: widget.spec,
-          tracer: widget.tracer,
-        ),
+            progress: progress,
+            strokeWidth: widget.strokeWidth,
+            borderRadius: widget.borderRadius,
+            shapeBorder: widget.shapeBorder,
+            opacity: widget.opacity,
+            spec: widget.spec,
+            tracer: widget.tracer,
+          ),
         BorderLoadingMode.progress => _BorderProgressPainter(
-          progress: _effectiveProgress,
-          strokeWidth: widget.strokeWidth,
-          borderRadius: widget.borderRadius,
-          shapeBorder: widget.shapeBorder,
-          opacity: widget.opacity,
-          spec: widget.spec,
-        ),
+            progress: _effectiveProgress,
+            strokeWidth: widget.strokeWidth,
+            borderRadius: widget.borderRadius,
+            shapeBorder: widget.shapeBorder,
+            opacity: widget.opacity,
+            spec: widget.spec,
+          ),
         BorderLoadingMode.staticBorder => _BorderLoadingPainter(
-          progress: 0,
-          strokeWidth: widget.strokeWidth,
-          borderRadius: widget.borderRadius,
-          shapeBorder: widget.shapeBorder,
-          opacity: widget.opacity,
-          spec: widget.spec,
-        ),
+            progress: 0,
+            strokeWidth: widget.strokeWidth,
+            borderRadius: widget.borderRadius,
+            shapeBorder: widget.shapeBorder,
+            opacity: widget.opacity,
+            spec: widget.spec,
+          ),
         BorderLoadingMode.sweepGradient => _BorderLoadingPainter(
-          progress: progress,
-          strokeWidth: widget.strokeWidth,
-          borderRadius: widget.borderRadius,
-          shapeBorder: widget.shapeBorder,
-          opacity: widget.opacity,
-          spec: widget.spec,
-        ),
+            progress: progress,
+            strokeWidth: widget.strokeWidth,
+            borderRadius: widget.borderRadius,
+            shapeBorder: widget.shapeBorder,
+            opacity: widget.opacity,
+            spec: widget.spec,
+          ),
       };
 
       // Paint above content while keeping pointer events on the child.

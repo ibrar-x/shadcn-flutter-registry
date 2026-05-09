@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../linear_progress_indicator.dart';
 
 /// Theme data for [LinearProgressIndicator].
@@ -43,15 +45,13 @@ class LinearProgressIndicatorTheme extends ComponentThemeData {
   }) {
     return LinearProgressIndicatorTheme(
       color: color == null ? this.color : color(),
-      backgroundColor: backgroundColor == null
-          ? this.backgroundColor
-          : backgroundColor(),
+      backgroundColor:
+          backgroundColor == null ? this.backgroundColor : backgroundColor(),
       minHeight: minHeight == null ? this.minHeight : minHeight(),
       borderRadius: borderRadius == null ? this.borderRadius : borderRadius(),
       showSparks: showSparks == null ? this.showSparks : showSparks(),
-      disableAnimation: disableAnimation == null
-          ? this.disableAnimation
-          : disableAnimation(),
+      disableAnimation:
+          disableAnimation == null ? this.disableAnimation : disableAnimation(),
     );
   }
 
@@ -70,11 +70,11 @@ class LinearProgressIndicatorTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    color,
-    backgroundColor,
-    minHeight,
-    borderRadius,
-    showSparks,
-    disableAnimation,
-  );
+        color,
+        backgroundColor,
+        minHeight,
+        borderRadius,
+        showSparks,
+        disableAnimation,
+      );
 }

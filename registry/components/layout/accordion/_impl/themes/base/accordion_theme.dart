@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../accordion.dart';
 
 /// Theme data used by [Accordion], [AccordionItem], and [AccordionTrigger].
@@ -63,18 +65,17 @@ class AccordionTheme extends ComponentThemeData {
       reverseCurve: reverseCurve == null ? this.reverseCurve : reverseCurve(),
       padding: padding == null ? this.padding : padding(),
       iconGap: iconGap == null ? this.iconGap : iconGap(),
-      dividerHeight: dividerHeight == null
-          ? this.dividerHeight
-          : dividerHeight(),
+      dividerHeight:
+          dividerHeight == null ? this.dividerHeight : dividerHeight(),
       dividerColor: dividerColor == null ? this.dividerColor : dividerColor(),
       arrowIcon: arrowIcon == null ? this.arrowIcon : arrowIcon(),
-      arrowIconColor: arrowIconColor == null
-          ? this.arrowIconColor
-          : arrowIconColor(),
+      arrowIconColor:
+          arrowIconColor == null ? this.arrowIconColor : arrowIconColor(),
     );
   }
 
   @override
+
   /// Executes `operator ==` behavior for this component/composite.
   bool operator ==(Object other) =>
       other is AccordionTheme &&
@@ -90,18 +91,19 @@ class AccordionTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    duration,
-    curve,
-    reverseCurve,
-    padding,
-    iconGap,
-    dividerHeight,
-    dividerColor,
-    arrowIcon,
-    arrowIconColor,
-  );
+        duration,
+        curve,
+        reverseCurve,
+        padding,
+        iconGap,
+        dividerHeight,
+        dividerColor,
+        arrowIcon,
+        arrowIconColor,
+      );
 
   @override
+
   /// Executes `toString` behavior for this component/composite.
   String toString() {
     return 'AccordionTheme(duration: $duration, curve: $curve, reverseCurve: $reverseCurve, padding: $padding, iconGap: $iconGap, dividerHeight: $dividerHeight, dividerColor: $dividerColor, arrowIcon: $arrowIcon, arrowIconColor: $arrowIconColor)';

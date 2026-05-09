@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../select.dart';
 
 /// _SelectPopupState stores and manages mutable widget state.
@@ -141,8 +143,7 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                             ],
                             autofocus: true,
                             placeholder: widget.searchPlaceholder,
-                            padding:
-                                const EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                   vertical: 12,
                                   horizontal: 12,
                                 ) *
@@ -165,14 +166,13 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                           searchQuery,
                                         )
                                       : widget.items != null
-                                      ? widget.items!
-                                      : SelectItemDelegate.empty,
+                                          ? widget.items!
+                                          : SelectItemDelegate.empty,
                                   builder: (context, snapshot) {
                                     if (snapshot.connectionState ==
                                         ConnectionState.waiting) {
-                                      Widget? loadingBuilder = widget
-                                          .loadingBuilder
-                                          ?.call(context);
+                                      Widget? loadingBuilder =
+                                          widget.loadingBuilder?.call(context);
                                       if (loadingBuilder != null) {
                                         return Column(
                                           mainAxisSize: MainAxisSize.min,
@@ -188,12 +188,12 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                       return const SizedBox();
                                     }
                                     if (snapshot.hasError) {
-                                      Widget? errorBuilder = widget.errorBuilder
-                                          ?.call(
-                                            context,
-                                            snapshot.error!,
-                                            snapshot.stackTrace,
-                                          );
+                                      Widget? errorBuilder =
+                                          widget.errorBuilder?.call(
+                                        context,
+                                        snapshot.error!,
+                                        snapshot.stackTrace,
+                                      );
                                       if (errorBuilder != null) {
                                         return Column(
                                           mainAxisSize: MainAxisSize.min,
@@ -232,10 +232,11 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                                         controller:
                                                             _scrollController,
                                                         padding:
-                                                            const EdgeInsets.all(
-                                                              4,
-                                                            ) *
-                                                            scaling,
+                                                            const EdgeInsets
+                                                                    .all(
+                                                                  4,
+                                                                ) *
+                                                                scaling,
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.min,
@@ -243,15 +244,12 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                                               CrossAxisAlignment
                                                                   .stretch,
                                                           children: [
-                                                            for (
-                                                              var i = 0;
-                                                              i <
-                                                                  (data
-                                                                          as SelectItemList)
-                                                                      .children
-                                                                      .length;
-                                                              i++
-                                                            )
+                                                            for (var i = 0;
+                                                                i <
+                                                                    (data as SelectItemList)
+                                                                        .children
+                                                                        .length;
+                                                                i++)
                                                               data.build(
                                                                 context,
                                                                 i,
@@ -264,10 +262,11 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                                         controller:
                                                             _scrollController,
                                                         padding:
-                                                            const EdgeInsets.all(
-                                                              4,
-                                                            ) *
-                                                            scaling,
+                                                            const EdgeInsets
+                                                                    .all(
+                                                                  4,
+                                                                ) *
+                                                                scaling,
                                                         itemBuilder: data.build,
                                                         shrinkWrap:
                                                             widget.shrinkWrap,
@@ -277,32 +276,35 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                                     ListenableBuilder(
                                                       listenable:
                                                           _scrollController,
-                                                      builder: (context, child) {
+                                                      builder:
+                                                          (context, child) {
                                                         return Visibility(
                                                           visible:
                                                               _scrollController
-                                                                  .offset >
-                                                              0,
+                                                                      .offset >
+                                                                  0,
                                                           child: Positioned(
                                                             top: 0,
                                                             left: 0,
                                                             right: 0,
-                                                            child: HoverActivity(
+                                                            child:
+                                                                HoverActivity(
                                                               hitTestBehavior:
                                                                   HitTestBehavior
                                                                       .translucent,
                                                               debounceDuration:
                                                                   const Duration(
-                                                                    milliseconds:
-                                                                        16,
-                                                                  ),
+                                                                milliseconds:
+                                                                    16,
+                                                              ),
                                                               onHover: () {
                                                                 // decrease scroll offset
                                                                 var value =
                                                                     _scrollController
-                                                                        .offset -
-                                                                    8;
-                                                                value = value.clamp(
+                                                                            .offset -
+                                                                        8;
+                                                                value =
+                                                                    value.clamp(
                                                                   0.0,
                                                                   _scrollController
                                                                       .position
@@ -310,17 +312,19 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                                                 );
                                                                 _scrollController
                                                                     .jumpTo(
-                                                                      value,
-                                                                    );
+                                                                  value,
+                                                                );
                                                               },
                                                               child: Container(
                                                                 padding:
-                                                                    const EdgeInsets.symmetric(
-                                                                      vertical:
-                                                                          4,
-                                                                    ) *
-                                                                    scaling,
-                                                                child: const Icon(
+                                                                    const EdgeInsets
+                                                                            .symmetric(
+                                                                          vertical:
+                                                                              4,
+                                                                        ) *
+                                                                        scaling,
+                                                                child:
+                                                                    const Icon(
                                                                   RadixIcons
                                                                       .chevronUp,
                                                                 ).iconX3Small(),
@@ -333,11 +337,10 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                                     ListenableBuilder(
                                                       listenable:
                                                           _scrollController,
-                                                      builder: (context, child) {
+                                                      builder:
+                                                          (context, child) {
                                                         return Visibility(
-                                                          visible:
-                                                              _scrollController
-                                                                  .hasClients &&
+                                                          visible: _scrollController.hasClients &&
                                                               _scrollController
                                                                   .position
                                                                   .hasContentDimensions &&
@@ -350,22 +353,24 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                                             bottom: 0,
                                                             left: 0,
                                                             right: 0,
-                                                            child: HoverActivity(
+                                                            child:
+                                                                HoverActivity(
                                                               hitTestBehavior:
                                                                   HitTestBehavior
                                                                       .translucent,
                                                               debounceDuration:
                                                                   const Duration(
-                                                                    milliseconds:
-                                                                        16,
-                                                                  ),
+                                                                milliseconds:
+                                                                    16,
+                                                              ),
                                                               onHover: () {
                                                                 // increase scroll offset
                                                                 var value =
                                                                     _scrollController
-                                                                        .offset +
-                                                                    8;
-                                                                value = value.clamp(
+                                                                            .offset +
+                                                                        8;
+                                                                value =
+                                                                    value.clamp(
                                                                   0.0,
                                                                   _scrollController
                                                                       .position
@@ -373,17 +378,19 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                                                 );
                                                                 _scrollController
                                                                     .jumpTo(
-                                                                      value,
-                                                                    );
+                                                                  value,
+                                                                );
                                                               },
                                                               child: Container(
                                                                 padding:
-                                                                    const EdgeInsets.symmetric(
-                                                                      vertical:
-                                                                          4,
-                                                                    ) *
-                                                                    scaling,
-                                                                child: const Icon(
+                                                                    const EdgeInsets
+                                                                            .symmetric(
+                                                                          vertical:
+                                                                              4,
+                                                                        ) *
+                                                                        scaling,
+                                                                child:
+                                                                    const Icon(
                                                                   RadixIcons
                                                                       .chevronDown,
                                                                 ).iconX3Small(),
@@ -401,8 +408,8 @@ class _SelectPopupState<T> extends State<SelectPopup<T>>
                                         },
                                       );
                                     }
-                                    Widget? emptyBuilder = widget.emptyBuilder
-                                        ?.call(context);
+                                    Widget? emptyBuilder =
+                                        widget.emptyBuilder?.call(context);
                                     if (emptyBuilder != null) {
                                       return Column(
                                         mainAxisSize: MainAxisSize.min,

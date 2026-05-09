@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../scrollable.dart';
 
 /// A customizable scrollable widget with two-axis scrolling support.
@@ -78,13 +80,15 @@ class ScrollableClient extends StatelessWidget {
           return ListenableBuilder(
             listenable: Listenable.merge([verticalOffset, horizontalOffset]),
             builder: (context, builtChild) {
-/// Stores `horizontalPixels` state/configuration for this implementation.
+              /// Stores `horizontalPixels` state/configuration for this implementation.
               final horizontalPixels = horizontalOffset.pixels;
-/// Stores `verticalPixels` state/configuration for this implementation.
+
+              /// Stores `verticalPixels` state/configuration for this implementation.
               final verticalPixels = verticalOffset.pixels;
               return builder(
                 context,
-/// Creates a `Offset` instance.
+
+                /// Creates a `Offset` instance.
                 Offset(horizontalPixels, verticalPixels),
                 (vicinity as _ScrollableClientChildVicinity).viewportSize,
                 builtChild,
@@ -99,39 +103,40 @@ class ScrollableClient extends StatelessWidget {
   }
 
   @override
-/// Executes `build` behavior for this component/composite.
+
+  /// Executes `build` behavior for this component/composite.
   Widget build(BuildContext context) {
-/// Creates a `assert` instance.
+    /// Creates a `assert` instance.
     assert(
-/// Creates a `axisDirectionToAxis` instance.
+      /// Creates a `axisDirectionToAxis` instance.
       axisDirectionToAxis(verticalDetails.direction) == Axis.vertical,
       'TwoDimensionalScrollView.verticalDetails are not Axis.vertical.',
     );
-/// Creates a `assert` instance.
+
+    /// Creates a `assert` instance.
     assert(
-/// Creates a `axisDirectionToAxis` instance.
+      /// Creates a `axisDirectionToAxis` instance.
       axisDirectionToAxis(horizontalDetails.direction) == Axis.horizontal,
       'TwoDimensionalScrollView.horizontalDetails are not Axis.horizontal.',
     );
 
     final compTheme = ComponentTheme.maybeOf<ScrollableClientTheme>(context);
-    final diag =
-        diagonalDragBehavior ??
+    final diag = diagonalDragBehavior ??
         compTheme?.diagonalDragBehavior ??
         DiagonalDragBehavior.none;
-    final dragStart =
-        dragStartBehavior ??
+    final dragStart = dragStartBehavior ??
         compTheme?.dragStartBehavior ??
         DragStartBehavior.start;
-    final keyboardDismiss =
-        keyboardDismissBehavior ??
+    final keyboardDismiss = keyboardDismissBehavior ??
         compTheme?.keyboardDismissBehavior ??
         ScrollViewKeyboardDismissBehavior.manual;
-/// Stores `clip` state/configuration for this implementation.
+
+    /// Stores `clip` state/configuration for this implementation.
     final clip = clipBehavior ?? compTheme?.clipBehavior ?? Clip.hardEdge;
     final hitTest =
         hitTestBehavior ?? compTheme?.hitTestBehavior ?? HitTestBehavior.opaque;
-/// Stores `effectiveOverscroll` state/configuration for this implementation.
+
+    /// Stores `effectiveOverscroll` state/configuration for this implementation.
     final effectiveOverscroll = overscroll ?? compTheme?.overscroll ?? false;
 
     ScrollableDetails mainAxisDetails = switch (mainAxis) {
@@ -139,13 +144,12 @@ class ScrollableClient extends StatelessWidget {
       Axis.horizontal => horizontalDetails,
     };
 
-    final effectivePrimary =
-        primary ??
+    final effectivePrimary = primary ??
         mainAxisDetails.controller == null &&
             PrimaryScrollController.shouldInherit(context, mainAxis);
 
     if (effectivePrimary) {
-/// Creates a `assert` instance.
+      /// Creates a `assert` instance.
       assert(
         mainAxisDetails.controller == null,
         'TwoDimensionalScrollView.primary was explicitly set to true, but a '
@@ -168,7 +172,8 @@ class ScrollableClient extends StatelessWidget {
       },
       diagonalDragBehavior: diag,
       viewportBuilder: (context, vOffset, hOffset) =>
-/// Creates a `_buildViewport` instance.
+
+          /// Creates a `_buildViewport` instance.
           _buildViewport(context, vOffset, hOffset, effectiveOverscroll, clip),
       dragStartBehavior: dragStart,
       hitTestBehavior: hitTest,

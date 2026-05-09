@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../text_area.dart';
 
 /// _TextAreaState stores and manages mutable widget state.
@@ -56,11 +58,11 @@ class _TextAreaState extends State<TextArea> {
               hitTestBehavior: HitTestBehavior.translucent,
               cursor: widget.expandableWidth
                   ? widget.expandableHeight
-                        ? SystemMouseCursors.resizeDownRight
-                        : SystemMouseCursors.resizeLeftRight
+                      ? SystemMouseCursors.resizeDownRight
+                      : SystemMouseCursors.resizeLeftRight
                   : widget.expandableHeight
-                  ? SystemMouseCursors.resizeUpDown
-                  : SystemMouseCursors.basic,
+                      ? SystemMouseCursors.resizeUpDown
+                      : SystemMouseCursors.basic,
               child: GestureDetector(
                 behavior: HitTestBehavior.translucent,
                 onPanUpdate: (details) {

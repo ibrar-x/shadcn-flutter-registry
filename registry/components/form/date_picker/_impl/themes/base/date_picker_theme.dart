@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../../date_picker.dart';
 
 /// Theme configuration for [DatePicker] widget styling and behavior.
@@ -74,18 +76,15 @@ class DatePickerTheme extends ComponentThemeData {
     return DatePickerTheme(
       mode: mode == null ? this.mode : mode(),
       initialView: initialView == null ? this.initialView : initialView(),
-      initialViewType: initialViewType == null
-          ? this.initialViewType
-          : initialViewType(),
-      popoverAlignment: popoverAlignment == null
-          ? this.popoverAlignment
-          : popoverAlignment(),
+      initialViewType:
+          initialViewType == null ? this.initialViewType : initialViewType(),
+      popoverAlignment:
+          popoverAlignment == null ? this.popoverAlignment : popoverAlignment(),
       popoverAnchorAlignment: popoverAnchorAlignment == null
           ? this.popoverAnchorAlignment
           : popoverAnchorAlignment(),
-      popoverPadding: popoverPadding == null
-          ? this.popoverPadding
-          : popoverPadding(),
+      popoverPadding:
+          popoverPadding == null ? this.popoverPadding : popoverPadding(),
     );
   }
 
@@ -103,11 +102,11 @@ class DatePickerTheme extends ComponentThemeData {
 
   @override
   int get hashCode => Object.hash(
-    mode,
-    initialView,
-    initialViewType,
-    popoverAlignment,
-    popoverAnchorAlignment,
-    popoverPadding,
-  );
+        mode,
+        initialView,
+        initialViewType,
+        popoverAlignment,
+        popoverAnchorAlignment,
+        popoverPadding,
+      );
 }

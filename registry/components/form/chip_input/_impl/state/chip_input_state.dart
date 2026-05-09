@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 part of '../../chip_input.dart';
 
 /// State class for [ChipInput].
@@ -27,8 +29,7 @@ class ChipInputState<T> extends State<ChipInput<T>>
   @override
   void initState() {
     super.initState();
-    _controller =
-        widget.controller ??
+    _controller = widget.controller ??
         ChipEditingController<T>(
           initialChips: widget.initialChips,
           text: widget.initialValue ?? '',

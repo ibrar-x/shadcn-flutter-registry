@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'package:flutter/widgets.dart';
 
 import '../../../../../shared/theme/theme.dart';
@@ -31,6 +33,7 @@ class ComponentThemeButtonStyle<T extends ButtonTheme>
   }
 
   @override
+
   /// Stores `decoration` state/configuration for this implementation.
   ButtonStateProperty<Decoration> get decoration => _resolveDecoration;
 
@@ -45,6 +48,7 @@ class ComponentThemeButtonStyle<T extends ButtonTheme>
   }
 
   @override
+
   /// Stores `iconTheme` state/configuration for this implementation.
   ButtonStateProperty<IconThemeData> get iconTheme => _resolveIconTheme;
 
@@ -61,6 +65,7 @@ class ComponentThemeButtonStyle<T extends ButtonTheme>
   }
 
   @override
+
   /// Stores `margin` state/configuration for this implementation.
   ButtonStateProperty<EdgeInsetsGeometry> get margin => _resolveMargin;
 
@@ -77,6 +82,7 @@ class ComponentThemeButtonStyle<T extends ButtonTheme>
   }
 
   @override
+
   /// Stores `mouseCursor` state/configuration for this implementation.
   ButtonStateProperty<MouseCursor> get mouseCursor => _resolveMouseCursor;
 
@@ -93,6 +99,7 @@ class ComponentThemeButtonStyle<T extends ButtonTheme>
   }
 
   @override
+
   /// Stores `padding` state/configuration for this implementation.
   ButtonStateProperty<EdgeInsetsGeometry> get padding => _resolvePadding;
 
@@ -109,6 +116,7 @@ class ComponentThemeButtonStyle<T extends ButtonTheme>
   }
 
   @override
+
   /// Stores `textStyle` state/configuration for this implementation.
   ButtonStateProperty<TextStyle> get textStyle => _resolveTextStyle;
 

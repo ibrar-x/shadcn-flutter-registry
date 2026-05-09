@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, unnecessary_import, unused_import, unnecessary_null_comparison, dead_code, deprecated_member_use, use_null_aware_elements, sort_child_properties_last
+
 import 'dart:math';
 
 import 'package:flutter/foundation.dart';
@@ -50,9 +52,8 @@ String colorToHex(
   String g = ((color.g * 255).round() & 0xFF).toRadixString(16).padLeft(2, '0');
   String b = ((color.b * 255).round() & 0xFF).toRadixString(16).padLeft(2, '0');
   if (showAlpha) {
-    String a = ((color.a * 255).round() & 0xFF)
-        .toRadixString(16)
-        .padLeft(2, '0');
+    String a =
+        ((color.a * 255).round() & 0xFF).toRadixString(16).padLeft(2, '0');
     return hashPrefix ? '#$a$r$g$b' : '$a$r$g$b';
   } else {
     return hashPrefix ? '#$r$g$b' : '$r$g$b';
